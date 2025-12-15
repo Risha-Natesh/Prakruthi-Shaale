@@ -14,41 +14,47 @@ import {
   Phone,
   Mail,
   MapPin,
-  Users2,
-  Radio,
-  HeartPulse,
-  Mountain,
-  BrainCircuit,
+  ArrowRight,
 } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 export default function Home() {
   const challengeImage = PlaceHolderImages.find(
     (img) => img.id === 'challenge'
   );
 
-  const solutionsAndOutcomes = [
-    { icon: Users, title: 'Collaborative Ecosystem' },
-    { icon: LifeBuoy, title: 'Capacity Building' },
-    { icon: Globe, title: 'Resource Mobilization' },
-    { icon: HeartHandshake, title: 'Community Engagement' },
-    { icon: Lightbulb, title: 'Innovation Incubation' },
-    { icon: Target, title: 'STEM Skills Development' },
-    { icon: Leaf, title: 'Environmental Awareness' },
-    { icon: Users2, title: 'Teamwork & Collaboration' },
-    { icon: Radio, title: 'Effective Communication' },
-    { icon: BrainCircuit, title: 'Problem-Solving & Critical Thinking' },
-    { icon: HeartPulse, title: 'Empathy & Compassion' },
-    { icon: Mountain, title: 'Leadership & Initiative' },
-    { icon: Sprout, title: 'Adaptability & Time Management' },
+  const initiatives = [
+    {
+      icon: Leaf,
+      title: 'Kids Environmental Program',
+      description:
+        'Engaging the next generation with hands-on nature and science programs.',
+      href: '/program/youth',
+      color: 'text-green-800',
+      bg: 'bg-green-300/20',
+    },
+    {
+      icon: Users,
+      title: 'Corporate Partnership Program',
+      description:
+        'Partner with us to create impactful environmental and team-building experiences.',
+      href: '/program/corporate',
+      color: 'text-green-800',
+      bg: 'bg-green-300/20',
+    },
+    {
+      icon: HeartHandshake,
+      title: 'Community Volunteer Program',
+      description:
+        'Join our volunteer efforts to make a tangible difference in our community.',
+      href: '/program/community',
+      color: 'text-green-800',
+      bg: 'bg-green-300/20',
+    },
   ];
 
   const { ref: visionRef, inView: visionInView } = useInView({
@@ -58,6 +64,47 @@ export default function Home() {
   const { ref: missionRef, inView: missionInView } = useInView({
     threshold: 0.1,
   });
+
+  const InitiativeCard = ({ initiative }: { initiative: any }) => {
+    const { ref, inView } = useInView({
+      triggerOnce: true,
+      threshold: 0.1,
+    });
+    const Icon = initiative.icon;
+
+    return (
+      <Link href={initiative.href} className="group block">
+        <div
+          ref={ref}
+          className={cn(
+            'relative h-full bg-card p-8 rounded-lg shadow-lg overflow-hidden transition-all duration-500 opacity-0',
+            inView ? 'opacity-100 translate-y-0' : 'translate-y-10',
+            'md:group-hover:transform md:group-hover:-translate-y-2 md:group-hover:ring-4 md:group-hover:ring-accent/50',
+            inView && 'ring-4 ring-accent/50 md:ring-0'
+          )}
+        >
+          <div
+            className={`absolute -top-4 -right-4 w-24 h-24 rounded-full ${initiative.bg} opacity-50 blur-xl`}
+          ></div>
+          <div className="relative z-10">
+            <div
+              className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${initiative.bg}`}
+            >
+              <Icon className={`w-8 h-8 ${initiative.color}`} />
+            </div>
+            <h3 className="text-2xl font-bold text-foreground mb-3 transition-transform duration-300 group-hover:scale-105">
+              {initiative.title}
+            </h3>
+            <p className="text-foreground/70 mb-4">{initiative.description}</p>
+            <div className="flex items-center font-semibold text-accent group-hover:text-primary transition-colors">
+              Learn More
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+            </div>
+          </div>
+        </div>
+      </Link>
+    );
+  };
 
   return (
     <div className="relative flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
@@ -286,45 +333,19 @@ export default function Home() {
         <section id="solution" className="py-20">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl font-bold mb-4" style={{ color: '#889063' }}>
-              Our Solutions &amp; Outcomes
+              Our Solutions
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
-              A pioneering enterprise fostering sustainability and community
-              impact through a multi-faceted approach.
+              We offer a range of programs to foster sustainability and community impact. Explore our initiatives to get involved.
             </p>
-            <Carousel
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                }),
-              ]}
-              opts={{
-                align: 'start',
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {solutionsAndOutcomes.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <CarouselItem
-                      key={index}
-                      className="md:basis-1/4 lg:basis-1/7"
-                    >
-                      <div className="flex flex-col items-center gap-3 text-center group transform transition-transform duration-300 hover:scale-110 hover:-translate-y-2">
-                        <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:rotate-12">
-                          <Icon className="w-10 h-10 text-accent" />
-                        </div>
-                        <h4 className="font-semibold text-foreground text-sm transition-transform duration-300 group-hover:scale-105">
-                          {item.title}
-                        </h4>
-                      </div>
-                    </CarouselItem>
-                  );
-                })}
-              </CarouselContent>
-            </Carousel>
+            <div className="grid md:grid-cols-3 gap-8">
+              {initiatives.map((initiative) => (
+                <InitiativeCard
+                  key={initiative.title}
+                  initiative={initiative}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
