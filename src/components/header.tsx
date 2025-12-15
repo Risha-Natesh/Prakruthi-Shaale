@@ -10,6 +10,7 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetClose,
 } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 
@@ -43,22 +44,12 @@ const Header = () => {
   const textShadow = 'drop-shadow(0 1px 2px rgba(255,255,255,0.4))';
   const navHoverColor = 'hover:bg-black/10';
 
-  const NavLinks = ({
-    isMobile = false,
-    onLinkClick,
-  }: {
-    isMobile?: boolean;
-    onLinkClick?: () => void;
-  }) => {
-    const handleScrollTo = (id: string) => {
-      scrollTo(id);
-      if (onLinkClick) onLinkClick();
-    };
+  const NavLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
     return (
       <>
         <Button
           variant="ghost"
-          onClick={() => handleScrollTo('home')}
+          onClick={() => scrollTo('home')}
           className={cn(
             navTextColor,
             navHoverColor,
@@ -70,7 +61,7 @@ const Header = () => {
         </Button>
         <Button
           variant="ghost"
-          onClick={() => handleScrollTo('about')}
+          onClick={() => scrollTo('about')}
           className={cn(
             navTextColor,
             navHoverColor,
@@ -90,13 +81,12 @@ const Header = () => {
               isMobile && 'justify-start'
             )}
             style={{ filter: isScrolled ? 'none' : textShadow }}
-            onClick={onLinkClick}
           >
             Programs
           </Button>
         </Link>
         <Button
-          onClick={() => handleScrollTo('contact')}
+          onClick={() => scrollTo('contact')}
           className={cn(
             'border',
             'border-[#03110d]/50 bg-black/5 text-[#03110d] hover:bg-black/10',
@@ -109,8 +99,6 @@ const Header = () => {
       </>
     );
   };
-
-  const [isSheetOpen, setIsSheetOpen] = React.useState(false);
 
   return (
     <header
@@ -140,7 +128,7 @@ const Header = () => {
         <NavLinks />
       </nav>
       <div className="md:hidden">
-        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+        <Sheet>
           <SheetTrigger asChild>
             <Button
               variant="ghost"
@@ -154,10 +142,9 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent side="right" className="w-[250px] bg-background">
             <div className="flex flex-col gap-4 pt-10">
-              <NavLinks
-                isMobile={true}
-                onLinkClick={() => setIsSheetOpen(false)}
-              />
+              <SheetClose asChild>
+                <NavLinks isMobile={true} />
+              </SheetClose>
             </div>
           </SheetContent>
         </Sheet>
