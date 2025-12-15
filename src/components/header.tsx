@@ -45,42 +45,36 @@ const Header = () => {
   const navHoverColor = 'hover:bg-black/10';
 
   const NavLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
-    return (
+    const commonButtonClass = cn(
+      navTextColor,
+      navHoverColor,
+      isMobile && 'w-full justify-start'
+    );
+    const commonButtonStyle = { filter: isScrolled ? 'none' : textShadow };
+
+    const links = (
       <>
         <Button
           variant="ghost"
           onClick={() => scrollTo('home')}
-          className={cn(
-            navTextColor,
-            navHoverColor,
-            isMobile && 'w-full justify-start'
-          )}
-          style={{ filter: isScrolled ? 'none' : textShadow }}
+          className={commonButtonClass}
+          style={commonButtonStyle}
         >
           Home
         </Button>
         <Button
           variant="ghost"
           onClick={() => scrollTo('about')}
-          className={cn(
-            navTextColor,
-            navHoverColor,
-            isMobile && 'w-full justify-start'
-          )}
-          style={{ filter: isScrolled ? 'none' : textShadow }}
+          className={commonButtonClass}
+          style={commonButtonStyle}
         >
           About
         </Button>
         <Link href="/program" passHref>
           <Button
             variant="ghost"
-            className={cn(
-              navTextColor,
-              navHoverColor,
-              'w-full',
-              isMobile && 'justify-start'
-            )}
-            style={{ filter: isScrolled ? 'none' : textShadow }}
+            className={cn(commonButtonClass, 'w-full', isMobile && 'justify-start')}
+            style={commonButtonStyle}
           >
             Programs
           </Button>
@@ -92,12 +86,22 @@ const Header = () => {
             'border-[#03110d]/50 bg-black/5 text-[#03110d] hover:bg-black/10',
             isMobile && 'w-full justify-start'
           )}
-          style={{ filter: isScrolled ? 'none' : textShadow }}
+          style={commonButtonStyle}
         >
           Contact
         </Button>
       </>
     );
+
+    if (isMobile) {
+      return (
+        <SheetClose asChild>
+          <div className='flex flex-col gap-4'>{links}</div>
+        </SheetClose>
+      );
+    }
+
+    return <>{links}</>;
   };
 
   return (
@@ -142,9 +146,7 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent side="right" className="w-[250px] bg-background">
             <div className="flex flex-col gap-4 pt-10">
-              <SheetClose asChild>
-                <NavLinks isMobile={true} />
-              </SheetClose>
+              <NavLinks isMobile={true} />
             </div>
           </SheetContent>
         </Sheet>
