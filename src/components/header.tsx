@@ -115,7 +115,7 @@ const Header = () => {
     >
       <Link href="/" className="flex items-center gap-3 font-bold text-xl">
         <Image
-          src="/Images/Logo.jpg"
+          src="/Images/1logo.jpg"
           alt="Prakruthi Shaale Logo"
           width={40}
           height={40}
