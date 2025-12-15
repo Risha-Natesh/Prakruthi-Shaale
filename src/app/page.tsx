@@ -361,7 +361,7 @@ export default function Home() {
               }}
               plugins={[
                 Autoplay({
-                  delay: 3000,
+                  delay: 2000,
                   stopOnInteraction: true,
                 }),
               ]}
