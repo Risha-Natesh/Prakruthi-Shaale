@@ -43,8 +43,8 @@ export default function Home() {
       description:
         'Partner with us to create impactful environmental and team-building experiences.',
       href: '/program/corporate',
-      color: 'text-green-800',
-      bg: 'bg-green-300/20',
+      color: 'text-blue-800',
+      bg: 'bg-blue-300/20',
     },
     {
       icon: HeartHandshake,
@@ -52,8 +52,8 @@ export default function Home() {
       description:
         'Join our volunteer efforts to make a tangible difference in our community.',
       href: '/program/community',
-      color: 'text-green-800',
-      bg: 'bg-green-300/20',
+      color: 'text-amber-800',
+      bg: 'bg-amber-300/20',
     },
   ];
 
@@ -77,26 +77,31 @@ export default function Home() {
         <div
           ref={ref}
           className={cn(
-            'relative h-full bg-card p-8 rounded-lg shadow-lg overflow-hidden transition-all duration-500 opacity-0',
+            'relative h-full bg-card p-8 rounded-xl shadow-lg overflow-hidden transition-all duration-500 transform opacity-0',
             inView ? 'opacity-100 translate-y-0' : 'translate-y-10',
-            'md:group-hover:transform md:group-hover:-translate-y-2 md:group-hover:ring-4 md:group-hover:ring-accent/50',
-            inView && 'ring-4 ring-accent/50 md:ring-0'
+            'hover:shadow-2xl hover:-translate-y-2'
           )}
         >
           <div
-            className={`absolute -top-4 -right-4 w-24 h-24 rounded-full ${initiative.bg} opacity-50 blur-xl`}
+            className={cn(
+              'absolute -top-8 -right-8 w-32 h-32 rounded-full transition-transform duration-500 group-hover:scale-[8]',
+              initiative.bg
+            )}
           ></div>
           <div className="relative z-10">
             <div
-              className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${initiative.bg}`}
+              className={cn(
+                'w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-white/50 group-hover:scale-110',
+                initiative.bg
+              )}
             >
-              <Icon className={`w-8 h-8 ${initiative.color}`} />
+              <Icon className={cn('w-8 h-8', initiative.color)} />
             </div>
-            <h3 className="text-2xl font-bold text-foreground mb-3 transition-transform duration-300 group-hover:scale-105">
+            <h3 className="text-2xl font-bold text-foreground mb-3 transition-colors duration-300 group-hover:text-white">
               {initiative.title}
             </h3>
-            <p className="text-foreground/70 mb-4">{initiative.description}</p>
-            <div className="flex items-center font-semibold text-accent group-hover:text-primary transition-colors">
+            <p className="text-foreground/70 mb-4 transition-colors duration-300 group-hover:text-white/80">{initiative.description}</p>
+            <div className="flex items-center font-semibold text-accent transition-colors duration-300 group-hover:text-white">
               Learn More
               <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
             </div>
