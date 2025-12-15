@@ -44,65 +44,82 @@ const Header = () => {
   const textShadow = 'drop-shadow(0 1px 2px rgba(255,255,255,0.4))';
   const navHoverColor = 'hover:bg-black/10';
 
-  const NavLinks = ({ isMobile = false }) => {
-    const Wrapper = isMobile ? SheetClose : React.Fragment;
-    const wrapperProps = isMobile ? { asChild: true } : {};
-
+  const NavLinks = ({
+    isMobile = false,
+    onLinkClick,
+  }: {
+    isMobile?: boolean;
+    onLinkClick?: () => void;
+  }) => {
+    const handleScrollTo = (id: string) => {
+      scrollTo(id);
+      if (onLinkClick) onLinkClick();
+    };
     return (
       <>
-        <Wrapper {...wrapperProps}>
+        <Button
+          variant="ghost"
+          onClick={() => handleScrollTo('home')}
+          className={cn(
+            navTextColor,
+            navHoverColor,
+            isMobile && 'w-full justify-start'
+          )}
+          style={{ filter: isScrolled ? 'none' : textShadow }}
+        >
+          Home
+        </Button>
+        <Button
+          variant="ghost"
+          onClick={() => handleScrollTo('about')}
+          className={cn(
+            navTextColor,
+            navHoverColor,
+            isMobile && 'w-full justify-start'
+          )}
+          style={{ filter: isScrolled ? 'none' : textShadow }}
+        >
+          About
+        </Button>
+        <Link href="/program" passHref>
           <Button
             variant="ghost"
-            onClick={() => scrollTo('home')}
-            className={cn(navTextColor, navHoverColor, isMobile && 'w-full justify-start')}
-            style={{ filter: isScrolled ? 'none' : textShadow }}
-          >
-            Home
-          </Button>
-        </Wrapper>
-        <Wrapper {...wrapperProps}>
-          <Button
-            variant="ghost"
-            onClick={() => scrollTo('about')}
-            className={cn(navTextColor, navHoverColor, isMobile && 'w-full justify-start')}
-            style={{ filter: isScrolled ? 'none' : textShadow }}
-          >
-            About
-          </Button>
-        </Wrapper>
-         <Wrapper {...wrapperProps}>
-          <Link href="/program" className={cn(isMobile && 'w-full')}>
-            <Button
-              variant="ghost"
-              className={cn(navTextColor, navHoverColor, 'w-full justify-start')}
-              style={{ filter: isScrolled ? 'none' : textShadow }}
-            >
-              Programs
-            </Button>
-          </Link>
-        </Wrapper>
-        <Wrapper {...wrapperProps}>
-          <Button
-            onClick={() => scrollTo('contact')}
             className={cn(
-              'border',
-              'border-[#03110d]/50 bg-black/5 text-[#03110d] hover:bg-black/10',
-              isMobile && 'w-full justify-start'
+              navTextColor,
+              navHoverColor,
+              'w-full',
+              isMobile && 'justify-start'
             )}
             style={{ filter: isScrolled ? 'none' : textShadow }}
+            onClick={onLinkClick}
           >
-            Contact
+            Programs
           </Button>
-        </Wrapper>
+        </Link>
+        <Button
+          onClick={() => handleScrollTo('contact')}
+          className={cn(
+            'border',
+            'border-[#03110d]/50 bg-black/5 text-[#03110d] hover:bg-black/10',
+            isMobile && 'w-full justify-start'
+          )}
+          style={{ filter: isScrolled ? 'none' : textShadow }}
+        >
+          Contact
+        </Button>
       </>
     );
   };
+
+  const [isSheetOpen, setIsSheetOpen] = React.useState(false);
 
   return (
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 transition-all duration-300',
-        isScrolled ? 'bg-background/80 backdrop-blur-md shadow-md' : 'bg-transparent'
+        isScrolled
+          ? 'bg-background/80 backdrop-blur-md shadow-md'
+          : 'bg-transparent'
       )}
     >
       <Link href="/" className="flex items-center gap-3 font-bold text-xl">
@@ -124,13 +141,13 @@ const Header = () => {
         <NavLinks />
       </nav>
       <div className="md:hidden">
-        <Sheet>
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
             <Button
               variant="ghost"
               size="icon"
               className={cn(navTextColor, navHoverColor)}
-               style={{ filter: isScrolled ? 'none' : textShadow }}
+              style={{ filter: isScrolled ? 'none' : textShadow }}
             >
               <Menu className="h-6 w-6" />
               <span className="sr-only">Open menu</span>
@@ -138,7 +155,10 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent side="right" className="w-[250px] bg-background">
             <div className="flex flex-col gap-4 pt-10">
-              <NavLinks isMobile={true} />
+              <NavLinks
+                isMobile={true}
+                onLinkClick={() => setIsSheetOpen(false)}
+              />
             </div>
           </SheetContent>
         </Sheet>
