@@ -26,6 +26,7 @@ export default function Home() {
   const challengeImage = PlaceHolderImages.find(
     (img) => img.id === 'challenge'
   );
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-sketch');
 
   const initiatives = [
     {
@@ -116,13 +117,15 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <section id="home" className="relative h-screen overflow-hidden">
-          <video
-            src="/videos/hero-background.mp4"
-            autoPlay
-            loop
-            muted
-            className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          />
+          {heroImage && (
+            <Image
+              src={heroImage.imageUrl}
+              alt={heroImage.description}
+              fill
+              className="absolute top-0 left-0 w-full h-full object-contain z-0"
+              data-ai-hint={heroImage.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-black/40 z-0"></div>
           <div className="container mx-auto h-full flex flex-col items-center justify-center text-center text-white relative z-10">
             <div className="flex flex-col gap-6">
@@ -416,3 +419,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
