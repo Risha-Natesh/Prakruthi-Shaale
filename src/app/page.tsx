@@ -16,11 +16,18 @@ import {
   MapPin,
   ArrowRight,
 } from 'lucide-react';
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 export default function Home() {
   const challengeImage = PlaceHolderImages.find(
@@ -74,7 +81,7 @@ export default function Home() {
     const Icon = initiative.icon;
 
     return (
-      <Link href={initiative.href} className="group block">
+      <Link href={initiative.href} className="group block h-full">
         <div
           ref={ref}
           className={cn(
@@ -347,14 +354,31 @@ export default function Home() {
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
               We offer a range of programs to foster sustainability and community impact. Explore our initiatives to get involved.
             </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {initiatives.map((initiative) => (
-                <InitiativeCard
-                  key={initiative.title}
-                  initiative={initiative}
-                />
-              ))}
-            </div>
+            <Carousel
+              opts={{
+                align: 'start',
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: true,
+                }),
+              ]}
+              className="w-full max-w-4xl mx-auto"
+            >
+              <CarouselContent>
+                {initiatives.map((initiative) => (
+                  <CarouselItem key={initiative.title} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                      <InitiativeCard initiative={initiative} />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </section>
 
@@ -420,3 +444,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
