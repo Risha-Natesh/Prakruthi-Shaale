@@ -29,10 +29,11 @@ export default function Home() {
 
   const events = [
     {
-      title: 'Community Tree Planting Day',
-      date: 'October 26, 2024',
+      title: 'Volunteer Day',
+      date: 'December 21, 2024',
       image: 'https://picsum.photos/seed/event1/600/400',
       aiHint: 'people planting trees',
+      href: '/program/community',
       colors: {
         bg: 'bg-green-100/30',
         glow1: 'bg-green-400/30',
@@ -45,6 +46,7 @@ export default function Home() {
       date: 'November 9, 2024',
       image: 'https://picsum.photos/seed/event2/600/400',
       aiHint: 'kids science experiment',
+      href: '#',
       colors: {
         bg: 'bg-blue-100/30',
         glow1: 'bg-blue-400/30',
@@ -57,6 +59,7 @@ export default function Home() {
       date: 'November 22, 2024',
       image: 'https://picsum.photos/seed/event3/600/400',
       aiHint: 'team cleaning lake',
+      href: '#',
       colors: {
         bg: 'bg-yellow-100/30',
         glow1: 'bg-yellow-400/30',
@@ -327,7 +330,7 @@ export default function Home() {
                     <h3 className={cn("text-xl font-bold mb-2 flex-grow", event.colors.text)}>
                       {event.title}
                     </h3>
-                    <Link href="#" className={cn("font-semibold flex items-center mt-auto", event.colors.text, 'group-hover:underline')}>
+                    <Link href={event.href} className={cn("font-semibold flex items-center mt-auto", event.colors.text, 'group-hover:underline')}>
                       Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </div>
