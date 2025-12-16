@@ -120,25 +120,27 @@ export default function CorporatePage() {
             </div>
 
             <div className="mb-12 p-8 rounded-lg bg-secondary/30">
-              <h3 className="text-3xl font-bold text-accent mb-4 text-center">
-                A Heritage Campus That Inspires Teams
-              </h3>
-              <p className="text-foreground/80 mb-6 text-center">
-                Located at the historic residence of Nobel Laureate Sir C. V.
-                Raman, Prakruthi Shaale is spread across 2.28 acres of green
-                open space in Malleswaram, Bengaluru. The campus offers a rare
-                combination of:
-              </p>
-              <ul className="list-decimal list-inside space-y-2 text-foreground/80 max-w-2xl mx-auto">
-                <li>Heritage and scientific legacy</li>
-                <li>Nature-rich open environments</li>
-                <li>Quiet, reflective spaces within the city</li>
-                <li>Safe and accessible location for corporate teams</li>
-              </ul>
-              <p className="text-foreground/80 mt-6 text-center">
-                This setting allows teams to disconnect from routine workspaces
-                and reconnect with purpose, people, and nature.
-              </p>
+              <div className="max-w-3xl mx-auto">
+                <h3 className="text-3xl font-bold text-accent mb-4">
+                  A Heritage Campus That Inspires Teams
+                </h3>
+                <p className="text-foreground/80 mb-6">
+                  Located at the historic residence of Nobel Laureate Sir C. V.
+                  Raman, Prakruthi Shaale is spread across 2.28 acres of green
+                  open space in Malleswaram, Bengaluru. The campus offers a rare
+                  combination of:
+                </p>
+                <ul className="list-decimal list-outside space-y-2 text-foreground/80 pl-5">
+                  <li>Heritage and scientific legacy</li>
+                  <li>Nature-rich open environments</li>
+                  <li>Quiet, reflective spaces within the city</li>
+                  <li>Safe and accessible location for corporate teams</li>
+                </ul>
+                <p className="text-foreground/80 mt-6">
+                  This setting allows teams to disconnect from routine workspaces
+                  and reconnect with purpose, people, and nature.
+                </p>
+              </div>
             </div>
 
             <div className="mb-12">
