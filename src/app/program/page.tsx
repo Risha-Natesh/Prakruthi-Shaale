@@ -302,8 +302,10 @@ export default function ProgramPage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <div className="flex justify-center gap-4 mt-8">
+                <CarouselPrevious className="relative top-auto left-auto" />
+                <CarouselNext className="relative top-auto right-auto" />
+              </div>
             </Carousel>
           </div>
         </section>
