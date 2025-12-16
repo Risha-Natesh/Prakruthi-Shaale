@@ -118,7 +118,7 @@ export default function ProgramPage() {
       href: '/program/partnerships',
       color: 'text-purple-800',
       bg: 'bg-purple-400',
-      image: '/Images/partnerships.jpg',
+      image: '/Images/partner.jpg',
     },
   ];
 
