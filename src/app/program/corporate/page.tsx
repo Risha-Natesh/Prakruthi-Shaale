@@ -7,18 +7,18 @@ import {
   ArrowLeft,
   Briefcase,
   Users,
-  Zap,
-  BookOpen,
   Award,
   Sparkles,
-  BarChart,
-  Target,
-  Calendar,
-  Building,
-  HeartHandshake,
-  TrendingUp,
   CheckCircle,
+  Calendar,
 } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function CorporatePage() {
   const engagementModels = [
@@ -34,7 +34,7 @@ export default function CorporatePage() {
       icon: Users,
       title: 'Cross-functional team engagement programs',
     },
-     {
+    {
       icon: Award,
       title: 'Sustainability-themed experiential days',
     },
@@ -51,26 +51,26 @@ export default function CorporatePage() {
     'Stronger connection to sustainability and ESG goals',
     'Memorable experiences that strengthen organizational culture',
   ];
-  
+
   const idealFor = [
-      "Corporate offsites and team outings",
-      "Leadership and management development days",
-      "ESG and sustainability engagement initiatives",
-      "CSR-linked employee volunteering days",
-      "Wellness and employee engagement programs"
-  ]
-  
+    'Corporate offsites and team outings',
+    'Leadership and management development days',
+    'ESG and sustainability engagement initiatives',
+    'CSR-linked employee volunteering days',
+    'Wellness and employee engagement programs',
+  ];
+
   const engagementProcess = [
-      "Objective and team requirement discussion",
-      "Custom experience design",
-      "On-ground facilitation by trained professionals",
-      "Guided reflection and learning integration",
-      "Optional feedback and impact summary"
-  ]
+    'Objective and team requirement discussion',
+    'Custom experience design',
+    'On-ground facilitation by trained professionals',
+    'Guided reflection and learning integration',
+    'Optional feedback and impact summary',
+  ];
 
   const handleContactScroll = () => {
     window.location.href = '/#contact';
-  }
+  };
 
   return (
     <div className="bg-background text-foreground">
@@ -89,7 +89,7 @@ export default function CorporatePage() {
               Purpose-Driven Team Experiences
             </h1>
             <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl">
-             Aligned with ESG & Sustainability Goals
+              Aligned with ESG & Sustainability Goals
             </p>
           </div>
         </div>
@@ -105,10 +105,17 @@ export default function CorporatePage() {
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center">
               <p className="text-lg text-foreground/80">
-                Prakruthi Shaale offers corporate team engagement and offsite experiences aligned with ESG priorities, sustainability goals, and employee wellbeing frameworks. Our programs combine team building, leadership development, and environmental awareness, enabling organizations to engage their teams meaningfully while reinforcing responsible business values.
+                Prakruthi Shaale offers corporate team engagement and offsite
+                experiences aligned with ESG priorities, sustainability goals,
+                and employee wellbeing frameworks.
               </p>
               <p className="text-lg text-foreground/80 mt-4">
-                Designed as day-out and short-format engagements, Prakruthi Shaale helps organizations translate sustainability commitments into hands-on, memorable team experiences.
+                Our programs combine team building, leadership development, and
+                environmental awareness, enabling organizations to engage their
+                teams meaningfully while reinforcing responsible business
+                values. Designed as day-out and short-format engagements,
+                Prakruthi Shaale helps organizations translate sustainability
+                commitments into hands-on, memorable team experiences.
               </p>
             </div>
 
@@ -117,7 +124,10 @@ export default function CorporatePage() {
                 A Heritage Campus That Inspires Teams
               </h3>
               <p className="text-foreground/80 mb-6 text-center">
-                Located at the historic residence of Nobel Laureate Sir C. V. Raman, Prakruthi Shaale is spread across 2.28 acres of green open space in Malleswaram, Bengaluru. The campus offers a rare combination of:
+                Located at the historic residence of Nobel Laureate Sir C. V.
+                Raman, Prakruthi Shaale is spread across 2.28 acres of green
+                open space in Malleswaram, Bengaluru. The campus offers a rare
+                combination of:
               </p>
               <ul className="list-decimal list-inside space-y-2 text-foreground/80 max-w-2xl mx-auto">
                 <li>Heritage and scientific legacy</li>
@@ -125,8 +135,9 @@ export default function CorporatePage() {
                 <li>Quiet, reflective spaces within the city</li>
                 <li>Safe and accessible location for corporate teams</li>
               </ul>
-               <p className="text-foreground/80 mt-6 text-center">
-                This setting allows teams to disconnect from routine workspaces and reconnect with purpose, people, and nature.
+              <p className="text-foreground/80 mt-6 text-center">
+                This setting allows teams to disconnect from routine workspaces
+                and reconnect with purpose, people, and nature.
               </p>
             </div>
 
@@ -134,8 +145,9 @@ export default function CorporatePage() {
               <h3 className="text-3xl font-bold text-accent mb-6 text-center">
                 Corporate Engagement Models
               </h3>
-               <p className="text-foreground/80 mb-6 text-center">
-                Prakruthi Shaale offers customizable day-out packages designed around organizational objectives:
+              <p className="text-foreground/80 mb-6 text-center">
+                Prakruthi Shaale offers customizable day-out packages designed
+                around organizational objectives:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
                 {engagementModels.map((model, index) => (
@@ -150,36 +162,45 @@ export default function CorporatePage() {
                   </div>
                 ))}
               </div>
-               <p className="text-foreground/80 mt-6 font-semibold text-center">
-                Each engagement is co-designed to reflect team size, learning goals, and corporate values.
+              <p className="text-foreground/80 mt-6 font-semibold text-center">
+                Each engagement is co-designed to reflect team size, learning
+                goals, and corporate values.
               </p>
             </div>
 
-             <div className="mb-12 text-center p-8 rounded-lg bg-secondary/30">
-                <h3 className="text-3xl font-bold text-accent mb-4">Our Experiential Approach</h3>
-                <p className="text-2xl font-semibold text-foreground/80 mb-4">
-                  Experience → Reflection → Collaboration → Action
-                </p>
-                 <p className="text-foreground/80 mb-4">Teams participate in:</p>
-                <ul className="list-decimal list-inside space-y-2 text-foreground/80 max-w-2xl mx-auto text-left">
-                  <li>Outdoor and nature-based challenges</li>
-                  <li>Problem-solving and collaborative activities</li>
-                  <li>Guided reflection and facilitated discussions</li>
-                  <li>Learning sessions linked to workplace application</li>
-                </ul>
-                <p className="text-foreground/80 max-w-3xl mx-auto mt-4">This ensures experiences are not just enjoyable, but impactful and transferable to the workplace.</p>
-             </div>
+            <div className="mb-12 text-center p-8 rounded-lg bg-secondary/30">
+              <h3 className="text-3xl font-bold text-accent mb-4">
+                Our Experiential Approach
+              </h3>
+              <p className="text-2xl font-semibold text-foreground/80 mb-4">
+                Experience → Reflection → Collaboration → Action
+              </p>
+              <p className="text-foreground/80 mb-4">Teams participate in:</p>
+              <ul className="list-decimal list-inside space-y-2 text-foreground/80 max-w-2xl mx-auto text-left">
+                <li>Outdoor and nature-based challenges</li>
+                <li>Problem-solving and collaborative activities</li>
+                <li>Guided reflection and facilitated discussions</li>
+                <li>Learning sessions linked to workplace application</li>
+              </ul>
+              <p className="text-foreground/80 max-w-3xl mx-auto mt-4">
+                This ensures experiences are not just enjoyable, but impactful
+                and transferable to the workplace.
+              </p>
+            </div>
 
             <div className="mb-12">
               <h3 className="text-3xl font-bold text-accent mb-6 text-center">
                 Outcomes for Organizations & Teams
               </h3>
-               <p className="text-foreground/80 mb-6 text-center">
+              <p className="text-foreground/80 mb-6 text-center">
                 Corporates consistently report:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {outcomes.map((outcome, index) => (
-                  <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-accent/10">
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-4 rounded-lg bg-accent/10"
+                  >
                     <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
                     <span>{outcome}</span>
                   </div>
@@ -188,33 +209,66 @@ export default function CorporatePage() {
             </div>
 
             <div className="mb-12 text-center">
-              <h3 className="text-3xl font-bold text-accent mb-4">Activities as Flexible Add-Ons</h3>
+              <h3 className="text-3xl font-bold text-accent mb-4">
+                Activities as Flexible Add-Ons
+              </h3>
               <p className="text-lg text-foreground/80">
-                Prakruthi Shaale offers a range of optional activity modules that organizations may choose as add-ons based on team preferences and objectives. These modules are presented as flexible components, allowing organizations to curate a day that aligns with their culture—without rigid packages.
+                Prakruthi Shaale offers a range of optional activity modules
+                that organizations may choose as add-ons based on team
+                preferences and objectives. These modules are presented as
+                flexible components, allowing organizations to curate a day
+                that aligns with their culture—without rigid packages.
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="p-8 rounded-lg bg-secondary/30">
-                <h3 className="text-2xl font-bold text-accent mb-4 text-center">Ideal For</h3>
-                <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                  {idealFor.map(item => <li key={item}>{item}</li>)}
-                </ul>
-              </div>
-              <div className="p-8 rounded-lg bg-secondary/30">
-                <h3 className="text-2xl font-bold text-accent mb-4 text-center">Our Engagement Process</h3>
-                <ul className="list-decimal list-inside space-y-2 text-foreground/80">
-                  {engagementProcess.map(item => <li key={item}>{item}</li>)}
-                </ul>
-              </div>
-            </div>
+
+            <Carousel
+              opts={{
+                align: 'start',
+                loop: true,
+              }}
+              className="w-full max-w-4xl mx-auto"
+            >
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="p-1">
+                    <div className="p-8 rounded-lg bg-secondary/30 h-full">
+                      <h3 className="text-2xl font-bold text-accent mb-4 text-center">
+                        Ideal For
+                      </h3>
+                      <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                        {idealFor.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="p-1">
+                    <div className="p-8 rounded-lg bg-secondary/30 h-full">
+                      <h3 className="text-2xl font-bold text-accent mb-4 text-center">
+                        Our Engagement Process
+                      </h3>
+                      <ul className="list-decimal list-inside space-y-2 text-foreground/80">
+                        {engagementProcess.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
 
             <div className="text-center mt-16 p-8 rounded-lg bg-accent/10">
               <h2 className="text-3xl font-bold text-accent mb-4">
                 Bring Your Teams Together—With Purpose
               </h2>
               <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
-                Discover how Prakruthi Shaale can create meaningful, memorable, and values-driven team experiences for your organization.
+                Discover how Prakruthi Shaale can create meaningful, memorable,
+                and values-driven team experiences for your organization.
               </p>
               <Button size="lg" onClick={handleContactScroll}>
                 Contact Us to Learn More
