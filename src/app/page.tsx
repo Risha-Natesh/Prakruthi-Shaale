@@ -31,7 +31,6 @@ export default function Home() {
     {
       title: 'Community Tree Planting Day',
       date: 'October 26, 2024',
-      description: 'Join us for a community-wide tree planting event to help restore local green spaces. All ages welcome!',
       image: 'https://picsum.photos/seed/event1/600/400',
       aiHint: 'people planting trees',
       colors: {
@@ -41,12 +40,11 @@ export default function Home() {
         glow2: 'bg-lime-400/30',
         text: 'text-green-800',
         hoverText: 'text-white',
-      }
+      },
     },
     {
       title: 'Youth Workshop: Wonders of Water',
       date: 'November 9, 2024',
-      description: 'An interactive workshop for kids aged 8-12 to learn about water conservation through fun experiments.',
       image: 'https://picsum.photos/seed/event2/600/400',
       aiHint: 'kids science experiment',
       colors: {
@@ -56,12 +54,11 @@ export default function Home() {
         glow2: 'bg-cyan-400/30',
         text: 'text-blue-800',
         hoverText: 'text-white',
-      }
+      },
     },
     {
       title: 'Corporate Volunteer Day at the Lake',
       date: 'November 22, 2024',
-      description: 'Partner with us for a day of team-building and environmental impact as we clean up a local lake.',
       image: 'https://picsum.photos/seed/event3/600/400',
       aiHint: 'team cleaning lake',
       colors: {
@@ -71,7 +68,7 @@ export default function Home() {
         glow2: 'bg-orange-400/30',
         text: 'text-yellow-800',
         hoverText: 'text-white',
-      }
+      },
     },
   ];
 
@@ -312,7 +309,7 @@ export default function Home() {
 
         <section id="live" className="py-20">
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: '#889063' }}>
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-500 to-lime-400 bg-clip-text text-transparent">
               What's Live
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
