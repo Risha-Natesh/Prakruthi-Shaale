@@ -10,10 +10,12 @@ import {
   Award,
   BookOpen,
   Telescope,
-  Heart,
   ShieldCheck,
   Building,
   Feather,
+  GraduationCap,
+  School,
+  PersonStanding,
 } from 'lucide-react';
 
 export default function YouthPage() {
@@ -68,6 +70,24 @@ export default function YouthPage() {
         'Programs executed by experienced facilitators from Outdoor Dynamix.',
     },
   ];
+  
+  const whoCanParticipate = [
+    {
+      icon: PersonStanding,
+      title: 'Spectrum Junior',
+      description: 'For students in 1st to 7th grade',
+    },
+    {
+      icon: School,
+      title: 'Spectrum Senior',
+      description: 'For students in 7th to 12th grade',
+    },
+    {
+      icon: GraduationCap,
+      title: 'Youth & College Students',
+      description: 'For college-level and young adult participants',
+    }
+  ];
 
   return (
     <div className="bg-background text-foreground">
@@ -116,6 +136,27 @@ export default function YouthPage() {
               </p>
             </div>
 
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-accent mb-6 text-center">
+                Who Can Participate
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                {whoCanParticipate.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="p-6 rounded-lg bg-secondary/30 flex flex-col items-center justify-center"
+                    >
+                      <Icon className="w-10 h-10 mb-3 text-accent" />
+                      <h4 className="font-bold text-lg text-accent/90">{item.title}</h4>
+                      <p className="text-foreground/80">{item.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
             <div className="mb-12 p-8 rounded-lg bg-secondary/30">
               <h3 className="text-2xl font-bold text-accent mb-4 text-center">
                 What Families Can Expect
@@ -124,20 +165,17 @@ export default function YouthPage() {
                 At Prakruthi Shaale, learning happens through doing, exploring,
                 and experiencing. Children and youth engage in:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                 {whatToExpect.map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 p-3 rounded-lg"
-                    >
+                    <li key={index} className="flex items-center gap-3">
                       <Icon className="w-6 h-6 text-accent flex-shrink-0" />
                       <span>{item.text}</span>
-                    </div>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
               <p className="text-foreground/80 mt-6 text-center">
                 All programs are facilitated by trained outdoor educators,
                 ensuring a safe, inclusive, and inspiring environment.
