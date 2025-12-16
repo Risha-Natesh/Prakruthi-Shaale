@@ -195,9 +195,12 @@ export default function CorporatePage() {
             </div>
             
             <div className="text-center mt-16">
-              <p className="text-foreground/70 italic text-sm max-w-2xl mx-auto">
+              <p className="text-foreground/70 italic text-sm max-w-2xl mx-auto mb-6">
                 Information about upcoming events and workshops will be posted here. For bespoke programs and collaborations, please feel free to reach out to us directly.
               </p>
+              <Link href="/program/partnerships">
+                <Button>Explore Strategic Partnerships</Button>
+              </Link>
             </div>
           </div>
         </div>
