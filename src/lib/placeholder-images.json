@@ -21,8 +21,8 @@
     {
       "id": "challenge",
       "description": "A split image showing environmental threats on one side and a group of empowered youth on the other.",
-      "imageUrl": "/Images/solution.jpg",
-      "imageHint": "environment youth"
+      "imageUrl": "/Images/diff.jpg",
+      "imageHint": "people planting trees"
     },
     {
       "id": "approach",
