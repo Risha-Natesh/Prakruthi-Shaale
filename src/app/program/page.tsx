@@ -78,7 +78,7 @@ export default function ProgramPage() {
     },
     {
       icon: Zap,
-      title: 'Corporate Partnership Program',
+      title: 'Corporate Program',
       description:
         'Partner with us to create impactful environmental and team-building experiences.',
       href: '/program/corporate',
