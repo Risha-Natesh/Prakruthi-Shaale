@@ -87,7 +87,7 @@ export default function ProgramPage() {
         'Engaging the next generation with hands-on nature and science programs.',
       href: '/program/youth',
       color: 'text-green-800',
-      bg: 'bg-green-300',
+      bg: 'bg-green-400',
       image: '/Images/kids - Copy.jpg',
     },
     {
@@ -107,7 +107,7 @@ export default function ProgramPage() {
         'Join our volunteer efforts to make a tangible difference in our community.',
       href: '/program/community',
       color: 'text-yellow-800',
-      bg: 'bg-yellow-300',
+      bg: 'bg-yellow-400',
       image: '/Images/volunteer.jpg',
     },
   ];
