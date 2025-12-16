@@ -249,7 +249,7 @@ export default function CorporatePage() {
                       <h3 className="text-2xl font-bold text-accent mb-4 text-center">
                         Our Engagement Process
                       </h3>
-                      <ul className="list-decimal list-inside space-y-2 text-foreground/80">
+                      <ul className="list-disc list-inside space-y-2 text-foreground/80">
                         {engagementProcess.map((item) => (
                           <li key={item}>{item}</li>
                         ))}
