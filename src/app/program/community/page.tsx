@@ -15,6 +15,7 @@ import {
   Sparkles,
   Award,
   BookOpen,
+  Calendar,
 } from 'lucide-react';
 
 export default function CommunityPage() {
@@ -231,12 +232,12 @@ export default function CommunityPage() {
 
             <div className="text-center p-8 rounded-lg bg-accent/10">
                  <h2 className="text-3xl font-bold text-accent mb-4">
-                Join the Community Volunteering Program
+                Upcoming Event
               </h2>
                <p className="text-lg text-foreground/80 mb-6">
-                Whether you are an individual looking to give back, a group seeking meaningful engagement, or an organization aiming to support community development, Prakruthi Shaale offers a platform to serve, learn, and grow together.
+                Join our Community Tree Planting Day on October 26, 2024! Let's make our neighborhood greener together.
               </p>
-               <Button size="lg">Be Part of the Change</Button>
+               <Button size="lg">Register Now</Button>
             </div>
 
           </div>
