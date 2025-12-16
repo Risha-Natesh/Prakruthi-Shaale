@@ -216,9 +216,17 @@ export default function CommunityPage() {
                 {outcomes.map((outcome, index) => {
                   const Icon = outcome.icon;
                   return (
-                    <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30">
-                      <Icon className="w-6 h-6 text-accent flex-shrink-0" />
-                      <span>{outcome.text}</span>
+                    <div
+                      key={index}
+                      className="relative group rounded-xl overflow-hidden p-0.5"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-lime-400/30 blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
+                      <div className="relative flex items-center gap-3 p-4 rounded-lg bg-background/80 backdrop-blur-md h-full">
+                        <Icon
+                          className="w-6 h-6 text-accent flex-shrink-0"
+                        />
+                        <span>{outcome.text}</span>
+                      </div>
                     </div>
                   );
                 })}
