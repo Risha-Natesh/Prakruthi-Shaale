@@ -11,6 +11,9 @@ import {
   Leaf,
   HeartHandshake,
   ArrowRight,
+  Wind,
+  Zap,
+  Hand,
 } from 'lucide-react';
 import {
   Carousel,
@@ -64,7 +67,7 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
 export default function ProgramPage() {
   const initiatives = [
     {
-      icon: Leaf,
+      icon: Wind,
       title: 'Youth Environmental Program',
       description:
         'Engaging the next generation with hands-on nature and science programs.',
@@ -74,7 +77,7 @@ export default function ProgramPage() {
       image: '/Images/kids - Copy.jpg',
     },
     {
-      icon: Users,
+      icon: Zap,
       title: 'Corporate Partnership Program',
       description:
         'Partner with us to create impactful environmental and team-building experiences.',
@@ -84,7 +87,7 @@ export default function ProgramPage() {
       image: '/Images/co-op.jpg',
     },
     {
-      icon: HeartHandshake,
+      icon: Hand,
       title: 'Community Volunteer Program',
       description:
         'Join our volunteer efforts to make a tangible difference in our community.',
