@@ -194,14 +194,10 @@ export default function CorporatePage() {
               </div>
             </div>
             
-            <div className="text-center p-8 rounded-lg bg-accent/10">
-              <h3 className="text-3xl font-bold text-accent mb-4">
-                Let’s Co-Create Meaningful Experiences
-              </h3>
-              <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
-                Connect with us to explore how Prakruthi Shaale can support your organization’s goals—whether for employee engagement, leadership development, CSR initiatives, or educational excellence.
+            <div className="text-center mt-16">
+              <p className="text-foreground/70 italic text-sm max-w-2xl mx-auto">
+                Information about upcoming events and workshops will be posted here. For bespoke programs and collaborations, please feel free to reach out to us directly.
               </p>
-              <Button size="lg">Partner with Us</Button>
             </div>
           </div>
         </div>
