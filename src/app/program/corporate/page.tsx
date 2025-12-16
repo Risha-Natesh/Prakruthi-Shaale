@@ -151,16 +151,18 @@ export default function CorporatePage() {
                 Prakruthi Shaale offers customizable day-out packages designed
                 around organizational objectives:
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {engagementModels.map((model, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center p-6 rounded-lg bg-accent/10 shadow-md"
+                    className="flex items-center gap-4 p-4 rounded-lg bg-accent/10 border border-accent/20"
                   >
-                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-3">
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                       <model.icon className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-bold text-lg">{model.title}</h4>
+                    <h4 className="font-semibold text-lg text-accent/90">
+                      {model.title}
+                    </h4>
                   </div>
                 ))}
               </div>
