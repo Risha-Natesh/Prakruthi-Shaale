@@ -15,53 +15,39 @@ import {
   Mail,
   MapPin,
   ArrowRight,
+  Calendar,
 } from 'lucide-react';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
 
 export default function Home() {
   const challengeImage = PlaceHolderImages.find(
     (img) => img.id === 'challenge'
   );
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-sketch');
 
-  const initiatives = [
+  const events = [
     {
-      icon: Leaf,
-      title: 'Kids Environmental Program',
-      description:
-        'Engaging the next generation with hands-on nature and science programs.',
-      href: '/program/youth',
-      color: 'text-green-800',
-      bg: 'bg-green-300/20',
+      title: 'Community Tree Planting Day',
+      date: 'October 26, 2024',
+      description: 'Join us for a community-wide tree planting event to help restore local green spaces. All ages welcome!',
+      image: 'https://picsum.photos/seed/event1/600/400',
+      aiHint: 'people planting trees',
     },
     {
-      icon: Users,
-      title: 'Corporate Partnership Program',
-      description:
-        'Partner with us to create impactful environmental and team-building experiences.',
-      href: '/program/corporate',
-      color: 'text-blue-800',
-      bg: 'bg-blue-300/20',
+      title: 'Youth Workshop: Wonders of Water',
+      date: 'November 9, 2024',
+      description: 'An interactive workshop for kids aged 8-12 to learn about water conservation through fun experiments.',
+      image: 'https://picsum.photos/seed/event2/600/400',
+      aiHint: 'kids science experiment',
     },
     {
-      icon: HeartHandshake,
-      title: 'Community Volunteer Program',
-      description:
-        'Join our volunteer efforts to make a tangible difference in our community.',
-      href: '/program/community',
-      color: 'text-amber-800',
-      bg: 'bg-amber-300/20',
+      title: 'Corporate Volunteer Day at the Lake',
+      date: 'November 22, 2024',
+      description: 'Partner with us for a day of team-building and environmental impact as we clean up a local lake.',
+      image: 'https://picsum.photos/seed/event3/600/400',
+      aiHint: 'team cleaning lake',
     },
   ];
 
@@ -72,52 +58,6 @@ export default function Home() {
   const { ref: missionRef, inView: missionInView } = useInView({
     threshold: 0.1,
   });
-
-  const InitiativeCard = ({ initiative }: { initiative: any }) => {
-    const { ref, inView } = useInView({
-      triggerOnce: true,
-      threshold: 0.1,
-    });
-    const Icon = initiative.icon;
-
-    return (
-      <Link href={initiative.href} className="group block h-full">
-        <div
-          ref={ref}
-          className={cn(
-            'relative h-full bg-card p-8 rounded-xl shadow-lg overflow-hidden transition-all duration-500 transform opacity-0',
-            inView ? 'opacity-100 translate-y-0' : 'translate-y-10',
-            'hover:shadow-2xl hover:-translate-y-2'
-          )}
-        >
-          <div
-            className={cn(
-              'absolute -top-8 -right-8 w-32 h-32 rounded-full transition-transform duration-500 group-hover:scale-[8]',
-              initiative.bg
-            )}
-          ></div>
-          <div className="relative z-10">
-            <div
-              className={cn(
-                'w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-white/50 group-hover:scale-110',
-                initiative.bg
-              )}
-            >
-              <Icon className={cn('w-8 h-8', initiative.color)} />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground mb-3 transition-colors duration-300 group-hover:text-white">
-              {initiative.title}
-            </h3>
-            <p className="text-foreground/70 mb-4 transition-colors duration-300 group-hover:text-white/80">{initiative.description}</p>
-            <div className="flex items-center font-semibold text-accent transition-colors duration-300 group-hover:text-white">
-              Learn More
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-            </div>
-          </div>
-        </div>
-      </Link>
-    );
-  };
 
   return (
     <div className="relative flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
@@ -346,39 +286,48 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="solution" className="py-20">
+        <section id="live" className="py-20">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl font-bold mb-4" style={{ color: '#889063' }}>
-              Our Solutions
+              What's Live
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
-              We offer a range of programs to foster sustainability and community impact. Explore our initiatives to get involved.
+              Stay updated with our latest events, workshops, and community activities.
             </p>
-            <Carousel
-              opts={{
-                align: 'start',
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                  stopOnInteraction: true,
-                }),
-              ]}
-              className="w-full max-w-4xl mx-auto"
-            >
-              <CarouselContent>
-                {initiatives.map((initiative) => (
-                  <CarouselItem key={initiative.title} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1 h-full">
-                      <InitiativeCard initiative={initiative} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {events.map((event, index) => (
+                <div
+                  key={index}
+                  className="bg-card rounded-lg shadow-lg overflow-hidden group transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                >
+                  <div className="relative h-56">
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={event.aiHint}
+                    />
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div className="p-6 text-left">
+                    <div className="flex items-center gap-2 text-sm text-accent mb-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{event.date}</span>
                     </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      {event.title}
+                    </h3>
+                    <p className="text-foreground/70 mb-4">
+                      {event.description}
+                    </p>
+                    <Link href="#" className="font-semibold text-accent flex items-center group-hover:underline">
+                      Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
