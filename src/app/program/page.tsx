@@ -161,13 +161,33 @@ export default function ProgramPage() {
       <main className="flex-1 pt-16">
         <section
           id="programs"
-          className="py-20 relative overflow-hidden"
-          style={{ backgroundColor: '#a7ad89' }}
+          className="py-20 relative overflow-hidden bg-[#E6EAE0]"
         >
-          <div className="absolute -top-20 -left-20 w-96 h-96 bg-green-300/30 rounded-full blur-3xl opacity-50"></div>
-          <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-lime-300/30 rounded-full blur-3xl opacity-50"></div>
+          <div className="absolute inset-0 z-0">
+            <svg
+              className="absolute left-0 top-0 h-full w-auto"
+              viewBox="0 0 400 600"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0 0 C50 100 150 100 200 200 C250 300 300 350 300 600 L0 600 Z"
+                fill="#A7AD89"
+                fillOpacity="0.4"
+              />
+              <path
+                d="M0 0 C40 120 120 150 180 250 C240 350 250 400 250 600 L0 600 Z"
+                fill="#889063"
+                fillOpacity="0.4"
+              />
+              <path
+                d="M0 0 C30 150 100 180 150 300 C200 420 200 500 200 600 L0 600 Z"
+                fill="#697254"
+                fillOpacity="0.4"
+              />
+            </svg>
+          </div>
 
-          <div className="container mx-auto relative">
+          <div className="container mx-auto relative z-10">
             <div
               ref={approachRef}
               className={cn(
