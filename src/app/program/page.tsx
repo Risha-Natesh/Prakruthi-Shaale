@@ -12,6 +12,7 @@ import {
   HeartHandshake,
   ArrowRight,
   Briefcase,
+  Building,
 } from 'lucide-react';
 import {
   Carousel,
@@ -91,7 +92,7 @@ export default function ProgramPage() {
       image: '/Images/kids - Copy.jpg',
     },
     {
-      icon: Briefcase,
+      icon: Building,
       title: 'Corporate Program',
       description:
         'Partner with us to create impactful environmental and team-building experiences.',
@@ -109,6 +110,16 @@ export default function ProgramPage() {
       color: 'text-yellow-800',
       bg: 'bg-yellow-400',
       image: '/Images/volunteer.jpg',
+    },
+    {
+      icon: Briefcase,
+      title: 'Strategic Partnerships',
+      description:
+        'Collaborate on for-profit ventures and sustainable business opportunities.',
+      href: '/program/partnerships',
+      color: 'text-purple-800',
+      bg: 'bg-purple-400',
+      image: '/Images/partnerships.jpg',
     },
   ];
 
@@ -323,3 +334,5 @@ export default function ProgramPage() {
     </div>
   );
 }
+
+    
