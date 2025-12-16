@@ -6,6 +6,10 @@ import Link from 'next/link';
 import { ArrowLeft, TrendingUp, Handshake, Target } from 'lucide-react';
 
 export default function PartnershipsPage() {
+  const handleContactScroll = () => {
+    window.location.href = '/#contact';
+  };
+
   return (
     <div className="bg-background text-foreground">
       <Header />
@@ -39,15 +43,15 @@ export default function PartnershipsPage() {
                 Driving Growth Through Collaboration
               </h2>
               <p className="text-lg text-foreground/80 mb-6">
-                Our Strategic Partnerships program is designed for businesses and entrepreneurs looking to collaborate on ventures that are both profitable and sustainable. We seek to align with partners who share our vision for a greener future and are interested in developing innovative business models.
+                Our Strategic Partnerships program is designed for businesses, social enterprises, and entrepreneurs looking to collaborate on ventures that are both profitable and sustainable. We seek to align with partners who share our vision for a greener future and are interested in developing innovative business models that create shared value.
               </p>
               
               <div className="space-y-4 text-foreground/80">
                 <p>
-                  This is a placeholder for more detailed information about partnership opportunities, investment models, and the benefits of collaborating with Prakruthi Shaale on for-profit initiatives.
+                  At Prakruthi Shaale, we believe that collaboration is key to scaling impact. We offer a unique platform for partners to leverage our heritage campus, community network, and educational expertise to co-create ventures in areas like eco-tourism, sustainable products, corporate wellness, and green technology.
                 </p>
                 <p>
-                  Information about past successful ventures and case studies will be shared here.
+                  We are open to various partnership models, including joint ventures, licensing agreements, and impact investments. Our goal is to build a robust ecosystem of purpose-driven organizations committed to making a tangible difference.
                 </p>
               </div>
             </div>
@@ -79,23 +83,24 @@ export default function PartnershipsPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Impact Investing</h4>
-                    <p className="text-sm text-foreground/70">Opportunities to invest in initiatives that deliver measurable impact.</p>
+                    <p className="text-sm text-foreground/70">Opportunities to invest in initiatives that deliver measurable social and environmental returns.</p>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-16">
-            <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent mb-8">Our Partners & Ventures</h2>
-            <div className="text-center text-foreground/70">
-              <p>Details about our current partners and joint ventures will be featured here soon.</p>
-            </div>
+          <div className="mt-16 text-center p-8 rounded-lg bg-accent/10">
+            <h2 className="text-3xl font-bold text-accent mb-4">Let's Build a Sustainable Future Together</h2>
+            <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
+              If your organization is passionate about driving sustainable change and is looking for a strategic partner to innovate and grow with, we would love to hear from you.
+            </p>
+            <Button size="lg" onClick={handleContactScroll}>
+              Contact Us to Discuss a Partnership
+            </Button>
           </div>
         </div>
       </main>
     </div>
   );
 }
-
-    
