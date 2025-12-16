@@ -132,7 +132,7 @@ export default function CorporatePage() {
                 {whyPartnerItems.map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col text-center items-center gap-4 p-6 rounded-lg bg-secondary/30"
+                    className="flex flex-col text-center items-center gap-4 p-6 rounded-lg bg-accent/10"
                   >
                     <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
                       <item.icon className="w-6 h-6 text-accent" />
