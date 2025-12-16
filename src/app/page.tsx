@@ -309,12 +309,9 @@ export default function Home() {
                       <Calendar className="w-4 h-4" />
                       <span>{event.date}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2 transition-colors duration-300 group-hover:text-white">
+                    <h3 className="text-xl font-bold text-foreground mb-2 transition-colors duration-300 group-hover:text-white flex-grow">
                       {event.title}
                     </h3>
-                    <p className="text-foreground/70 mb-4 flex-grow transition-colors duration-300 group-hover:text-white/80">
-                      {event.description}
-                    </p>
                     <Link href="#" className="font-semibold text-accent flex items-center mt-auto group-hover:text-white group-hover:underline">
                       Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
