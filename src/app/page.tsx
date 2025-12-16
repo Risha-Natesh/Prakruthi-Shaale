@@ -34,6 +34,14 @@ export default function Home() {
       description: 'Join us for a community-wide tree planting event to help restore local green spaces. All ages welcome!',
       image: 'https://picsum.photos/seed/event1/600/400',
       aiHint: 'people planting trees',
+      colors: {
+        bg: 'bg-green-100/30',
+        hoverBg: 'bg-green-500/70',
+        glow1: 'bg-green-400/30',
+        glow2: 'bg-lime-400/30',
+        text: 'text-green-800',
+        hoverText: 'text-white',
+      }
     },
     {
       title: 'Youth Workshop: Wonders of Water',
@@ -41,6 +49,14 @@ export default function Home() {
       description: 'An interactive workshop for kids aged 8-12 to learn about water conservation through fun experiments.',
       image: 'https://picsum.photos/seed/event2/600/400',
       aiHint: 'kids science experiment',
+      colors: {
+        bg: 'bg-blue-100/30',
+        hoverBg: 'bg-blue-500/70',
+        glow1: 'bg-blue-400/30',
+        glow2: 'bg-cyan-400/30',
+        text: 'text-blue-800',
+        hoverText: 'text-white',
+      }
     },
     {
       title: 'Corporate Volunteer Day at the Lake',
@@ -48,6 +64,14 @@ export default function Home() {
       description: 'Partner with us for a day of team-building and environmental impact as we clean up a local lake.',
       image: 'https://picsum.photos/seed/event3/600/400',
       aiHint: 'team cleaning lake',
+      colors: {
+        bg: 'bg-yellow-100/30',
+        hoverBg: 'bg-yellow-500/70',
+        glow1: 'bg-yellow-400/30',
+        glow2: 'bg-orange-400/30',
+        text: 'text-yellow-800',
+        hoverText: 'text-white',
+      }
     },
   ];
 
@@ -300,19 +324,19 @@ export default function Home() {
                   key={index}
                   className="group relative rounded-[3rem] overflow-hidden transform transition-all duration-500 hover:-translate-y-2"
                 >
-                   <div className="absolute inset-0 bg-card/50 backdrop-blur-xl transition-all duration-500 group-hover:bg-accent/70 shadow-inner"></div>
-                   <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl transition-all duration-500 group-hover:scale-150"></div>
-                   <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-secondary/20 rounded-full blur-2xl transition-all duration-700 group-hover:scale-150"></div>
+                   <div className={cn("absolute inset-0 backdrop-blur-xl transition-all duration-500 shadow-inner", event.colors.bg, `group-hover:${event.colors.hoverBg}`)}></div>
+                   <div className={cn("absolute -top-10 -right-10 w-32 h-32 rounded-full blur-2xl transition-all duration-500 group-hover:scale-150", event.colors.glow1)}></div>
+                   <div className={cn("absolute -bottom-10 -left-10 w-32 h-32 rounded-full blur-2xl transition-all duration-700 group-hover:scale-150", event.colors.glow2)}></div>
 
                   <div className="relative p-8 text-left z-10 flex flex-col h-full">
-                    <div className="flex items-center gap-2 text-sm text-accent mb-4 transition-colors duration-300 group-hover:text-white/90">
+                    <div className={cn("flex items-center gap-2 text-sm mb-4 transition-colors duration-300", event.colors.text, `group-hover:${event.colors.hoverText}`)}>
                       <Calendar className="w-4 h-4" />
                       <span>{event.date}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2 transition-colors duration-300 group-hover:text-white flex-grow">
+                    <h3 className={cn("text-xl font-bold mb-2 transition-colors duration-300 flex-grow", event.colors.text, `group-hover:${event.colors.hoverText}`)}>
                       {event.title}
                     </h3>
-                    <Link href="#" className="font-semibold text-accent flex items-center mt-auto group-hover:text-white group-hover:underline">
+                    <Link href="#" className={cn("font-semibold flex items-center mt-auto transition-colors duration-300", event.colors.text, `group-hover:${event.colors.hoverText}`, 'group-hover:underline')}>
                       Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </div>
