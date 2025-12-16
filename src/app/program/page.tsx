@@ -11,9 +11,6 @@ import {
   Leaf,
   HeartHandshake,
   ArrowRight,
-  Wind,
-  Zap,
-  Hand,
   Briefcase,
 } from 'lucide-react';
 import {
@@ -32,26 +29,34 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
   const Icon = initiative.icon;
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
-      <div className="flex flex-col gap-4 text-center md:text-left items-center md:items-start">
+      <div className="relative flex flex-col gap-4 text-center md:text-left items-center md:items-start">
         <div
           className={cn(
-            `w-16 h-16 rounded-full flex items-center justify-center mb-4`,
+            'absolute -top-1/4 -left-1/4 w-72 h-72 rounded-full opacity-20 blur-3xl',
             initiative.bg
           )}
-        >
-          <Icon className={`w-8 h-8 ${initiative.color}`} />
+        ></div>
+        <div className="relative z-10 w-full">
+          <div
+            className={cn(
+              `w-16 h-16 rounded-full flex items-center justify-center mb-4`,
+              initiative.bg
+            )}
+          >
+            <Icon className={`w-8 h-8 ${initiative.color}`} />
+          </div>
+          <h3 className="text-3xl font-bold text-foreground">
+            {initiative.title}
+          </h3>
+          <p className="text-foreground/70 text-lg mt-2">
+            {initiative.description}
+          </p>
+          <Link href={initiative.href} passHref>
+            <Button className="mt-4">
+              Learn More <ArrowRight className="ml-2" />
+            </Button>
+          </Link>
         </div>
-        <h3 className="text-3xl font-bold text-foreground">
-          {initiative.title}
-        </h3>
-        <p className="text-foreground/70 text-lg">
-          {initiative.description}
-        </p>
-        <Link href={initiative.href} passHref>
-          <Button>
-            Learn More <ArrowRight className="ml-2" />
-          </Button>
-        </Link>
       </div>
       <div className="h-80 relative rounded-lg overflow-hidden shadow-lg">
         <Image
