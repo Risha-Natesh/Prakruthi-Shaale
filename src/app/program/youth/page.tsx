@@ -6,61 +6,66 @@ import Link from 'next/link';
 import {
   ArrowLeft,
   Users,
-  HeartHandshake,
-  Lightbulb,
-  CheckCircle,
-  Building,
-  User,
-  School,
   Sparkles,
   Award,
   BookOpen,
-  Wind,
   Telescope,
-  Microscope,
-  Calendar,
+  Heart,
+  ShieldCheck,
+  Building,
+  Feather,
 } from 'lucide-react';
 
 export default function YouthPage() {
-  const whoCanParticipate = [
+  const whatToExpect = [
     {
-      icon: User,
-      text: 'Individuals and families',
+      icon: Feather,
+      text: 'Hands-on outdoor activities',
+    },
+    {
+      icon: Telescope,
+      text: 'Nature exploration and observation',
+    },
+    {
+      icon: Sparkles,
+      text: 'Creative expression and problem-solving',
     },
     {
       icon: Users,
-      text: 'Youth and student groups',
+      text: 'Teamwork, communication, and leadership building',
     },
     {
-      icon: School,
-      text: 'Schools and colleges',
+      icon: BookOpen,
+      text: 'Environmental awareness and sustainable living practices',
     },
   ];
 
-  const outcomes = [
+  const whyChoose = [
     {
-      icon: Sparkles,
-      text: 'Empathy and social awareness',
+      icon: Building,
+      title: 'Heritage Learning Environment',
+      description: 'Learn on a campus that inspired scientific excellence.',
     },
     {
-      icon: CheckCircle,
-      text: 'Civic responsibility',
-    },
-    {
-      icon: Users,
-      text: 'Teamwork and collaboration',
+      icon: Feather,
+      title: 'Nature-First Approach',
+      description: 'Screen-free, outdoor-rich experiences.',
     },
     {
       icon: Award,
-      text: 'Leadership and initiative',
+      title: 'Holistic Development',
+      description: 'Builds confidence, empathy, creativity, and responsibility.',
     },
     {
-      icon: Lightbulb,
-      text: 'Environmental consciousness',
+      icon: Sparkles,
+      title: 'Flexible Enrollment',
+      description: 'Choose activities that suit your child’s interests.',
     },
     {
-      icon: HeartHandshake,
-      text: 'A deeper connection to their community',
+      icon: ShieldCheck,
+      title: 'Safe & Guided',
+      description:
+        'Programs executed by experienced facilitators from Outdoor Dynamix.',
     },
   ];
 
@@ -78,11 +83,8 @@ export default function YouthPage() {
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
             <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
-              Youth Environmental Program
+              Where Nature, Curiosity, and Young Minds Grow
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-white/90">
-              Local Action. Shared Responsibility. Meaningful Impact.
-            </p>
           </div>
         </div>
 
@@ -95,138 +97,92 @@ export default function YouthPage() {
           </Link>
 
           <div className="max-w-4xl mx-auto">
-            <div className="mb-12">
+            <div className="mb-12 text-center">
               <h2 className="text-3xl font-bold text-accent mb-4">
-                Be the Change in Your Community
+                A Place to Explore, Learn, and Belong
               </h2>
               <p className="text-lg text-foreground/80 mb-4">
-                Prakruthi Shaale’s Youth Program is rooted in the belief that
-                sustainable change begins with young, empowered citizens.
-                Aligned with the UN Sustainable Development Goals (SDGs), our
-                initiatives provide young people with opportunities to
--                contribute meaningfully to society while developing empathy,
--                leadership, and a sense of responsibility.
+                We offer thoughtfully designed nature-based learning experiences
+                for children and young adults aged 6 to 24, helping them
+                explore, create, and grow—beyond screens and classrooms.
+              </p>
+              <p className="text-lg text-foreground/80">
+                Prakruthi Shaale is more than an activity center—it is a
+                community space where families come together to nurture
+                curiosity, values, and a love for nature. Whether your child is
+                discovering the outdoors for the first time or seeking deeper
+                learning experiences, Prakruthi Shaale offers a meaningful
+                journey of growth.
               </p>
             </div>
 
             <div className="mb-12 p-8 rounded-lg bg-secondary/30">
-              <h3 className="text-2xl font-bold text-accent mb-4">
-                A Place Where Future Leaders Come Together
+              <h3 className="text-2xl font-bold text-accent mb-4 text-center">
+                What Families Can Expect
               </h3>
-              <p className="text-foreground/80">
-                Located at the historic residence of Nobel Laureate Sir C. V.
-                Raman, Prakruthi Shaale serves as a hub where youth, families,
-                and schools come together to work on real-world community
-                challenges. The campus offers a safe, accessible, and
-                inspiring environment to learn, serve, and reflect.
+              <p className="text-foreground/80 mb-6 text-center">
+                At Prakruthi Shaale, learning happens through doing, exploring,
+                and experiencing. Children and youth engage in:
               </p>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-accent mb-4">
-                What the Youth Program Offers
-              </h3>
-              <p className="text-foreground/80 mb-4">
-                Our programs are action-oriented and inclusive, designed for
-                participants aged 6 to 24. Participants engage in:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                <li>Community service and civic action</li>
-                <li>
-                  Environmental conservation and sustainability initiatives
-                </li>
-                <li>Awareness building and outreach activities</li>
-                <li>Skill-based projects and workshops</li>
-                <li>Collaborative problem-solving at the local level</li>
-              </ul>
-              <p className="text-foreground/80 mt-4">
-                Each experience is thoughtfully structured to ensure meaningful
-                contribution and personal growth.
-              </p>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-accent mb-4">
-                Who Can Participate
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {whoCanParticipate.map((item, index) => {
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {whatToExpect.map((item, index) => {
                   const Icon = item.icon;
                   return (
                     <div
                       key={index}
-                      className="flex flex-col items-center text-center p-4 rounded-lg bg-secondary/30"
+                      className="flex items-center gap-3 p-3 rounded-lg"
                     >
-                      <Icon className="w-8 h-8 mb-2 text-accent" />
-                      <p>{item.text}</p>
+                      <Icon className="w-6 h-6 text-accent flex-shrink-0" />
+                      <span>{item.text}</span>
                     </div>
                   );
                 })}
               </div>
-              <p className="text-foreground/80 mt-4 text-center">
-                Activities are customized based on group size, age, and learning
-                objectives.
-              </p>
-            </div>
-
-            <div className="mb-12 p-8 rounded-lg bg-secondary/30">
-              <h3 className="text-2xl font-bold text-accent mb-4">
-                Our Learning Approach
-              </h3>
-              <p className="text-foreground/80 mb-4 text-center text-2xl font-semibold">
-                Understand → Engage → Reflect → Act
-              </p>
-              <p className="text-foreground/80 mb-2">
-                All our initiatives follow this simple, impactful framework.
-                Participants:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                <li>Learn about the issue and its context</li>
-                <li>Engage directly with the community or environment</li>
-                <li>Reflect on their role and impact</li>
-                <li>Take action that contributes to sustainable outcomes</li>
-              </ul>
-              <p className="text-foreground/80 mt-4">
-                This ensures every project is purposeful, respectful, and
-                educational.
+              <p className="text-foreground/80 mt-6 text-center">
+                All programs are facilitated by trained outdoor educators,
+                ensuring a safe, inclusive, and inspiring environment.
               </p>
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl font-bold text-accent mb-4">
-                Outcomes for Young Changemakers
+              <h3 className="text-2xl font-bold text-accent mb-6 text-center">
+                Why Parents Choose Prakruthi Shaale
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                {outcomes.map((outcome, index) => {
-                  const Icon = outcome.icon;
+              <div className="grid grid-cols-1 gap-6">
+                {whyChoose.map((item, index) => {
+                  const Icon = item.icon;
                   return (
                     <div
                       key={index}
-                      className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30"
+                      className="flex items-start gap-4 p-4 rounded-lg bg-accent/10 border border-accent/20"
                     >
-                      <Icon className="w-6 h-6 text-accent flex-shrink-0" />
-                      <span>{outcome.text}</span>
+                      <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-6 h-6 text-accent" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-lg text-accent/90">
+                          {item.title}
+                        </h4>
+                        <p className="text-foreground/80">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   );
                 })}
               </div>
-              <p className="text-foreground/80 mt-4">
-                Participants also gain a sense of fulfillment by contributing to
-                tangible, local impact.
-              </p>
             </div>
 
             <div className="text-center p-8 rounded-lg bg-accent/10">
               <h2 className="text-3xl font-bold text-accent mb-4">
-                Join the Youth Environmental Program
+                Join Us
               </h2>
               <p className="text-lg text-foreground/80 mb-6">
-                Whether you are a student looking to make a difference, a
-                teacher seeking meaningful engagement for your class, or a parent
-                wanting to inspire your child, Prakruthi Shaale offers a platform
-                to learn, serve, and grow together.
+                Explore upcoming programs, weekend workshops, and holiday
+                activities. Enroll your child in experiences that inspire
+                lifelong learning.
               </p>
-              <Button size="lg">Be Part of the Change</Button>
+              <Button size="lg">Explore Programs</Button>
             </div>
           </div>
         </div>
