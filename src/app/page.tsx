@@ -298,30 +298,24 @@ export default function Home() {
               {events.map((event, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-lg shadow-lg overflow-hidden group transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                  className="group relative rounded-[3rem] overflow-hidden transform transition-all duration-500 hover:-translate-y-2"
                 >
-                  <div className="relative h-56">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      data-ai-hint={event.aiHint}
-                    />
-                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  </div>
-                  <div className="p-6 text-left">
-                    <div className="flex items-center gap-2 text-sm text-accent mb-2">
+                   <div className="absolute inset-0 bg-card/50 backdrop-blur-xl transition-all duration-500 group-hover:bg-accent/70 shadow-inner"></div>
+                   <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl transition-all duration-500 group-hover:scale-150"></div>
+                   <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-secondary/20 rounded-full blur-2xl transition-all duration-700 group-hover:scale-150"></div>
+
+                  <div className="relative p-8 text-left z-10 flex flex-col h-full">
+                    <div className="flex items-center gap-2 text-sm text-accent mb-4 transition-colors duration-300 group-hover:text-white/90">
                       <Calendar className="w-4 h-4" />
                       <span>{event.date}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl font-bold text-foreground mb-2 transition-colors duration-300 group-hover:text-white">
                       {event.title}
                     </h3>
-                    <p className="text-foreground/70 mb-4">
+                    <p className="text-foreground/70 mb-4 flex-grow transition-colors duration-300 group-hover:text-white/80">
                       {event.description}
                     </p>
-                    <Link href="#" className="font-semibold text-accent flex items-center group-hover:underline">
+                    <Link href="#" className="font-semibold text-accent flex items-center mt-auto group-hover:text-white group-hover:underline">
                       Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </div>
