@@ -161,10 +161,13 @@ export default function ProgramPage() {
       <main className="flex-1 pt-16">
         <section
           id="programs"
-          className="py-20"
+          className="py-20 relative overflow-hidden"
           style={{ backgroundColor: '#a7ad89' }}
         >
-          <div className="container mx-auto">
+          <div className="absolute -top-20 -left-20 w-96 h-96 bg-green-300/30 rounded-full blur-3xl opacity-50"></div>
+          <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-lime-300/30 rounded-full blur-3xl opacity-50"></div>
+
+          <div className="container mx-auto relative">
             <div
               ref={approachRef}
               className={cn(
@@ -334,5 +337,3 @@ export default function ProgramPage() {
     </div>
   );
 }
-
-    
