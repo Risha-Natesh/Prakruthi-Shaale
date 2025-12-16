@@ -235,9 +235,8 @@ export default function CommunityPage() {
                 Upcoming Event
               </h2>
                <p className="text-lg text-foreground/80 mb-6">
-                Join our Community Tree Planting Day on October 26, 2024! Let's make our neighborhood greener together.
+                Join our Volunteer Day on December 21, 2024! Let's make our community stronger together.
               </p>
-               <Button size="lg">Register Now</Button>
             </div>
 
           </div>
