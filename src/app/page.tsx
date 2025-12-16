@@ -41,32 +41,6 @@ export default function Home() {
         text: 'text-green-800',
       },
     },
-    {
-      title: 'Youth Workshop: Wonders of Water',
-      date: 'November 9, 2024',
-      image: 'https://picsum.photos/seed/event2/600/400',
-      aiHint: 'kids science experiment',
-      href: '#',
-      colors: {
-        bg: 'bg-blue-100/30',
-        glow1: 'bg-blue-400/30',
-        glow2: 'bg-cyan-400/30',
-        text: 'text-blue-800',
-      },
-    },
-    {
-      title: 'Corporate Volunteer Day at the Lake',
-      date: 'November 22, 2024',
-      image: 'https://picsum.photos/seed/event3/600/400',
-      aiHint: 'team cleaning lake',
-      href: '#',
-      colors: {
-        bg: 'bg-yellow-100/30',
-        glow1: 'bg-yellow-400/30',
-        glow2: 'bg-orange-400/30',
-        text: 'text-yellow-800',
-      },
-    },
   ];
 
   const { ref: visionRef, inView: visionInView } = useInView({
@@ -312,11 +286,11 @@ export default function Home() {
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
               Stay updated with our latest events, workshops, and community activities.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="flex justify-center">
               {events.map((event, index) => (
                 <div
                   key={index}
-                  className="group relative rounded-[3rem] overflow-hidden transform transition-all duration-500 hover:-translate-y-2"
+                  className="group relative rounded-[3rem] overflow-hidden transform transition-all duration-500 hover:-translate-y-2 w-full max-w-sm"
                 >
                    <div className={cn("absolute inset-0 backdrop-blur-xl transition-all duration-500 shadow-inner", event.colors.bg)}></div>
                    <div className={cn("absolute -top-10 -right-10 w-32 h-32 rounded-full blur-2xl transition-all duration-500 scale-100", event.colors.glow1)}></div>
