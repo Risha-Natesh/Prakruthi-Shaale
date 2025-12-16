@@ -5,14 +5,65 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowLeft,
-  Calendar,
+  Users,
+  HeartHandshake,
+  Lightbulb,
+  CheckCircle,
+  Building,
   User,
-  Microscope,
+  School,
+  Sparkles,
+  Award,
+  BookOpen,
   Wind,
   Telescope,
+  Microscope,
+  Calendar,
 } from 'lucide-react';
 
 export default function YouthPage() {
+  const whoCanParticipate = [
+    {
+      icon: User,
+      text: 'Individuals and families',
+    },
+    {
+      icon: Users,
+      text: 'Youth and student groups',
+    },
+    {
+      icon: School,
+      text: 'Schools and colleges',
+    },
+  ];
+
+  const outcomes = [
+    {
+      icon: Sparkles,
+      text: 'Empathy and social awareness',
+    },
+    {
+      icon: CheckCircle,
+      text: 'Civic responsibility',
+    },
+    {
+      icon: Users,
+      text: 'Teamwork and collaboration',
+    },
+    {
+      icon: Award,
+      text: 'Leadership and initiative',
+    },
+    {
+      icon: Lightbulb,
+      text: 'Environmental consciousness',
+    },
+    {
+      icon: HeartHandshake,
+      text: 'A deeper connection to their community',
+    },
+  ];
+
   return (
     <div className="bg-background text-foreground">
       <Header />
@@ -25,10 +76,13 @@ export default function YouthPage() {
             className="object-cover"
             data-ai-hint="kids exploring nature"
           />
-          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight text-center">
+          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
               Youth Environmental Program
             </h1>
+            <p className="mt-4 text-lg md:text-xl text-white/90">
+              Local Action. Shared Responsibility. Meaningful Impact.
+            </p>
           </div>
         </div>
 
@@ -40,166 +94,139 @@ export default function YouthPage() {
             </Button>
           </Link>
 
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2">
-              <h2
-                className="text-3xl font-bold mb-4"
-                style={{ color: '#354024' }}
-              >
-                Fostering a Love for Nature & Science
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-accent mb-4">
+                Be the Change in Your Community
               </h2>
-              <p className="text-lg text-foreground/80 mb-6 transition-transform duration-300 hover:scale-105">
-                Our Youth Environmental Program is designed to ignite curiosity
-                and passion in young minds. Through a series of engaging,
-                hands-on activities, we connect children with the natural
-                world, teaching them valuable skills and fostering a lifelong
-                love for learning and discovery.
+              <p className="text-lg text-foreground/80 mb-4">
+                Prakruthi Shaale’s Youth Program is rooted in the belief that
+                sustainable change begins with young, empowered citizens.
+                Aligned with the UN Sustainable Development Goals (SDGs), our
+                initiatives provide young people with opportunities to
+-                contribute meaningfully to society while developing empathy,
+-                leadership, and a sense of responsibility.
               </p>
-
-              <div className="space-y-4 text-foreground/80">
-                <p className="transition-transform duration-300 hover:scale-105">
-                  Participants will explore local ecosystems, learn about
-                  native plants and animals, and engage in fun, educational
-                  experiments. Our goal is to make science and nature
-                  accessible, exciting, and memorable.
-                </p>
-                <p className="transition-transform duration-300 hover:scale-105">
-                  Join us for a journey of exploration that promises to be as
-                  educational as it is fun!
-                </p>
-              </div>
             </div>
 
-            <div className="bg-secondary/30 p-6 rounded-lg shadow-lg">
-              <h3
-                className="text-xl font-bold mb-4"
-                style={{ color: '#354024' }}
-              >
-                Program Highlights
+            <div className="mb-12 p-8 rounded-lg bg-secondary/30">
+              <h3 className="text-2xl font-bold text-accent mb-4">
+                A Place Where Future Leaders Come Together
               </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
-                    <Microscope className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h4
-                      className="font-semibold transition-transform duration-300 hover:scale-105"
-                      style={{ color: '#354024' }}
-                    >
-                      Hands-On Science
-                    </h4>
-                    <p className="text-sm text-foreground/70">
-                      Interactive experiments and nature exploration.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
-                    <User className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h4
-                      className="font-semibold transition-transform duration-300 hover:scale-105"
-                      style={{ color: '#354024' }}
-                    >
-                      Age Groups
-                    </h4>
-                    <p className="text-sm text-foreground/70">
-                      Activities tailored for children aged 6-14.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
-                    <Calendar className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h4
-                      className="font-semibold transition-transform duration-300 hover:scale-105"
-                      style={{ color: '#354024' }}
-                    >
-                      Upcoming Events
-                    </h4>
-                    <p className="text-sm text-foreground/70">
-                      Weekend workshops and summer camps. Stay tuned for dates!
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <section
-          className="py-16"
-          style={{ backgroundColor: '#a7ad89' }}
-        >
-          <div className="container mx-auto text-center">
-            <h2
-              className="text-3xl font-bold mb-4"
-              style={{ color: '#354024' }}
-            >
-              ON-CAMPUS EXPERIENCE
-            </h2>
-            <p className="text-lg text-foreground/80 max-w-4xl mx-auto mb-10">
-              Panchavati the residence of the first Asian Nobel Laureate for
-              Science,
-              <br />
-              Sir CV Raman's residence.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="bg-background/50 p-6 rounded-lg shadow-md border border-border">
-                <div className="flex items-center justify-center gap-3 mb-4">
-                  <Wind className="w-6 h-6 text-accent" />
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ color: '#354024' }}
-                  >
-                    SPECTRUM JUNIOR
-                  </h3>
-                </div>
-                <p className="font-semibold text-foreground/90">
-                  (1st - 6th Grade)
-                </p>
-                <p className="text-foreground/80 mt-2 text-lg">
-                  Mud | Mess | Marvels
-                </p>
-              </div>
-              <div className="bg-background/50 p-6 rounded-lg shadow-md border border-border">
-                <div className="flex items-center justify-center gap-3 mb-4">
-                  <Telescope className="w-6 h-6 text-accent" />
-                  <h3
-                    className="text-xl font-bold"
-                    style={{ color: '#354024' }}
-                  >
-                    SPECTRUM SENIOR
-                  </h3>
-                </div>
-                <p className="font-semibold text-foreground/90">
-                  (7th - 12th Grade)
-                </p>
-                <p className="text-foreground/80 mt-2 text-lg">
-                  Experience sustainability boot camp
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="container mx-auto py-16">
-          <div className="mt-16">
-            <h2
-              className="text-3xl font-bold text-center mb-8"
-              style={{ color: '#354024' }}
-            >
-              Past Events & Gallery
-            </h2>
-            <div className="text-center text-foreground/70">
-              <p>
-                Details about past events and a gallery will be available here
-                soon.
+              <p className="text-foreground/80">
+                Located at the historic residence of Nobel Laureate Sir C. V.
+                Raman, Prakruthi Shaale serves as a hub where youth, families,
+                and schools come together to work on real-world community
+                challenges. The campus offers a safe, accessible, and
+                inspiring environment to learn, serve, and reflect.
               </p>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-accent mb-4">
+                What the Youth Program Offers
+              </h3>
+              <p className="text-foreground/80 mb-4">
+                Our programs are action-oriented and inclusive, designed for
+                participants aged 6 to 24. Participants engage in:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                <li>Community service and civic action</li>
+                <li>
+                  Environmental conservation and sustainability initiatives
+                </li>
+                <li>Awareness building and outreach activities</li>
+                <li>Skill-based projects and workshops</li>
+                <li>Collaborative problem-solving at the local level</li>
+              </ul>
+              <p className="text-foreground/80 mt-4">
+                Each experience is thoughtfully structured to ensure meaningful
+                contribution and personal growth.
+              </p>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-accent mb-4">
+                Who Can Participate
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {whoCanParticipate.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center text-center p-4 rounded-lg bg-secondary/30"
+                    >
+                      <Icon className="w-8 h-8 mb-2 text-accent" />
+                      <p>{item.text}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="text-foreground/80 mt-4 text-center">
+                Activities are customized based on group size, age, and learning
+                objectives.
+              </p>
+            </div>
+
+            <div className="mb-12 p-8 rounded-lg bg-secondary/30">
+              <h3 className="text-2xl font-bold text-accent mb-4">
+                Our Learning Approach
+              </h3>
+              <p className="text-foreground/80 mb-4 text-center text-2xl font-semibold">
+                Understand → Engage → Reflect → Act
+              </p>
+              <p className="text-foreground/80 mb-2">
+                All our initiatives follow this simple, impactful framework.
+                Participants:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                <li>Learn about the issue and its context</li>
+                <li>Engage directly with the community or environment</li>
+                <li>Reflect on their role and impact</li>
+                <li>Take action that contributes to sustainable outcomes</li>
+              </ul>
+              <p className="text-foreground/80 mt-4">
+                This ensures every project is purposeful, respectful, and
+                educational.
+              </p>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-accent mb-4">
+                Outcomes for Young Changemakers
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                {outcomes.map((outcome, index) => {
+                  const Icon = outcome.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30"
+                    >
+                      <Icon className="w-6 h-6 text-accent flex-shrink-0" />
+                      <span>{outcome.text}</span>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="text-foreground/80 mt-4">
+                Participants also gain a sense of fulfillment by contributing to
+                tangible, local impact.
+              </p>
+            </div>
+
+            <div className="text-center p-8 rounded-lg bg-accent/10">
+              <h2 className="text-3xl font-bold text-accent mb-4">
+                Join the Youth Environmental Program
+              </h2>
+              <p className="text-lg text-foreground/80 mb-6">
+                Whether you are a student looking to make a difference, a
+                teacher seeking meaningful engagement for your class, or a parent
+                wanting to inspire your child, Prakruthi Shaale offers a platform
+                to learn, serve, and grow together.
+              </p>
+              <Button size="lg">Be Part of the Change</Button>
             </div>
           </div>
         </div>
