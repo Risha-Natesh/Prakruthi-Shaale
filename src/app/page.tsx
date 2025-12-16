@@ -30,7 +30,7 @@ export default function Home() {
   const events = [
     {
       title: 'Volunteer Day',
-      date: 'December 21, 2024',
+      date: 'December 21, 2025',
       image: 'https://picsum.photos/seed/event1/600/400',
       aiHint: 'people planting trees',
       href: '/program/community',

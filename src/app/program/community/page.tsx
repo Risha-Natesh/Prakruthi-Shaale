@@ -239,7 +239,7 @@ export default function CommunityPage() {
                 Upcoming Event
               </h2>
                <p className="text-lg text-foreground/80 mb-6">
-                Join our Volunteer Day on December 21, 2024! Let's make our community stronger together.
+                Join our Volunteer Day on December 21, 2025! Let's make our community stronger together.
               </p>
               <Button size="lg" onClick={handleContactScroll}>
                 Register Now
