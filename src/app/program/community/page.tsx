@@ -80,7 +80,7 @@ export default function CommunityPage() {
             className="object-cover"
             data-ai-hint="volunteers working together"
           />
-          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center">
+          <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
             <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
               Community Volunteering Program
             </h1>
@@ -100,9 +100,6 @@ export default function CommunityPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-accent mb-4">
-                Be the Change in Your Community
-              </h2>
               <p className="text-lg text-foreground/80 mb-4">
                 Prakruthi Shaale’s Community Volunteering Program is rooted in
                 the belief that sustainable change begins at the community
@@ -131,12 +128,10 @@ export default function CommunityPage() {
 
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-accent mb-4">
-                What the Program Offers
+                What the Community Volunteering Program Offers
               </h3>
               <p className="text-foreground/80 mb-4">
-                Our volunteering programs are action-oriented and inclusive,
-                designed for participants aged 6 to 24 and beyond, depending on
-                the nature of the activity. Participants engage in:
+                Our volunteering programs are action-oriented and inclusive, designed for participants aged 6 to 24 and beyond, depending on the nature of the activity. Participants engage in:
               </p>
               <ul className="list-disc list-inside space-y-2 text-foreground/80">
                 <li>Community service and civic action</li>
@@ -148,8 +143,7 @@ export default function CommunityPage() {
                 <li>Collaborative problem-solving at the local level</li>
               </ul>
               <p className="text-foreground/80 mt-4">
-                Each volunteering experience is thoughtfully structured to
-                ensure meaningful contribution and personal growth.
+                Each volunteering experience is thoughtfully structured to ensure meaningful contribution and personal growth.
               </p>
             </div>
 
@@ -157,6 +151,9 @@ export default function CommunityPage() {
               <h3 className="text-2xl font-bold text-accent mb-4">
                 Who Can Participate
               </h3>
+               <p className="text-foreground/80 mb-4">
+                The Community Volunteering Program is open to:
+              </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {whoCanParticipate.map((item, index) => {
                   const Icon = item.icon;
@@ -203,6 +200,9 @@ export default function CommunityPage() {
               <h3 className="text-2xl font-bold text-accent mb-4">
                 Outcomes for Volunteers
               </h3>
+              <p className="text-foreground/80 mb-4">
+                Through participation, volunteers develop:
+              </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {outcomes.map((outcome, index) => {
                   const Icon = outcome.icon;
@@ -219,6 +219,16 @@ export default function CommunityPage() {
               </p>
             </div>
             
+            <div className="mb-12">
+                 <h3 className="text-2xl font-bold text-accent mb-4">
+                Volunteering as a Pathway to Sustainable Change
+              </h3>
+               <p className="text-lg text-foreground/80">
+               Prakruthi Shaale’s Community Volunteering Program connects people with purpose, creating a culture of participation and shared responsibility. By working at the grassroots level, volunteers become active contributors to building resilient, inclusive, and sustainable communities.
+              </p>
+            </div>
+
+
             <div className="text-center p-8 rounded-lg bg-accent/10">
                  <h2 className="text-3xl font-bold text-accent mb-4">
                 Join the Community Volunteering Program
