@@ -165,30 +165,39 @@ export default function ProgramPage() {
         >
           <div className="absolute inset-0 z-0">
             <svg
-              className="absolute inset-0 h-full w-full"
+              className="absolute left-0 top-0 h-full w-auto"
               xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 800 600"
+              preserveAspectRatio="xMidYMid slice"
             >
-              <path
-                d="M800 0H0V600H800V0Z"
-                fill="#E6EAE0"
-              />
-              <path
-                d="M-200 650 C 150 400, 300 700, 850 500 V 650 H-200 Z"
-                fill="#A7AD89"
-                fillOpacity="0.5"
-              />
-               <path
-                d="M-200 650 C 200 450, 400 650, 850 450 V 650 H-200 Z"
-                fill="#889063"
-                fillOpacity="0.5"
-              />
-               <path
-                d="M-200 650 C 150 500, 350 600, 850 350 V 650 H-200 Z"
-                fill="#697254"
-                fillOpacity="0.5"
-              />
+              <defs>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="2" dy="4" stdDeviation="4" floodColor="#000000" floodOpacity="0.1"/>
+                </filter>
+              </defs>
+              <g>
+                <path
+                  d="M 300,0 C 200,150 400,200 300,300 C 200,400 400,450 300,600 L 0,600 L 0,0 Z"
+                  fill="#697254"
+                  filter="url(#shadow)"
+                />
+                 <path
+                  d="M 250,0 C 150,150 350,200 250,300 C 150,400 350,450 250,600 L 0,600 L 0,0 Z"
+                  fill="#889063"
+                  filter="url(#shadow)"
+                />
+                <path
+                  d="M 200,0 C 100,150 300,200 200,300 C 100,400 300,450 200,600 L 0,600 L 0,0 Z"
+                  fill="#A7AD89"
+                  filter="url(#shadow)"
+                />
+                 <path
+                  d="M 150,0 C 50,150 250,200 150,300 C 50,400 250,450 150,600 L 0,600 L 0,0 Z"
+                  fill="#E6EAE0"
+                  filter="url(#shadow)"
+                />
+              </g>
             </svg>
           </div>
 
