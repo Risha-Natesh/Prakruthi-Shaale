@@ -69,6 +69,10 @@ export default function CommunityPage() {
     },
   ];
 
+  const handleContactScroll = () => {
+    window.location.href = '/#contact';
+  };
+
   return (
     <div className="bg-background text-foreground">
       <Header />
@@ -237,6 +241,9 @@ export default function CommunityPage() {
                <p className="text-lg text-foreground/80 mb-6">
                 Join our Volunteer Day on December 21, 2024! Let's make our community stronger together.
               </p>
+              <Button size="lg" onClick={handleContactScroll}>
+                Register Now
+              </Button>
             </div>
 
           </div>
