@@ -165,24 +165,34 @@ export default function ProgramPage() {
         >
           <div className="absolute inset-0 z-0">
             <svg
-              className="absolute left-0 top-0 h-full w-auto"
-              viewBox="0 0 400 600"
+              className="absolute inset-0 h-full w-full"
+              xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
+              viewBox="0 0 800 600"
             >
+              <defs>
+                <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="4" dy="6" stdDeviation="8" floodColor="#000000" floodOpacity="0.2" />
+                </filter>
+              </defs>
               <path
-                d="M0 0 C50 100 150 100 200 200 C250 300 300 350 300 600 L0 600 Z"
+                d="M800 0H0V600H800V0Z"
+                fill="#E6EAE0"
+              />
+              <path
+                d="M-200 650 C 150 400, 300 700, 850 500 V 650 H-200 Z"
                 fill="#A7AD89"
-                fillOpacity="0.4"
+                style={{filter: 'url(#drop-shadow)'}}
               />
-              <path
-                d="M0 0 C40 120 120 150 180 250 C240 350 250 400 250 600 L0 600 Z"
+               <path
+                d="M-200 650 C 200 450, 400 650, 850 450 V 650 H-200 Z"
                 fill="#889063"
-                fillOpacity="0.4"
+                style={{filter: 'url(#drop-shadow)'}}
               />
-              <path
-                d="M0 0 C30 150 100 180 150 300 C200 420 200 500 200 600 L0 600 Z"
+               <path
+                d="M-200 650 C 150 500, 350 600, 850 350 V 650 H-200 Z"
                 fill="#697254"
-                fillOpacity="0.4"
+                style={{filter: 'url(#drop-shadow)'}}
               />
             </svg>
           </div>
