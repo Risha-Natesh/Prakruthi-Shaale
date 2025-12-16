@@ -74,4 +74,7 @@
   .cloud-shape {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
+  .bubble-shape {
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
 }

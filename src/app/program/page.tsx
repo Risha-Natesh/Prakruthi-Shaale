@@ -36,14 +36,14 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
             initiative.bg
           )}
         ></div>
-        <div className="relative z-10 w-full">
-          <div
-            className={cn(
-              'p-8 rounded-lg',
-              initiative.bg,
-              'bg-opacity-40'
-            )}
-          >
+        <div
+          className={cn(
+            'relative z-10 w-full p-8 bubble-shape',
+            initiative.bg,
+            'bg-opacity-40'
+          )}
+        >
+          <div className="flex flex-col items-center md:items-start">
             <div
               className={cn(
                 `w-16 h-16 rounded-full flex items-center justify-center mb-4`,
