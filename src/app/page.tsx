@@ -289,7 +289,7 @@ export default function Home() {
                   >
                     The Opportunity
                   </h3>
-                  <ul className="space-y-2 text-white/80 list-disc list-inside text-left">
+                  <ul className="space-y-2 text-white/80 list-disc text-left pl-5">
                     <li>Empower community-led innovation</li>
                     <li>Create a collaborative ecosystem</li>
                     <li>Leverage partnerships for impact</li>
@@ -316,8 +316,8 @@ export default function Home() {
                   className="group relative rounded-[3rem] overflow-hidden transform transition-all duration-500 hover:-translate-y-2"
                 >
                    <div className={cn("absolute inset-0 backdrop-blur-xl transition-all duration-500 shadow-inner", event.colors.bg)}></div>
-                   <div className={cn("absolute -top-10 -right-10 w-32 h-32 rounded-full blur-2xl transition-all duration-500 group-hover:scale-150", event.colors.glow1)}></div>
-                   <div className={cn("absolute -bottom-10 -left-10 w-32 h-32 rounded-full blur-2xl transition-all duration-700 group-hover:scale-150", event.colors.glow2)}></div>
+                   <div className={cn("absolute -top-10 -right-10 w-32 h-32 rounded-full blur-2xl transition-all duration-500 scale-100", event.colors.glow1)}></div>
+                   <div className={cn("absolute -bottom-10 -left-10 w-32 h-32 rounded-full blur-2xl transition-all duration-700 scale-100", event.colors.glow2)}></div>
 
                   <div className="relative p-8 text-left z-10 flex flex-col h-full">
                     <div className={cn("flex items-center gap-2 text-sm mb-4", event.colors.text)}>
