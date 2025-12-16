@@ -22,52 +22,42 @@ import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { Button } from '@/components/ui/button';
 
-const InitiativeCard = ({ initiative }: { initiative: any }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+const InitiativeSlide = ({ initiative }: { initiative: any }) => {
   const Icon = initiative.icon;
-
   return (
-    <Link href={initiative.href} className="group block">
-      <div
-        ref={ref}
-        className={cn(
-          'relative h-full bg-card p-8 shadow-lg overflow-hidden transition-all duration-500 opacity-0 cloud-shape',
-          inView ? 'opacity-100 translate-y-0' : 'translate-y-10',
-          'md:group-hover:transform md:group-hover:-translate-y-2 md:group-hover:ring-4 md:group-hover:ring-accent/50'
-        )}
-      >
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
+      <div className="flex flex-col gap-4 text-center md:text-left items-center md:items-start">
         <div
           className={cn(
-            'absolute -top-12 -right-12 w-48 h-48 rounded-full blur-2xl opacity-20 transition-all duration-500',
-            initiative.bg,
-            'group-hover:opacity-40 group-hover:scale-125'
+            `w-16 h-16 rounded-xl flex items-center justify-center mb-4`,
+            initiative.bg
           )}
-        ></div>
-        <div className="relative z-10">
-          <div
-            className={cn(
-              `w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300`,
-              initiative.bg,
-              'group-hover:scale-110'
-            )}
-          >
-            <Icon className={`w-8 h-8 ${initiative.color}`} />
-          </div>
-          <h3 className="text-2xl font-bold text-foreground mb-3">
-            {initiative.title}
-          </h3>
-          <p className="text-foreground/70 mb-4">{initiative.description}</p>
-          <div className="flex items-center font-semibold text-accent group-hover:text-primary transition-colors">
-            Learn More
-            <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-          </div>
+        >
+          <Icon className={`w-8 h-8 ${initiative.color}`} />
         </div>
+        <h3 className="text-3xl font-bold text-foreground">
+          {initiative.title}
+        </h3>
+        <p className="text-foreground/70 text-lg">
+          {initiative.description}
+        </p>
+        <Link href={initiative.href} passHref>
+          <Button>
+            Learn More <ArrowRight className="ml-2" />
+          </Button>
+        </Link>
       </div>
-    </Link>
+      <div className="h-80 relative rounded-lg overflow-hidden shadow-lg">
+        <Image
+          src={initiative.image}
+          alt={initiative.title}
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
   );
 };
 
@@ -81,6 +71,7 @@ export default function ProgramPage() {
       href: '/program/youth',
       color: 'text-green-800',
       bg: 'bg-green-300',
+      image: '/Images/kids - Copy.jpg',
     },
     {
       icon: Users,
@@ -90,6 +81,7 @@ export default function ProgramPage() {
       href: '/program/corporate',
       color: 'text-blue-800',
       bg: 'bg-blue-300',
+      image: '/Images/co-op.jpg',
     },
     {
       icon: HeartHandshake,
@@ -99,6 +91,7 @@ export default function ProgramPage() {
       href: '/program/community',
       color: 'text-yellow-800',
       bg: 'bg-yellow-300',
+      image: '/Images/volunteer.jpg',
     },
   ];
 
@@ -235,14 +228,29 @@ export default function ProgramPage() {
                 Discover how you can get involved and make a difference.
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {initiatives.map((initiative) => (
-                <InitiativeCard
-                  key={initiative.title}
-                  initiative={initiative}
-                />
-              ))}
-            </div>
+            <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 5000,
+                  stopOnInteraction: true,
+                }),
+              ]}
+              opts={{
+                align: 'start',
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {initiatives.map((initiative) => (
+                  <CarouselItem key={initiative.title}>
+                    <div className="p-4">
+                      <InitiativeSlide initiative={initiative} />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
         </section>
 
