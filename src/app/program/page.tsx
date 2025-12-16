@@ -170,11 +170,6 @@ export default function ProgramPage() {
               preserveAspectRatio="none"
               viewBox="0 0 800 600"
             >
-              <defs>
-                <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="4" dy="6" stdDeviation="8" floodColor="#000000" floodOpacity="0.2" />
-                </filter>
-              </defs>
               <path
                 d="M800 0H0V600H800V0Z"
                 fill="#E6EAE0"
@@ -182,17 +177,17 @@ export default function ProgramPage() {
               <path
                 d="M-200 650 C 150 400, 300 700, 850 500 V 650 H-200 Z"
                 fill="#A7AD89"
-                style={{filter: 'url(#drop-shadow)'}}
+                fillOpacity="0.5"
               />
                <path
                 d="M-200 650 C 200 450, 400 650, 850 450 V 650 H-200 Z"
                 fill="#889063"
-                style={{filter: 'url(#drop-shadow)'}}
+                fillOpacity="0.5"
               />
                <path
                 d="M-200 650 C 150 500, 350 600, 850 350 V 650 H-200 Z"
                 fill="#697254"
-                style={{filter: 'url(#drop-shadow)'}}
+                fillOpacity="0.5"
               />
             </svg>
           </div>
