@@ -35,11 +35,9 @@ export default function Home() {
       aiHint: 'people planting trees',
       colors: {
         bg: 'bg-green-100/30',
-        hoverBg: 'bg-green-500/70',
         glow1: 'bg-green-400/30',
         glow2: 'bg-lime-400/30',
         text: 'text-green-800',
-        hoverText: 'text-white',
       },
     },
     {
@@ -49,11 +47,9 @@ export default function Home() {
       aiHint: 'kids science experiment',
       colors: {
         bg: 'bg-blue-100/30',
-        hoverBg: 'bg-blue-500/70',
         glow1: 'bg-blue-400/30',
         glow2: 'bg-cyan-400/30',
         text: 'text-blue-800',
-        hoverText: 'text-white',
       },
     },
     {
@@ -63,11 +59,9 @@ export default function Home() {
       aiHint: 'team cleaning lake',
       colors: {
         bg: 'bg-yellow-100/30',
-        hoverBg: 'bg-yellow-500/70',
         glow1: 'bg-yellow-400/30',
         glow2: 'bg-orange-400/30',
         text: 'text-yellow-800',
-        hoverText: 'text-white',
       },
     },
   ];
@@ -321,19 +315,19 @@ export default function Home() {
                   key={index}
                   className="group relative rounded-[3rem] overflow-hidden transform transition-all duration-500 hover:-translate-y-2"
                 >
-                   <div className={cn("absolute inset-0 backdrop-blur-xl transition-all duration-500 shadow-inner", event.colors.bg, `group-hover:${event.colors.hoverBg}`)}></div>
+                   <div className={cn("absolute inset-0 backdrop-blur-xl transition-all duration-500 shadow-inner", event.colors.bg)}></div>
                    <div className={cn("absolute -top-10 -right-10 w-32 h-32 rounded-full blur-2xl transition-all duration-500 group-hover:scale-150", event.colors.glow1)}></div>
                    <div className={cn("absolute -bottom-10 -left-10 w-32 h-32 rounded-full blur-2xl transition-all duration-700 group-hover:scale-150", event.colors.glow2)}></div>
 
                   <div className="relative p-8 text-left z-10 flex flex-col h-full">
-                    <div className={cn("flex items-center gap-2 text-sm mb-4 transition-colors duration-300", event.colors.text, `group-hover:${event.colors.hoverText}`)}>
+                    <div className={cn("flex items-center gap-2 text-sm mb-4 transition-colors duration-300", event.colors.text)}>
                       <Calendar className="w-4 h-4" />
                       <span>{event.date}</span>
                     </div>
-                    <h3 className={cn("text-xl font-bold mb-2 transition-colors duration-300 flex-grow", event.colors.text, `group-hover:${event.colors.hoverText}`)}>
+                    <h3 className={cn("text-xl font-bold mb-2 transition-colors duration-300 flex-grow", event.colors.text)}>
                       {event.title}
                     </h3>
-                    <Link href="#" className={cn("font-semibold flex items-center mt-auto transition-colors duration-300", event.colors.text, `group-hover:${event.colors.hoverText}`, 'group-hover:underline')}>
+                    <Link href="#" className={cn("font-semibold flex items-center mt-auto transition-colors duration-300", event.colors.text, 'group-hover:underline')}>
                       Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </div>
