@@ -68,6 +68,10 @@ export default function CorporatePage() {
       "Optional feedback and impact summary"
   ]
 
+  const handleContactScroll = () => {
+    window.location.href = '/#contact';
+  }
+
   return (
     <div className="bg-background text-foreground">
       <Header />
@@ -212,10 +216,7 @@ export default function CorporatePage() {
               <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
                 Discover how Prakruthi Shaale can create meaningful, memorable, and values-driven team experiences for your organization.
               </p>
-              <Button size="lg" onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if(contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
-              }}>
+              <Button size="lg" onClick={handleContactScroll}>
                 Contact Us to Learn More
               </Button>
             </div>
