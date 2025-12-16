@@ -17,6 +17,7 @@ import {
   BookOpen,
   Calendar,
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function CommunityPage() {
   const whoCanParticipate = [
@@ -156,7 +157,7 @@ export default function CommunityPage() {
               <h3 className="text-2xl font-bold text-accent mb-4">
                 Who Can Participate
               </h3>
-               <p className="text-foreground/80 mb-4">
+              <p className="text-foreground/80 mb-4">
                 The Community Volunteering Program is open to:
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -165,15 +166,18 @@ export default function CommunityPage() {
                   return (
                     <div
                       key={index}
-                      className="flex flex-col items-center text-center p-4 rounded-lg bg-secondary/30"
+                      className="relative group rounded-xl overflow-hidden p-0.5"
                     >
-                      <Icon className="w-8 h-8 mb-2 text-accent" />
-                      <p>{item.text}</p>
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-lime-400/30 blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
+                      <div className="relative flex flex-col items-center text-center p-4 rounded-lg bg-background/80 backdrop-blur-md h-full justify-center">
+                        <Icon className="w-8 h-8 mb-2 text-accent" />
+                        <p>{item.text}</p>
+                      </div>
                     </div>
                   );
                 })}
               </div>
-               <p className="text-foreground/80 mt-4 text-center">
+              <p className="text-foreground/80 mt-4 text-center">
                 Activities are customized based on group size, age, time availability, and community needs.
               </p>
             </div>
