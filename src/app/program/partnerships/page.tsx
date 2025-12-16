@@ -16,7 +16,7 @@ export default function PartnershipsPage() {
       <main className="pt-20">
         <div className="relative h-64 md:h-80">
           <Image
-            src="/Images/partnerships.jpg"
+            src="/Images/partner.jpg"
             alt="Strategic Partnerships"
             fill
             className="object-cover"
