@@ -303,7 +303,7 @@ export default function Home() {
 
         <section id="live" className="py-20">
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-500 to-lime-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-4" style={{ color: '#889063' }}>
               What's Live
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
