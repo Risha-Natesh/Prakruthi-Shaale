@@ -5,41 +5,80 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowLeft,
-  Calendar,
   Briefcase,
+  Users,
   Zap,
   BookOpen,
-  Users,
   Award,
   Sparkles,
   BarChart,
+  Target,
+  Calendar,
 } from 'lucide-react';
 
 export default function CorporatePage() {
   const whyPartnerItems = [
-    { text: 'Implement NEP-aligned experiential and project-based learning' },
     {
-      text: 'Integrate SDG-focused sustainability education across age groups',
+      icon: Zap,
+      text: 'Deliver impactful experiential and project-based learning programs.',
     },
-    { text: 'Build leadership, teamwork, communication, and life skills' },
-    { text: 'Offer structured community service and volunteering pathways' },
-    { text: 'Enhance student engagement through real-world, outdoor experiences' },
+    {
+      icon: BookOpen,
+      text: 'Integrate SDG-focused sustainability education and action.',
+    },
+    {
+      icon: Users,
+      text: 'Build leadership, teamwork, communication, and essential life skills.',
+    },
+    {
+      icon: Target,
+      text: 'Offer structured community service and employee/student volunteering pathways.',
+    },
+    {
+      icon: Sparkles,
+      text: 'Enhance engagement through real-world, outdoor experiences.',
+    },
+     {
+      icon: BarChart,
+      text: 'Achieve measurable outcomes for participants and the organization.',
+    },
   ];
 
   const engagementModels = [
-    'Half-day and full-day experiential programs',
-    'Multi-day thematic modules',
-    'Semester or annual engagement models',
-    'Leadership and team-building immersions',
-    'Community development and volunteering tracks',
+    {
+      icon: Calendar,
+      title: 'Workshops & Immersions',
+      description: 'Half-day and full-day experiential programs.',
+    },
+    {
+      icon: Briefcase,
+      title: 'Thematic Modules',
+      description: 'Multi-day programs focused on specific goals.',
+    },
+    {
+      icon: Users,
+      title: 'Long-Term Engagement',
+      description: 'Semester or annual engagement models.',
+    },
+     {
+      icon: Award,
+      title: 'Leadership & Team Building',
+      description: 'Immersive experiences to foster collaboration.',
+    },
+    {
+      icon: Sparkles,
+      title: 'Community Impact Tracks',
+      description: 'Tailored community development and volunteering projects.',
+    },
   ];
 
   const outcomes = [
-    'Environmental literacy and sustainability awareness',
-    'STEM and analytical thinking',
-    'Leadership and collaboration',
-    'Communication and confidence',
-    'Civic responsibility and empathy',
+    'Enhanced environmental and sustainability awareness',
+    'Improved analytical and problem-solving skills',
+    'Stronger leadership and collaboration',
+    'Better communication and increased confidence',
+    'Greater sense of civic responsibility and empathy',
+    'A culture of purpose and engagement',
   ];
 
   return (
@@ -48,18 +87,18 @@ export default function CorporatePage() {
       <main className="pt-20">
         <div className="relative h-64 md:h-80">
           <Image
-            src="/Images/kids - Copy.jpg"
-            alt="Prakruthi Shaale for Schools & Colleges"
+            src="/Images/co-op.jpg"
+            alt="Prakruthi Shaale for Organizations"
             fill
             className="object-cover"
-            data-ai-hint="students learning outdoors"
+            data-ai-hint="diverse group collaborating"
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
             <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
-              Prakruthi Shaale for Schools & Colleges
+              Prakruthi Shaale for Organizations
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-white/90">
-              NEP-Aligned Experiential Learning | SDG-Focused Education
+            <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl">
+              Customized Experiential Programs for Corporate Teams, Non-Profits, and Educational Institutions
             </p>
           </div>
         </div>
@@ -72,81 +111,79 @@ export default function CorporatePage() {
             </Button>
           </Link>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center">
+               <h2 className="text-3xl font-bold text-accent mb-4">
+                Partner with Prakruthi Shaale
+              </h2>
               <p className="text-lg text-foreground/80">
-                Prakruthi Shaale offers experiential, sustainability-focused
-                learning programs aligned with India’s National Education
-                Policy (NEP 2020) and the United Nations Sustainable
-                Development Goals (SDGs). Our approach integrates hands-on
-                learning, life skills, environmental awareness, and community
-                engagement—supporting institutions in delivering holistic,
-                future-ready education.
+                Prakruthi Shaale offers experiential, sustainability-focused programs that align with corporate social responsibility (CSR) goals, employee engagement needs, and educational objectives. Our approach integrates hands-on learning, life skills, and environmental action to help organizations deliver holistic, future-ready development.
               </p>
             </div>
 
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-accent mb-6 text-center">
-                Why Institutions Partner with Prakruthi Shaale
-              </h2>
+              <h3 className="text-3xl font-bold text-accent mb-6 text-center">
+                Why Organizations Partner with Us
+              </h3>
               <p className="text-foreground/80 mb-6 text-center">
-                Education today requires more than academic instruction.
-                Prakruthi Shaale enables schools and colleges to:
+                Today’s challenges require more than conventional training. Prakruthi Shaale enables organizations to:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {whyPartnerItems.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 p-4 rounded-lg bg-secondary/30"
+                    className="flex flex-col text-center items-center gap-4 p-6 rounded-lg bg-secondary/30"
                   >
-                    <BookOpen className="w-6 h-6 text-accent flex-shrink-0" />
-                    <p>{item.text}</p>
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                      <item.icon className="w-6 h-6 text-accent" />
+                    </div>
+                    <p className="font-medium">{item.text}</p>
                   </div>
                 ))}
               </div>
               <p className="text-foreground/80 mt-4 text-center">
-                All programs are facilitated by trained educators and outdoor
-                learning specialists, ensuring safety, relevance, and
-                measurable outcomes.
+                All programs are facilitated by trained educators and specialists, ensuring safety, relevance, and measurable outcomes.
               </p>
             </div>
 
             <div className="mb-12 p-8 rounded-lg bg-accent/10">
-              <h2 className="text-3xl font-bold text-accent mb-4 text-center">
+              <h3 className="text-3xl font-bold text-accent mb-4 text-center">
                 Flexible Engagement Models
-              </h2>
+              </h3>
               <p className="text-foreground/80 mb-6 text-center">
-                We offer customizable engagement formats for students aged 6 to
-                24, allowing institutions to choose what best aligns with their
-                academic calendar and objectives:
+                We offer customizable formats, allowing organizations to choose what best aligns with their objectives:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
                 {engagementModels.map((model, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center p-4 rounded-lg bg-background/50"
+                    className="flex flex-col items-center p-6 rounded-lg bg-background/50 shadow-md"
                   >
-                    <Calendar className="w-8 h-8 mb-2 text-accent" />
-                    <p>{model}</p>
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-3">
+                      <model.icon className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-1">{model.title}</h4>
+                    <p className="text-sm text-foreground/70">{model.description}</p>
                   </div>
                 ))}
               </div>
-               <p className="text-foreground/80 mt-4 font-semibold text-center">
-                Programs are designed collaboratively, not as fixed packages.
+               <p className="text-foreground/80 mt-6 font-semibold text-center">
+                Programs are designed collaboratively to meet your specific needs.
               </p>
             </div>
 
-             <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold text-accent mb-4">Our Learning Approach</h2>
-                <p className="text-2xl font-semibold text-foreground/80 mb-4">Experience → Exploration → Reflection → Action</p>
-                <p className="text-foreground/80 mb-6 max-w-2xl mx-auto">This approach supports deeper understanding, retention, and real-world relevance. Students learn through hands-on activities, interdisciplinary exploration, collaborative problem-solving, and guided reflection.</p>
+             <div className="mb-12 text-center p-8 rounded-lg bg-secondary/30">
+                <h3 className="text-3xl font-bold text-accent mb-4">Our Learning Approach</h3>
+                <p className="text-2xl font-semibold text-foreground/80 mb-4">
+                  Experience → Exploration → Reflection → Action
+                </p>
+                <p className="text-foreground/80 max-w-3xl mx-auto">This approach supports deeper understanding, retention, and real-world relevance. Participants learn through hands-on activities, interdisciplinary exploration, collaborative problem-solving, and guided reflection.</p>
              </div>
 
             <div className="mb-12">
-              <h2 className="text-3xl font-bold text-accent mb-4 text-center">
-                Outcomes for Students
-              </h2>
-              <p className="text-foreground/80 mb-6 text-center">Institutions consistently observe improvements in:</p>
+              <h3 className="text-3xl font-bold text-accent mb-6 text-center">
+                Outcomes for Participants & Organizations
+              </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {outcomes.map((outcome, index) => (
                   <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30">
@@ -157,23 +194,12 @@ export default function CorporatePage() {
               </div>
             </div>
             
-            <div className="mb-12 p-8 rounded-lg bg-secondary/30 text-center">
-              <h2 className="text-3xl font-bold text-accent mb-4">
-                Programs as Modular Add-Ons
-              </h2>
-               <p className="text-lg text-foreground/80">
-                Prakruthi Shaale offers a diverse range of optional learning modules that institutions may select as add-ons based on age group, subject focus, and learning outcomes. These modules are informational and flexible, enabling institutions to fully control program design while ensuring alignment with NEP and SDG objectives.
-              </p>
-            </div>
-
             <div className="text-center p-8 rounded-lg bg-accent/10">
-              <h2 className="text-3xl font-bold text-accent mb-4">
-                Let’s Co-Create Meaningful Learning Experiences
-              </h2>
-              <p className="text-lg text-foreground/80 mb-6">
-                Connect with us to explore how Prakruthi Shaale can support your
-                institution’s academic excellence, sustainability vision, and
-                holistic student development.
+              <h3 className="text-3xl font-bold text-accent mb-4">
+                Let’s Co-Create Meaningful Experiences
+              </h3>
+              <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
+                Connect with us to explore how Prakruthi Shaale can support your organization’s goals—whether for employee engagement, leadership development, CSR initiatives, or educational excellence.
               </p>
               <Button size="lg">Partner with Us</Button>
             </div>
