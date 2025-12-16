@@ -120,7 +120,7 @@ export default function CorporatePage() {
             </div>
 
             <div className="mb-12 p-8 rounded-lg bg-secondary/30">
-              <div className="max-w-3xl mx-auto">
+              <div className="max-w-3xl mx-auto text-left">
                 <h3 className="text-3xl font-bold text-accent mb-4">
                   A Heritage Campus That Inspires Teams
                 </h3>
@@ -172,24 +172,27 @@ export default function CorporatePage() {
               </p>
             </div>
 
-            <div className="mb-12 text-center p-8 rounded-lg bg-secondary/30">
-              <h3 className="text-3xl font-bold text-accent mb-4">
-                Our Experiential Approach
-              </h3>
-              <p className="text-2xl font-semibold text-foreground/80 mb-4">
-                Experience → Reflection → Collaboration → Action
-              </p>
-              <p className="text-foreground/80 mb-4">Teams participate in:</p>
-              <ul className="list-decimal list-inside space-y-2 text-foreground/80 max-w-2xl mx-auto text-left">
-                <li>Outdoor and nature-based challenges</li>
-                <li>Problem-solving and collaborative activities</li>
-                <li>Guided reflection and facilitated discussions</li>
-                <li>Learning sessions linked to workplace application</li>
-              </ul>
-              <p className="text-foreground/80 max-w-3xl mx-auto mt-4">
-                This ensures experiences are not just enjoyable, but impactful
-                and transferable to the workplace.
-              </p>
+            <div className="mb-12 p-8 rounded-lg bg-secondary/30">
+              <div className="max-w-3xl mx-auto text-left">
+                <h3 className="text-3xl font-bold text-accent mb-4">
+                  Our Experiential Approach
+                </h3>
+                <p className="text-lg text-foreground/80 mb-4">
+                  All corporate programs follow a structured engagement cycle:
+                  Experience → Reflection → Collaboration → Action
+                </p>
+                <p className="text-foreground/80 mb-4">Teams participate in:</p>
+                <ul className="list-decimal list-outside space-y-2 text-foreground/80 pl-5">
+                  <li>Outdoor and nature-based challenges</li>
+                  <li>Problem-solving and collaborative activities</li>
+                  <li>Guided reflection and facilitated discussions</li>
+                  <li>Learning sessions linked to workplace application</li>
+                </ul>
+                <p className="text-foreground/80 max-w-3xl mt-4">
+                  This ensures experiences are not just enjoyable, but impactful
+                  and transferable to the workplace.
+                </p>
+              </div>
             </div>
 
             <div className="mb-12">
