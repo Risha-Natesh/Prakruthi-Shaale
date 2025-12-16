@@ -233,7 +233,7 @@ export default function CorporatePage() {
                   <div className="p-1">
                     <div className="p-8 rounded-lg bg-secondary/30 h-full">
                       <h3 className="text-2xl font-bold text-accent mb-4 text-center">
-                        Ideal For
+                        Who is this for?
                       </h3>
                       <ul className="list-disc list-inside space-y-2 text-foreground/80">
                         {idealFor.map((item) => (
