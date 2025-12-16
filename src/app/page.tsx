@@ -382,10 +382,15 @@ export default function Home() {
                       </div>
                       <div className="flex items-start gap-4">
                         <MapPin className="w-5 h-5 text-accent mt-1" />
-                        <span>
+                        <a
+                          href="https://maps.app.goo.gl/k1nmzXf3CWLf2SH68"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-accent hover:underline"
+                        >
                           45, 15th Cross Rd, Maruthi Extension, Malleshwaram,
                           Bengaluru, Karnataka 560003
-                        </span>
+                        </a>
                       </div>
                     </div>
                   </div>
