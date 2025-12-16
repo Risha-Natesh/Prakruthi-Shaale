@@ -276,10 +276,10 @@ export default function Home() {
                     The Challenge
                   </h3>
                   <ul className="space-y-2 text-white/80 list-disc list-inside text-left">
+                    <li>Limited community engagement</li>
                     <li>Urgent environmental threats</li>
                     <li>Disconnected sustainability efforts</li>
                     <li>Inefficient resource allocation</li>
-                    <li>Limited community engagement</li>
                   </ul>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
@@ -290,10 +290,10 @@ export default function Home() {
                     The Opportunity
                   </h3>
                   <ul className="space-y-2 text-white/80 list-disc list-inside text-left">
+                    <li>Empower community-led innovation</li>
                     <li>Create a collaborative ecosystem</li>
                     <li>Leverage partnerships for impact</li>
                     <li>Mobilize resources efficiently</li>
-                    <li>Empower community-led innovation</li>
                   </ul>
                 </div>
               </div>
@@ -320,14 +320,14 @@ export default function Home() {
                    <div className={cn("absolute -bottom-10 -left-10 w-32 h-32 rounded-full blur-2xl transition-all duration-700 group-hover:scale-150", event.colors.glow2)}></div>
 
                   <div className="relative p-8 text-left z-10 flex flex-col h-full">
-                    <div className={cn("flex items-center gap-2 text-sm mb-4 transition-colors duration-300", event.colors.text)}>
+                    <div className={cn("flex items-center gap-2 text-sm mb-4", event.colors.text)}>
                       <Calendar className="w-4 h-4" />
                       <span>{event.date}</span>
                     </div>
-                    <h3 className={cn("text-xl font-bold mb-2 transition-colors duration-300 flex-grow", event.colors.text)}>
+                    <h3 className={cn("text-xl font-bold mb-2 flex-grow", event.colors.text)}>
                       {event.title}
                     </h3>
-                    <Link href="#" className={cn("font-semibold flex items-center mt-auto transition-colors duration-300", event.colors.text, 'group-hover:underline')}>
+                    <Link href="#" className={cn("font-semibold flex items-center mt-auto", event.colors.text, 'group-hover:underline')}>
                       Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                   </div>
