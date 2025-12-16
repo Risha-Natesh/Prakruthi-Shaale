@@ -20,14 +20,14 @@ export default function YouthPage() {
         <div className="relative h-64 md:h-80">
           <Image
             src="/Images/kids - Copy.jpg"
-            alt="Kids Environmental Program"
+            alt="Youth Environmental Program"
             fill
             className="object-cover"
             data-ai-hint="kids exploring nature"
           />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight text-center">
-              Kids Environmental Program
+              Youth Environmental Program
             </h1>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function YouthPage() {
                 Fostering a Love for Nature & Science
               </h2>
               <p className="text-lg text-foreground/80 mb-6 transition-transform duration-300 hover:scale-105">
-                Our Kids Environmental Program is designed to ignite curiosity
+                Our Youth Environmental Program is designed to ignite curiosity
                 and passion in young minds. Through a series of engaging,
                 hands-on activities, we connect children with the natural
                 world, teaching them valuable skills and fostering a lifelong
