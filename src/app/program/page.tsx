@@ -15,6 +15,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import Link from 'next/link';
@@ -300,6 +302,8 @@ export default function ProgramPage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
             </Carousel>
           </div>
         </section>
