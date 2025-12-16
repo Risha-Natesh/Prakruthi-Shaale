@@ -39,23 +39,31 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
         <div className="relative z-10 w-full">
           <div
             className={cn(
-              `w-16 h-16 rounded-full flex items-center justify-center mb-4`,
-              initiative.bg
+              'p-8 rounded-lg',
+              initiative.bg,
+              'bg-opacity-40'
             )}
           >
-            <Icon className={`w-8 h-8 ${initiative.color}`} />
+            <div
+              className={cn(
+                `w-16 h-16 rounded-full flex items-center justify-center mb-4`,
+                initiative.bg
+              )}
+            >
+              <Icon className={`w-8 h-8 ${initiative.color}`} />
+            </div>
+            <h3 className="text-3xl font-bold text-foreground">
+              {initiative.title}
+            </h3>
+            <p className="text-foreground/70 text-lg mt-2">
+              {initiative.description}
+            </p>
+            <Link href={initiative.href} passHref>
+              <Button className="mt-4">
+                Learn More <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
-          <h3 className="text-3xl font-bold text-foreground">
-            {initiative.title}
-          </h3>
-          <p className="text-foreground/70 text-lg mt-2">
-            {initiative.description}
-          </p>
-          <Link href={initiative.href} passHref>
-            <Button className="mt-4">
-              Learn More <ArrowRight className="ml-2" />
-            </Button>
-          </Link>
         </div>
       </div>
       <div className="h-80 relative rounded-lg overflow-hidden shadow-lg">
