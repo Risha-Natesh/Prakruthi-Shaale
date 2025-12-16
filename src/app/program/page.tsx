@@ -35,21 +35,29 @@ const InitiativeCard = ({ initiative }: { initiative: any }) => {
       <div
         ref={ref}
         className={cn(
-          'relative h-full bg-card p-8 rounded-lg shadow-lg overflow-hidden transition-all duration-500 opacity-0',
+          'relative h-full bg-card p-8 rounded-2xl shadow-lg overflow-hidden transition-all duration-500 opacity-0',
           inView ? 'opacity-100 translate-y-0' : 'translate-y-10',
           'md:group-hover:transform md:group-hover:-translate-y-2 md:group-hover:ring-4 md:group-hover:ring-accent/50'
         )}
       >
         <div
-          className={`absolute -top-4 -right-4 w-24 h-24 rounded-full ${initiative.bg} opacity-50 blur-xl`}
+          className={cn(
+            'absolute -top-12 -right-12 w-48 h-48 rounded-full blur-2xl opacity-20 transition-all duration-500',
+            initiative.bg,
+            'group-hover:opacity-40 group-hover:scale-125'
+          )}
         ></div>
         <div className="relative z-10">
           <div
-            className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${initiative.bg}`}
+            className={cn(
+              `w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300`,
+              initiative.bg,
+              'group-hover:scale-110'
+            )}
           >
             <Icon className={`w-8 h-8 ${initiative.color}`} />
           </div>
-          <h3 className="text-2xl font-bold text-foreground mb-3 transition-transform duration-300 group-hover:scale-105">
+          <h3 className="text-2xl font-bold text-foreground mb-3">
             {initiative.title}
           </h3>
           <p className="text-foreground/70 mb-4">{initiative.description}</p>
@@ -72,7 +80,7 @@ export default function ProgramPage() {
         'Engaging the next generation with hands-on nature and science programs.',
       href: '/program/youth',
       color: 'text-green-800',
-      bg: 'bg-green-300/20',
+      bg: 'bg-green-300',
     },
     {
       icon: Users,
@@ -80,8 +88,8 @@ export default function ProgramPage() {
       description:
         'Partner with us to create impactful environmental and team-building experiences.',
       href: '/program/corporate',
-      color: 'text-green-800',
-      bg: 'bg-green-300/20',
+      color: 'text-blue-800',
+      bg: 'bg-blue-300',
     },
     {
       icon: HeartHandshake,
@@ -89,8 +97,8 @@ export default function ProgramPage() {
       description:
         'Join our volunteer efforts to make a tangible difference in our community.',
       href: '/program/community',
-      color: 'text-green-800',
-      bg: 'bg-green-300/20',
+      color: 'text-yellow-800',
+      bg: 'bg-yellow-300',
     },
   ];
 
@@ -219,7 +227,7 @@ export default function ProgramPage() {
           </div>
         </section>
 
-        <section id="initiatives" className="py-20 bg-background">
+        <section id="initiatives" className="py-20 bg-secondary/30">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold">Explore Our Initiatives</h2>
