@@ -14,72 +14,59 @@ import {
   BarChart,
   Target,
   Calendar,
+  Building,
+  HeartHandshake,
+  TrendingUp,
+  CheckCircle,
 } from 'lucide-react';
 
 export default function CorporatePage() {
-  const whyPartnerItems = [
-    {
-      icon: Zap,
-      text: 'Deliver impactful experiential and project-based learning programs.',
-    },
-    {
-      icon: BookOpen,
-      text: 'Integrate SDG-focused sustainability education and action.',
-    },
-    {
-      icon: Users,
-      text: 'Build leadership, teamwork, communication, and essential life skills.',
-    },
-    {
-      icon: Target,
-      text: 'Offer structured community service and employee/student volunteering pathways.',
-    },
-    {
-      icon: Sparkles,
-      text: 'Enhance engagement through real-world, outdoor experiences.',
-    },
-     {
-      icon: BarChart,
-      text: 'Achieve measurable outcomes for participants and the organization.',
-    },
-  ];
-
   const engagementModels = [
     {
       icon: Calendar,
-      title: 'Workshops & Immersions',
-      description: 'Half-day and full-day experiential programs.',
+      title: 'Half-day or full-day team offsites',
     },
     {
       icon: Briefcase,
-      title: 'Thematic Modules',
-      description: 'Multi-day programs focused on specific goals.',
+      title: 'Leadership and management retreats',
     },
     {
       icon: Users,
-      title: 'Long-Term Engagement',
-      description: 'Semester or annual engagement models.',
+      title: 'Cross-functional team engagement programs',
     },
      {
       icon: Award,
-      title: 'Leadership & Team Building',
-      description: 'Immersive experiences to foster collaboration.',
+      title: 'Sustainability-themed experiential days',
     },
     {
       icon: Sparkles,
-      title: 'Community Impact Tracks',
-      description: 'Tailored community development and volunteering projects.',
+      title: 'Employee volunteering and community engagement days',
     },
   ];
 
   const outcomes = [
-    'Enhanced environmental and sustainability awareness',
-    'Improved analytical and problem-solving skills',
-    'Stronger leadership and collaboration',
-    'Better communication and increased confidence',
-    'Greater sense of civic responsibility and empathy',
-    'A culture of purpose and engagement',
+    'Improved teamwork and trust',
+    'Enhanced communication and leadership behaviors',
+    'Increased employee engagement and morale',
+    'Stronger connection to sustainability and ESG goals',
+    'Memorable experiences that strengthen organizational culture',
   ];
+  
+  const idealFor = [
+      "Corporate offsites and team outings",
+      "Leadership and management development days",
+      "ESG and sustainability engagement initiatives",
+      "CSR-linked employee volunteering days",
+      "Wellness and employee engagement programs"
+  ]
+  
+  const engagementProcess = [
+      "Objective and team requirement discussion",
+      "Custom experience design",
+      "On-ground facilitation by trained professionals",
+      "Guided reflection and learning integration",
+      "Optional feedback and impact summary"
+  ]
 
   return (
     <div className="bg-background text-foreground">
@@ -95,10 +82,10 @@ export default function CorporatePage() {
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
             <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
-              Prakruthi Shaale for Organizations
+              Purpose-Driven Team Experiences
             </h1>
             <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl">
-              Customized Experiential Programs for Corporate Teams, Non-Profits, and Educational Institutions
+             Aligned with ESG & Sustainability Goals
             </p>
           </div>
         </div>
@@ -113,94 +100,124 @@ export default function CorporatePage() {
 
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center">
-               <h2 className="text-3xl font-bold text-accent mb-4">
-                Partner with Prakruthi Shaale
-              </h2>
               <p className="text-lg text-foreground/80">
-                Prakruthi Shaale offers experiential, sustainability-focused programs that align with corporate social responsibility (CSR) goals, employee engagement needs, and educational objectives. Our approach integrates hands-on learning, life skills, and environmental action to help organizations deliver holistic, future-ready development.
+                Prakruthi Shaale offers corporate team engagement and offsite experiences aligned with ESG priorities, sustainability goals, and employee wellbeing frameworks. Our programs combine team building, leadership development, and environmental awareness, enabling organizations to engage their teams meaningfully while reinforcing responsible business values.
+              </p>
+              <p className="text-lg text-foreground/80 mt-4">
+                Designed as day-out and short-format engagements, Prakruthi Shaale helps organizations translate sustainability commitments into hands-on, memorable team experiences.
+              </p>
+            </div>
+
+            <div className="mb-12 p-8 rounded-lg bg-secondary/30">
+              <h3 className="text-3xl font-bold text-accent mb-4 text-center">
+                A Heritage Campus That Inspires Teams
+              </h3>
+              <p className="text-foreground/80 mb-6 text-center">
+                Located at the historic residence of Nobel Laureate Sir C. V. Raman, Prakruthi Shaale is spread across 2.28 acres of green open space in Malleswaram, Bengaluru. The campus offers a rare combination of:
+              </p>
+              <ul className="list-decimal list-inside space-y-2 text-foreground/80 max-w-2xl mx-auto">
+                <li>Heritage and scientific legacy</li>
+                <li>Nature-rich open environments</li>
+                <li>Quiet, reflective spaces within the city</li>
+                <li>Safe and accessible location for corporate teams</li>
+              </ul>
+               <p className="text-foreground/80 mt-6 text-center">
+                This setting allows teams to disconnect from routine workspaces and reconnect with purpose, people, and nature.
               </p>
             </div>
 
             <div className="mb-12">
               <h3 className="text-3xl font-bold text-accent mb-6 text-center">
-                Why Organizations Partner with Us
+                Corporate Engagement Models
               </h3>
-              <p className="text-foreground/80 mb-6 text-center">
-                Today’s challenges require more than conventional training. Prakruthi Shaale enables organizations to:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {whyPartnerItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col text-center items-center gap-4 p-6 rounded-lg bg-accent/10"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-                      <item.icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <p className="font-medium">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-foreground/80 mt-4 text-center">
-                All programs are facilitated by trained educators and specialists, ensuring safety, relevance, and measurable outcomes.
-              </p>
-            </div>
-
-            <div className="mb-12 p-8 rounded-lg bg-accent/10">
-              <h3 className="text-3xl font-bold text-accent mb-4 text-center">
-                Flexible Engagement Models
-              </h3>
-              <p className="text-foreground/80 mb-6 text-center">
-                We offer customizable formats, allowing organizations to choose what best aligns with their objectives:
+               <p className="text-foreground/80 mb-6 text-center">
+                Prakruthi Shaale offers customizable day-out packages designed around organizational objectives:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
                 {engagementModels.map((model, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center p-6 rounded-lg bg-background/50 shadow-md"
+                    className="flex flex-col items-center p-6 rounded-lg bg-accent/10 shadow-md"
                   >
                     <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-3">
                       <model.icon className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-bold text-lg mb-1">{model.title}</h4>
-                    <p className="text-sm text-foreground/70">{model.description}</p>
+                    <h4 className="font-bold text-lg">{model.title}</h4>
                   </div>
                 ))}
               </div>
                <p className="text-foreground/80 mt-6 font-semibold text-center">
-                Programs are designed collaboratively to meet your specific needs.
+                Each engagement is co-designed to reflect team size, learning goals, and corporate values.
               </p>
             </div>
 
              <div className="mb-12 text-center p-8 rounded-lg bg-secondary/30">
-                <h3 className="text-3xl font-bold text-accent mb-4">Our Learning Approach</h3>
+                <h3 className="text-3xl font-bold text-accent mb-4">Our Experiential Approach</h3>
                 <p className="text-2xl font-semibold text-foreground/80 mb-4">
-                  Experience → Exploration → Reflection → Action
+                  Experience → Reflection → Collaboration → Action
                 </p>
-                <p className="text-foreground/80 max-w-3xl mx-auto">This approach supports deeper understanding, retention, and real-world relevance. Participants learn through hands-on activities, interdisciplinary exploration, collaborative problem-solving, and guided reflection.</p>
+                 <p className="text-foreground/80 mb-4">Teams participate in:</p>
+                <ul className="list-decimal list-inside space-y-2 text-foreground/80 max-w-2xl mx-auto text-left">
+                  <li>Outdoor and nature-based challenges</li>
+                  <li>Problem-solving and collaborative activities</li>
+                  <li>Guided reflection and facilitated discussions</li>
+                  <li>Learning sessions linked to workplace application</li>
+                </ul>
+                <p className="text-foreground/80 max-w-3xl mx-auto mt-4">This ensures experiences are not just enjoyable, but impactful and transferable to the workplace.</p>
              </div>
 
             <div className="mb-12">
               <h3 className="text-3xl font-bold text-accent mb-6 text-center">
-                Outcomes for Participants & Organizations
+                Outcomes for Organizations & Teams
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+               <p className="text-foreground/80 mb-6 text-center">
+                Corporates consistently report:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {outcomes.map((outcome, index) => (
                   <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-accent/10">
-                    <Award className="w-6 h-6 text-accent flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
                     <span>{outcome}</span>
                   </div>
                 ))}
               </div>
             </div>
-            
-            <div className="text-center mt-16">
-              <p className="text-foreground/70 italic text-sm max-w-2xl mx-auto mb-6">
-                Information about upcoming events and workshops will be posted here. For bespoke programs and collaborations, please feel free to reach out to us directly.
+
+            <div className="mb-12 text-center">
+              <h3 className="text-3xl font-bold text-accent mb-4">Activities as Flexible Add-Ons</h3>
+              <p className="text-lg text-foreground/80">
+                Prakruthi Shaale offers a range of optional activity modules that organizations may choose as add-ons based on team preferences and objectives. These modules are presented as flexible components, allowing organizations to curate a day that aligns with their culture—without rigid packages.
               </p>
-              <Link href="/program/partnerships">
-                <Button>Explore Strategic Partnerships</Button>
-              </Link>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="p-8 rounded-lg bg-secondary/30">
+                <h3 className="text-2xl font-bold text-accent mb-4 text-center">Ideal For</h3>
+                <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                  {idealFor.map(item => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+              <div className="p-8 rounded-lg bg-secondary/30">
+                <h3 className="text-2xl font-bold text-accent mb-4 text-center">Our Engagement Process</h3>
+                <ul className="list-decimal list-inside space-y-2 text-foreground/80">
+                  {engagementProcess.map(item => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center mt-16 p-8 rounded-lg bg-accent/10">
+              <h2 className="text-3xl font-bold text-accent mb-4">
+                Bring Your Teams Together—With Purpose
+              </h2>
+              <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
+                Discover how Prakruthi Shaale can create meaningful, memorable, and values-driven team experiences for your organization.
+              </p>
+              <Button size="lg" onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if(contactSection) contactSection.scrollIntoView({behavior: 'smooth'});
+              }}>
+                Contact Us to Learn More
+              </Button>
             </div>
           </div>
         </div>
