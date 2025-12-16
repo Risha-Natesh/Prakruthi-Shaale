@@ -144,7 +144,7 @@ export default function ProgramPage() {
                 approachInView ? 'opacity-100' : 'opacity-0'
               )}
             >
-              <h2 className="text-4xl font-bold">Our Approach & Programs</h2>
+              <h2 className="text-4xl font-bold">Our Approach</h2>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
                 Fostering sustainability through hands-on education.
               </p>
