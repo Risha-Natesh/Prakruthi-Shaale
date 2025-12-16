@@ -186,7 +186,7 @@ export default function CorporatePage() {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {outcomes.map((outcome, index) => (
-                  <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30">
+                  <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-accent/10">
                     <Award className="w-6 h-6 text-accent flex-shrink-0" />
                     <span>{outcome}</span>
                   </div>
