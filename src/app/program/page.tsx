@@ -146,7 +146,7 @@ export default function ProgramPage() {
             >
               <h2 className="text-4xl font-bold">Our Approach & Programs</h2>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
-                Empowering schools through hands-on sustainability education.
+                Fostering sustainability through hands-on education.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-16 items-center">
