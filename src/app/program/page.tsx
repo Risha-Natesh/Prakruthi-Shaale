@@ -2,12 +2,9 @@
 import Image from 'next/image';
 import Header from '@/components/header';
 import {
-  Antenna,
-  Cross,
   Users,
   Footprints,
   Puzzle,
-  GitCommit,
   Leaf,
   HeartHandshake,
   ArrowRight,
@@ -124,18 +121,6 @@ export default function ProgramPage() {
   ];
 
   const ecoConnectActivities = [
-    {
-      icon: Antenna,
-      title: 'HAM Radio Exploration',
-    },
-    {
-      icon: GitCommit,
-      title: 'Rope Work & Knots',
-    },
-    {
-      icon: Cross,
-      title: 'Essential First Aid',
-    },
     {
       icon: Footprints,
       title: 'Panchavati Nature Walk',
