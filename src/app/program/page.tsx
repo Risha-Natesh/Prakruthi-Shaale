@@ -37,8 +37,7 @@ const InitiativeCard = ({ initiative }: { initiative: any }) => {
         className={cn(
           'relative h-full bg-card p-8 rounded-lg shadow-lg overflow-hidden transition-all duration-500 opacity-0',
           inView ? 'opacity-100 translate-y-0' : 'translate-y-10',
-          'md:group-hover:transform md:group-hover:-translate-y-2 md:group-hover:ring-4 md:group-hover:ring-accent/50',
-          inView && 'ring-4 ring-accent/50 md:ring-0'
+          'md:group-hover:transform md:group-hover:-translate-y-2 md:group-hover:ring-4 md:group-hover:ring-accent/50'
         )}
       >
         <div
