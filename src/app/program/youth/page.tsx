@@ -17,6 +17,7 @@ import {
   School,
   PersonStanding,
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function YouthPage() {
   const whatToExpect = [
@@ -146,11 +147,16 @@ export default function YouthPage() {
                   return (
                     <div
                       key={index}
-                      className="p-6 rounded-lg bg-secondary/30 flex flex-col items-center justify-center"
+                      className="relative group rounded-xl overflow-hidden p-0.5"
                     >
-                      <Icon className="w-10 h-10 mb-3 text-accent" />
-                      <h4 className="font-bold text-lg text-accent/90">{item.title}</h4>
-                      <p className="text-foreground/80">{item.description}</p>
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-lime-400/30 blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
+                      <div
+                        className="relative p-6 rounded-lg bg-background/80 backdrop-blur-md flex flex-col items-center justify-center h-full"
+                      >
+                        <Icon className="w-10 h-10 mb-3 text-accent" />
+                        <h4 className="font-bold text-lg text-accent/90">{item.title}</h4>
+                        <p className="text-foreground/80">{item.description}</p>
+                      </div>
                     </div>
                   );
                 })}
