@@ -97,7 +97,7 @@ export default function ProgramPage() {
         'Partner with us to create impactful environmental and team-building experiences.',
       href: '/program/corporate',
       color: 'text-blue-800',
-      bg: 'bg-blue-300',
+      bg: 'bg-blue-400',
       image: '/Images/co-op.jpg',
     },
     {
