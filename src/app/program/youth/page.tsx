@@ -165,16 +165,12 @@ export default function YouthPage() {
                 At Prakruthi Shaale, learning happens through doing, exploring,
                 and experiencing. Children and youth engage in:
               </p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                {whatToExpect.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <li key={index} className="flex items-center gap-3">
-                      <Icon className="w-6 h-6 text-accent flex-shrink-0" />
-                      <span>{item.text}</span>
-                    </li>
-                  );
-                })}
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 list-decimal list-inside">
+                <li>Hands-on outdoor activities</li>
+                <li>Nature exploration and observation</li>
+                <li>Creative expression and problem-solving</li>
+                <li>Teamwork, communication, and leadership building</li>
+                <li>Environmental awareness and sustainable living practices</li>
               </ul>
               <p className="text-foreground/80 mt-6 text-center">
                 All programs are facilitated by trained outdoor educators,
@@ -217,10 +213,8 @@ export default function YouthPage() {
               </h2>
               <p className="text-lg text-foreground/80 mb-6">
                 Explore upcoming programs, weekend workshops, and holiday
-                activities. Enroll your child in experiences that inspire
-                lifelong learning.
+                activities. Upcoming events will be posted here.
               </p>
-              <Button size="lg">Explore Programs</Button>
             </div>
           </div>
         </div>
