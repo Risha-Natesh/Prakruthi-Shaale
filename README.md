@@ -1,6 +1,6 @@
 # Prakruthi Shaale
 
-This is the official website for Prakruthi Shaale, a flagship initiative by Outdoor Dynamix. It aims to revolutionize education by connecting students with nature through innovative outdoor learning experiences.
+This is the official website for Prakruthi Shaale, a flagship initiative. It aims to revolutionize education by connecting students with nature through innovative outdoor learning experiences.
 
 ## About the Project
 

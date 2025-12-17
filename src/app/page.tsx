@@ -85,8 +85,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg text-white/90 max-w-2xl mx-auto animate-fade-in-up [animation-delay:700ms]">
-                Prakruthi Shaale, a flagship initiative by Outdoor Dynamix,
-                revolutionizes education by connecting minds with nature through
+                Prakruthi Shaale revolutionizes education by connecting minds with nature through
                 innovative outdoor learning experiences. It fosters creativity,
                 curiosity, and critical thinking, promoting holistic
                 development.
@@ -321,7 +320,7 @@ export default function Home() {
             </h2>
             <p className="text-lg max-w-4xl mx-auto mb-8 text-primary-foreground/90">
               Discover our groundbreaking initiative uniting Nobel Laureate Sir
-              CV Raman Trust &amp; Outdoor Dynamix. Join us to empower minds
+              CV Raman Trust. Join us to empower minds
               through extraordinary learning experiences, complement academic
               education with hands-on activities, and inspire a lifelong love
               for nature. Partner with Prakruthi Shaale to nurture curious,

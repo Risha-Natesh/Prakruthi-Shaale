@@ -13,7 +13,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Prakruthi Shaale',
   description:
-    'A flagship initiative by Outdoor Dynamix, revolutionizes education by connecting students with nature through innovative outdoor learning experiences.',
+    'Prakruthi Shaale revolutionizes education by connecting students with nature through innovative outdoor learning experiences.',
 };
 
 export default function RootLayout({

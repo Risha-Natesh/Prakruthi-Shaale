@@ -68,7 +68,7 @@ export default function YouthPage() {
       icon: ShieldCheck,
       title: 'Safe & Guided',
       description:
-        'Programs executed by experienced facilitators from Outdoor Dynamix.',
+        'Programs executed by experienced facilitators.',
     },
   ];
   
@@ -149,7 +149,7 @@ export default function YouthPage() {
                       key={index}
                       className="relative group rounded-xl overflow-hidden p-0.5"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-lime-400/30 blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
+                       <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-lime-400/30 blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
                       <div
                         className="relative p-6 rounded-lg bg-background/80 backdrop-blur-md flex flex-col items-center justify-center h-full"
                       >
