@@ -67,9 +67,9 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/40 z-0"></div>
-          <div className="container mx-auto h-full flex flex-col items-center justify-center text-center text-white relative z-10">
+          <div className="container mx-auto h-full flex flex-col items-center justify-center text-center text-white relative z-10 px-4">
             <div className="flex flex-col gap-6">
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+              <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
                 <span
                   className="inline-block animate-fade-in-up"
                   style={{ color: '#889063', animationDelay: '100ms' }}
@@ -94,9 +94,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-20 bg-secondary/30">
-          <div className="container mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div className="h-96 relative rounded-lg overflow-hidden shadow-lg">
+        <section id="about" className="py-16 md:py-20 bg-secondary/30">
+          <div className="container mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center px-4">
+            <div className="h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/Images/aboutus.jpg"
                 alt="About us"
@@ -105,7 +105,7 @@ export default function Home() {
                 data-ai-hint="kids learning outdoors"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <h2 className="absolute bottom-6 left-6 text-4xl font-bold text-white">
+              <h2 className="absolute bottom-6 left-6 text-3xl md:text-4xl font-bold text-white">
                 About Us
               </h2>
             </div>
@@ -173,16 +173,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="vision" className="py-20 bg-white">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: '#889063' }}>
+        <section id="vision" className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto text-center px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#889063' }}>
               Our Vision &amp; Mission
             </h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-12">
               Connecting changemakers to make sustainability actionable and
               inclusive.
             </p>
-            <div className="grid md:grid-cols-2 gap-12 text-center">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 text-center">
               <div
                 ref={visionRef}
                 className={cn(
@@ -222,7 +222,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="challenge" className="py-20 relative text-white">
+        <section id="challenge" className="py-16 md:py-20 relative text-white">
           {challengeImage && (
             <Image
               src={challengeImage.imageUrl}
@@ -233,9 +233,9 @@ export default function Home() {
             />
           )}
           <div className="absolute inset-0 bg-black/60"></div>
-          <div className="container mx-auto relative z-10">
+          <div className="container mx-auto relative z-10 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold" style={{ color: '#889063' }}>
+              <h2 className="text-3xl md:text-4xl font-bold" style={{ color: '#889063' }}>
                 The Challenge &amp; The Opportunity
               </h2>
               <p className="mt-4 text-lg text-white/90">
@@ -277,9 +277,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="live" className="py-20">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: '#889063' }}>
+        <section id="live" className="py-16 md:py-20">
+          <div className="container mx-auto text-center px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#889063' }}>
               What's Live
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
@@ -313,9 +313,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="py-20 bg-[#546A50] text-white">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4">
+        <section id="contact" className="py-16 md:py-20 bg-[#546A50] text-white">
+          <div className="container mx-auto text-center px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Shape a Sustainable Tomorrow Together
             </h2>
             <p className="text-lg max-w-4xl mx-auto mb-8 text-primary-foreground/90">

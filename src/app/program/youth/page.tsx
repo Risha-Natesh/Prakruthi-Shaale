@@ -103,13 +103,13 @@ export default function YouthPage() {
             data-ai-hint="kids exploring nature"
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
               Where Nature, Curiosity, and Young Minds Grow
             </h1>
           </div>
         </div>
 
-        <div className="container mx-auto py-16">
+        <div className="container mx-auto py-12 md:py-16 px-4">
           <Link href="/program" className="mb-8 inline-block">
             <Button variant="outline">
               <ArrowLeft className="mr-2" />
@@ -119,7 +119,7 @@ export default function YouthPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold text-accent mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">
                 A Place to Explore, Learn, and Belong
               </h2>
               <p className="text-lg text-foreground/80 mb-4">
@@ -138,7 +138,7 @@ export default function YouthPage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl font-bold text-accent mb-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-6 text-center">
                 Who Can Participate
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -163,8 +163,8 @@ export default function YouthPage() {
               </div>
             </div>
 
-            <div className="mb-12 p-8 rounded-lg bg-secondary/30">
-              <h3 className="text-2xl font-bold text-accent mb-4 text-center">
+            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary/30">
+              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4 text-center">
                 What Families Can Expect
               </h3>
               <p className="text-foreground/80 mb-6 text-center">
@@ -185,7 +185,7 @@ export default function YouthPage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl font-bold text-accent mb-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-6 text-center">
                 Why Parents Choose Prakruthi Shaale
               </h3>
               <div className="grid grid-cols-1 gap-6">
@@ -213,8 +213,8 @@ export default function YouthPage() {
               </div>
             </div>
 
-            <div className="text-center p-8 rounded-lg bg-accent/10">
-              <h2 className="text-3xl font-bold text-accent mb-4">
+            <div className="text-center p-6 md:p-8 rounded-lg bg-accent/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">
                 Join Us
               </h2>
               <p className="text-lg text-foreground/80 mb-6">

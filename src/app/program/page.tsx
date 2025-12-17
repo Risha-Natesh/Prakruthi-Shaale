@@ -29,7 +29,7 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
   const Icon = initiative.icon;
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
-      <div className="relative flex flex-col gap-4 text-center md:text-left items-center md:items-start">
+      <div className="relative flex flex-col gap-4 text-center md:text-left items-center md:items-start order-2 md:order-1">
         <div
           className={cn(
             'absolute -top-1/4 -left-1/4 w-72 h-72 rounded-full opacity-20 blur-3xl',
@@ -66,7 +66,7 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
           </div>
         </div>
       </div>
-      <div className="h-80 relative rounded-lg overflow-hidden shadow-lg">
+      <div className="h-80 relative rounded-lg overflow-hidden shadow-lg order-1 md:order-2">
         <Image
           src={initiative.image}
           alt={initiative.title}
@@ -148,7 +148,7 @@ export default function ProgramPage() {
       <main className="flex-1 pt-16">
         <section
           id="programs"
-          className="py-20 relative overflow-hidden bg-[#E6EAE0]"
+          className="py-16 md:py-20 relative overflow-hidden bg-[#E6EAE0]"
         >
           <div className="absolute inset-0 z-0">
             <svg
@@ -188,7 +188,7 @@ export default function ProgramPage() {
             </svg>
           </div>
 
-          <div className="container mx-auto relative z-10">
+          <div className="container mx-auto relative z-10 px-4">
             <div
               ref={approachRef}
               className={cn(
@@ -196,15 +196,15 @@ export default function ProgramPage() {
                 approachInView ? 'opacity-100' : 'opacity-0'
               )}
             >
-              <h2 className="text-4xl font-bold">Our Approach</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Our Approach</h2>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
                 Fostering sustainability through hands-on education.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               <div
                 className={cn(
-                  'h-96 relative rounded-lg overflow-hidden shadow-lg transition-all duration-1000 transform',
+                  'h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg transition-all duration-1000 transform order-1',
                   approachInView
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
@@ -218,7 +218,7 @@ export default function ProgramPage() {
                   data-ai-hint="approach diagram"
                 />
               </div>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-8 order-2">
                 <div
                   className={cn(
                     'transition-all duration-1000 transform',
@@ -272,10 +272,10 @@ export default function ProgramPage() {
           </div>
         </section>
 
-        <section id="initiatives" className="py-20 bg-secondary/30">
-          <div className="container mx-auto">
+        <section id="initiatives" className="py-16 md:py-20 bg-secondary/30">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold">Explore Our Initiatives</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Explore Our Initiatives</h2>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
                 Discover how you can get involved and make a difference.
               </p>
@@ -312,18 +312,18 @@ export default function ProgramPage() {
 
         <section
           id="eco-connect-activities"
-          className="py-20"
+          className="py-16 md:py-20"
           style={{ backgroundColor: '#a7ad89' }}
         >
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4">
+          <div className="container mx-auto text-center px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Eco Connect Activities
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
               Engaging, hands-on activities designed to build skills and foster
               teamwork.
             </p>
-            <div className="flex justify-center gap-8 md:gap-16">
+            <div className="flex flex-wrap justify-center gap-8 md:gap-16">
               {ecoConnectActivities.map((activity, index) => {
                 const Icon = activity.icon;
                 return (

@@ -22,14 +22,14 @@ export default function PartnershipsPage() {
             className="object-cover"
             data-ai-hint="business people shaking hands"
           />
-          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight text-center">
+          <div className="absolute inset-0 bg-black/50 flex items-center justify-center p-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight text-center">
               Strategic Partnerships
             </h1>
           </div>
         </div>
 
-        <div className="container mx-auto py-16">
+        <div className="container mx-auto py-12 md:py-16 px-4">
           <Link href="/program" className="mb-8 inline-block">
             <Button variant="outline">
               <ArrowLeft className="mr-2" />
@@ -37,8 +37,8 @@ export default function PartnershipsPage() {
             </Button>
           </Link>
 
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2">
+          <div className="grid lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent mb-4">
                 Driving Growth Through Collaboration
               </h2>
@@ -90,8 +90,8 @@ export default function PartnershipsPage() {
             </div>
           </div>
 
-          <div className="mt-16 text-center p-8 rounded-lg bg-accent/10">
-            <h2 className="text-3xl font-bold text-accent mb-4">Let's Build a Sustainable Future Together</h2>
+          <div className="mt-16 text-center p-6 md:p-8 rounded-lg bg-accent/10">
+            <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">Let's Build a Sustainable Future Together</h2>
             <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
               If your organization is passionate about driving sustainable change and is looking for a strategic partner to innovate and grow with, we would love to hear from you.
             </p>
