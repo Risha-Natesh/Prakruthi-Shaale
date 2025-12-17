@@ -212,7 +212,7 @@ export default function CommunityPage() {
               <p className="text-foreground/80 mb-4">
                 Through participation, volunteers develop:
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {outcomes.map((outcome, index) => {
                   const Icon = outcome.icon;
                   return (
