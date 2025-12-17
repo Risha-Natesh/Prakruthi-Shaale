@@ -142,6 +142,10 @@ export default function ProgramPage() {
     triggerOnce: true,
   });
 
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
   return (
     <div className="relative flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
       <Header />
@@ -281,21 +285,18 @@ export default function ProgramPage() {
               </p>
             </div>
             <Carousel
-              plugins={[
-                Autoplay({
-                  delay: 3000,
-                  stopOnInteraction: true,
-                }),
-              ]}
+              plugins={[plugin.current]}
               opts={{
                 align: 'start',
                 loop: true,
               }}
               className="w-full"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
             >
               <CarouselContent>
                 {initiatives.map((initiative) => (
-                  <CarouselItem key={initiative.title}>
+                  <CarouselItem key={initiative.title} className="md:basis-1/1">
                     <div className="p-4">
                       <InitiativeSlide initiative={initiative} />
                     </div>
