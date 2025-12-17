@@ -122,21 +122,6 @@ export default function ProgramPage() {
     },
   ];
 
-  const ecoConnectActivities = [
-    {
-      icon: Footprints,
-      title: 'Panchavati Nature Walk',
-    },
-    {
-      icon: Puzzle,
-      title: 'Ice Breaker Games',
-    },
-    {
-      icon: Users,
-      title: 'Team Building',
-    },
-  ];
-
   const { ref: approachRef, inView: approachInView } = useInView({
     threshold: 0.2,
     triggerOnce: true,
@@ -308,40 +293,6 @@ export default function ProgramPage() {
                 <CarouselNext className="relative top-auto right-auto" />
               </div>
             </Carousel>
-          </div>
-        </section>
-
-        <section
-          id="eco-connect-activities"
-          className="py-16 md:py-20"
-          style={{ backgroundColor: '#a7ad89' }}
-        >
-          <div className="container mx-auto text-center px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Eco Connect Activities
-            </h2>
-            <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
-              Engaging, hands-on activities designed to build skills and foster
-              teamwork.
-            </p>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-              {ecoConnectActivities.map((activity, index) => {
-                const Icon = activity.icon;
-                return (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center gap-3 text-center group transform transition-transform duration-300 hover:scale-110 hover:-translate-y-2"
-                  >
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:rotate-12 ring-2 ring-accent/20">
-                      <Icon className="w-8 h-8 text-accent" />
-                    </div>
-                    <h4 className="font-semibold text-foreground transition-transform duration-300 group-hover:scale-105">
-                      {activity.title}
-                    </h4>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </section>
       </main>
