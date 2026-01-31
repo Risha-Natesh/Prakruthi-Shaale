@@ -83,9 +83,9 @@ export default function ProgramPage() {
   const initiatives = [
     {
       icon: Leaf,
-      title: 'Youth Environmental Program',
+      title: 'Youth for SDGs Program',
       description:
-        'Engaging the next generation with hands-on nature and science programs.',
+        'Empowering the next generation to lead on the Global Goals through immersive nature and science education (SDG 4, 13, 15).',
       href: '/program/youth',
       color: 'text-green-800',
       bg: 'bg-green-400',
@@ -93,9 +93,9 @@ export default function ProgramPage() {
     },
     {
       icon: Building,
-      title: 'Corporate Program',
+      title: 'Partnerships for Purpose',
       description:
-        'Partner with us to create impactful environmental and team-building experiences.',
+        'Collaborate on ESG-aligned corporate experiences that drive sustainable innovation and responsible leadership (SDG 12, 17).',
       href: '/program/corporate',
       color: 'text-teal-800',
       bg: 'bg-teal-400',
@@ -103,9 +103,9 @@ export default function ProgramPage() {
     },
     {
       icon: HeartHandshake,
-      title: 'Community Volunteer Program',
+      title: 'Community Action for the Planet',
       description:
-        'Join our volunteer efforts to make a tangible difference in our community.',
+        'Join local volunteer efforts to build sustainable communities and contribute to climate action and biodiversity (SDG 11, 13, 15).',
       href: '/program/community',
       color: 'text-lime-800',
       bg: 'bg-lime-400',
@@ -113,9 +113,9 @@ export default function ProgramPage() {
     },
     {
       icon: Briefcase,
-      title: 'Strategic Partnerships',
+      title: 'Ventures for a Better World',
       description:
-        'Collaborate on for-profit ventures and sustainable business opportunities.',
+        'Co-create profitable and sustainable business ventures aligned with the principles of the SDGs (SDG 8, 9, 17).',
       href: '/program/partnerships',
       color: 'text-emerald-800',
       bg: 'bg-emerald-400',
@@ -126,15 +126,15 @@ export default function ProgramPage() {
   const approachItems = [
     {
       title: 'Outdoor Activities & Workshops',
-      description: 'Activities like nature walks, bird watching, and gardening promote environmental awareness.',
+      description: 'Activities like nature walks and gardening connect participants to SDG 15 (Life on Land) and promote environmental awareness.',
     },
     {
       title: 'Experiential Learning Programs',
-      description: 'Hands-on activities enrich curriculum and support academic, emotional, and social growth.',
+      description: 'Hands-on activities provide quality education (SDG 4) that supports academic, emotional, and social growth for all ages.',
     },
     {
-      title: 'Volunteering, Team-building & Leadership Programs',
-      description: 'Collaborative challenges enhance communication and leadership skills among participants.',
+      title: 'Volunteering & Leadership Programs',
+      description: 'Collaborative challenges enhance communication and leadership skills, fostering partnerships for the goals (SDG 17).',
     }
   ];
 
@@ -149,7 +149,7 @@ export default function ProgramPage() {
   });
 
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 5000, stopOnInteraction: true })
   );
 
   return (
@@ -159,7 +159,7 @@ export default function ProgramPage() {
         <section
           id="programs"
           ref={approachRef}
-          className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-background to-secondary"
+          className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-background via-secondary to-background"
         >
           <div className="absolute inset-0 z-0 opacity-50">
             <svg
@@ -208,7 +208,7 @@ export default function ProgramPage() {
             >
               <h2 className="text-3xl md:text-4xl font-bold">Our Approach</h2>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
-                Fostering sustainability through hands-on education.
+                Our approach is rooted in experiential education that empowers individuals to understand and act on the Sustainable Development Goals.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -253,12 +253,12 @@ export default function ProgramPage() {
           </div>
         </section>
 
-        <section id="initiatives" ref={initiativesRef} className="py-16 md:py-20 bg-gradient-to-b from-secondary to-background">
+        <section id="initiatives" ref={initiativesRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
           <div className="container mx-auto px-4">
             <div className={cn('text-center mb-12 transition-all duration-700', initiativesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold">Explore Our Initiatives</h2>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
-                Discover how you can get involved and make a difference.
+                Discover how you can get involved and contribute to the Global Goals.
               </p>
             </div>
             <div className={cn('transition-all duration-700', initiativesInView ? 'opacity-100' : 'opacity-0')} style={{transitionDelay: '200ms'}}>

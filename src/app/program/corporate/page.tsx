@@ -1,3 +1,4 @@
+
 'use client';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
@@ -53,19 +54,19 @@ export default function CorporatePage() {
   ];
 
   const idealFor = [
-    'Corporate offsites and team outings',
-    'Leadership and management development days',
+    'Corporate offsites focused on purpose and impact',
+    'Leadership development aligned with SDG principles',
     'ESG and sustainability engagement initiatives',
-    'CSR-linked employee volunteering days',
+    'CSR-linked employee volunteering days (SDG 11, 13, 15)',
     'Wellness and employee engagement programs',
   ];
 
   const engagementProcess = [
-    'Objective and team requirement discussion',
-    'Custom experience design',
+    'Aligning on objectives and SDG focus areas',
+    'Custom experience design and co-creation',
     'On-ground facilitation by trained professionals',
-    'Guided reflection and learning integration',
-    'Optional feedback and impact summary',
+    'Guided reflection and connecting action to impact',
+    'Optional feedback and SDG impact reporting',
   ];
 
   const handleContactScroll = () => {
@@ -86,10 +87,10 @@ export default function CorporatePage() {
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-              Purpose-Driven Team Experiences
+              Corporate Partnerships for Purpose
             </h1>
             <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl">
-              Aligned with ESG & Sustainability Goals
+              Aligning Business with the Sustainable Development Goals
             </p>
           </div>
         </div>
@@ -105,40 +106,29 @@ export default function CorporatePage() {
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center">
               <p className="text-lg text-foreground/80">
-                Prakruthi Shaale offers corporate team engagement and offsite
-                experiences aligned with ESG priorities, sustainability goals,
-                and employee wellbeing frameworks.
+                Prakruthi Shaale offers bespoke corporate engagement experiences that align with your ESG priorities, sustainability goals, and commitment to the UN SDGs. Our programs help translate your organization's purpose into tangible, hands-on team experiences.
               </p>
               <p className="text-lg text-foreground/80 mt-4">
-                Our programs combine team building, leadership development, and
-                environmental awareness, enabling organizations to engage their
-                teams meaningfully while reinforcing responsible business
-                values. Designed as day-out and short-format engagements,
-                Prakruthi Shaale helps organizations translate sustainability
-                commitments into hands-on, memorable team experiences.
+                We combine leadership development, team building, and environmental action to create memorable offsites that reinforce responsible business values. Engage your team, foster innovation, and make a measurable impact on goals like Responsible Consumption (SDG 12), Decent Work (SDG 8), and Partnerships for the Goals (SDG 17).
               </p>
             </div>
 
             <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
               <div className="max-w-3xl mx-auto text-left">
                 <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-                  A Heritage Campus That Inspires Teams
+                  A Heritage Campus That Inspires Innovation
                 </h3>
                 <p className="text-foreground/80 mb-6">
-                  Located at the historic residence of Nobel Laureate Sir C. V.
-                  Raman, Prakruthi Shaale is spread across 2.28 acres of green
-                  open space in Malleswaram, Bengaluru. The campus offers a rare
-                  combination of:
+                  Located at the historic 2.28-acre residence of Nobel Laureate Sir C. V. Raman in Bengaluru, our campus offers a unique environment to inspire your teams:
                 </p>
                 <ul className="list-decimal list-outside space-y-2 text-foreground/80 pl-5">
-                  <li>Heritage and scientific legacy</li>
-                  <li>Nature-rich open environments</li>
-                  <li>Quiet, reflective spaces within the city</li>
-                  <li>Safe and accessible location for corporate teams</li>
+                  <li>A legacy of scientific innovation and discovery</li>
+                  <li>Nature-rich open spaces for creative thinking</li>
+                  <li>Quiet, reflective areas to disconnect and refocus</li>
+                  <li>A safe, accessible, and inspiring urban oasis</li>
                 </ul>
                 <p className="text-foreground/80 mt-6">
-                  This setting allows teams to disconnect from routine workspaces
-                  and reconnect with purpose, people, and nature.
+                  This setting empowers teams to break from routine, connect with a greater purpose, and collaborate on sustainable solutions.
                 </p>
               </div>
             </div>
@@ -148,8 +138,7 @@ export default function CorporatePage() {
                 Corporate Engagement Models
               </h3>
               <p className="text-foreground/80 mb-6 text-center">
-                Prakruthi Shaale offers customizable day-out packages designed
-                around organizational objectives:
+                We offer customizable day-out packages designed around your organization's objectives:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {engagementModels.map((model, index) => (
@@ -167,8 +156,7 @@ export default function CorporatePage() {
                 ))}
               </div>
               <p className="text-foreground/80 mt-6 font-semibold text-center">
-                Each engagement is co-designed to reflect team size, learning
-                goals, and corporate values.
+                Each engagement is co-designed to reflect team size, learning goals, and your commitment to the SDGs.
               </p>
             </div>
 
@@ -183,14 +171,13 @@ export default function CorporatePage() {
                 </p>
                 <p className="text-foreground/80 mb-4">Teams participate in:</p>
                 <ul className="list-decimal list-outside space-y-2 text-foreground/80 pl-5">
-                  <li>Outdoor and nature-based challenges</li>
-                  <li>Problem-solving and collaborative activities</li>
-                  <li>Guided reflection and facilitated discussions</li>
-                  <li>Learning sessions linked to workplace application</li>
+                  <li>Outdoor and nature-based challenges that build resilience</li>
+                  <li>Collaborative activities focused on sustainable problem-solving</li>
+                  <li>Guided reflection to connect experiences to business challenges</li>
+                  <li>Learning sessions on applying SDG principles in the workplace</li>
                 </ul>
                 <p className="text-foreground/80 max-w-3xl mt-4">
-                  This ensures experiences are not just enjoyable, but impactful
-                  and transferable to the workplace.
+                  This ensures experiences are not just enjoyable, but impactful and transferable to your organization's culture and strategy.
                 </p>
               </div>
             </div>
@@ -220,11 +207,7 @@ export default function CorporatePage() {
                 Activities as Flexible Add-Ons
               </h3>
               <p className="text-lg text-foreground/80">
-                Prakruthi Shaale offers a range of optional activity modules
-                that organizations may choose as add-ons based on team
-                preferences and objectives. These modules are presented as
-                flexible components, allowing organizations to curate a day
-                that aligns with their culture—without rigid packages.
+                Prakruthi Shaale offers a range of optional activity modules that organizations may choose as add-ons based on team preferences and objectives. These modules are presented as flexible components, allowing organizations to curate a day that aligns with their culture—without rigid packages.
               </p>
             </div>
 
@@ -274,8 +257,7 @@ export default function CorporatePage() {
                 Bring Your Teams Together—With Purpose
               </h2>
               <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
-                Discover how Prakruthi Shaale can create meaningful, memorable,
-                and values-driven team experiences for your organization.
+                Discover how Prakruthi Shaale can create meaningful, memorable, and values-driven team experiences that advance your sustainability agenda.
               </p>
               <Button size="lg" onClick={handleContactScroll}>
                 Contact Us to Learn More

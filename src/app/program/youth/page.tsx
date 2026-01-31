@@ -1,3 +1,4 @@
+
 'use client';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
@@ -47,28 +48,28 @@ export default function YouthPage() {
     {
       icon: Building,
       title: 'Heritage Learning Environment',
-      description: 'Learn on a campus that inspired scientific excellence.',
+      description: 'Learn on a campus that inspired a Nobel Laureate.',
     },
     {
       icon: Feather,
-      title: 'Nature-First Approach',
-      description: 'Screen-free, outdoor-rich experiences.',
+      title: 'Education for Action',
+      description: 'Screen-free, outdoor experiences that inspire real-world action on the SDGs.',
     },
     {
       icon: Award,
       title: 'Holistic Development',
-      description: 'Builds confidence, empathy, creativity, and responsibility.',
+      description: 'Builds confidence, empathy, and the critical thinking skills needed for a sustainable future.',
     },
     {
       icon: Sparkles,
-      title: 'Flexible Enrollment',
-      description: 'Choose activities that suit your child’s interests.',
+      title: 'Flexible & Engaging',
+      description: 'Choose from a variety of programs that align with your child’s passions.',
     },
     {
       icon: ShieldCheck,
       title: 'Safe & Guided',
       description:
-        'Programs executed by experienced facilitators.',
+        'All programs are led by experienced facilitators in a secure environment.',
     },
   ];
   
@@ -104,7 +105,7 @@ export default function YouthPage() {
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-              Where Nature, Curiosity, and Young Minds Grow
+              Growing Future Leaders for the Global Goals
             </h1>
           </div>
         </div>
@@ -120,20 +121,13 @@ export default function YouthPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-                A Place to Explore, Learn, and Belong
+                A Place to Explore, Learn, and Lead
               </h2>
               <p className="text-lg text-foreground/80 mb-4">
-                We offer thoughtfully designed nature-based learning experiences
-                for children and young adults aged 6 to 24, helping them
-                explore, create, and grow—beyond screens and classrooms.
+                Our Youth for SDGs Program offers nature-based learning experiences for ages 6-24, designed to empower the next generation of global citizens. We provide the tools, knowledge, and inspiration for young people to act on critical issues like climate change (SDG 13), biodiversity (SDG 15), and quality education (SDG 4).
               </p>
               <p className="text-lg text-foreground/80">
-                Prakruthi Shaale is more than an activity center—it is a
-                community space where families come together to nurture
-                curiosity, values, and a love for nature. Whether your child is
-                discovering the outdoors for the first time or seeking deeper
-                learning experiences, Prakruthi Shaale offers a meaningful
-                journey of growth.
+                Prakruthi Shaale is a community where families and youth come together to nurture curiosity, values, and a commitment to a sustainable world.
               </p>
             </div>
 
@@ -168,19 +162,17 @@ export default function YouthPage() {
                 What Families Can Expect
               </h3>
               <p className="text-foreground/80 mb-6 text-center">
-                At Prakruthi Shaale, learning happens through doing, exploring,
-                and experiencing. Children and youth engage in:
+                At Prakruthi Shaale, learning is an adventure. Our programs are centered on doing, exploring, and experiencing, with a focus on:
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 list-decimal list-inside">
-                <li>Hands-on outdoor activities</li>
-                <li>Nature exploration and observation</li>
-                <li>Creative expression and problem-solving</li>
-                <li>Teamwork, communication, and leadership building</li>
-                <li>Environmental awareness and sustainable living practices</li>
+                <li>Hands-on activities that bring the SDGs to life</li>
+                <li>Exploration to foster a deep connection with nature (SDG 15)</li>
+                <li>Creative problem-solving for real-world sustainability challenges</li>
+                <li>Teamwork and leadership skills for effective collaboration (SDG 17)</li>
+                <li>Building awareness and practices for sustainable living (SDG 12)</li>
               </ul>
               <p className="text-foreground/80 mt-6 text-center">
-                All programs are facilitated by trained outdoor educators,
-                ensuring a safe, inclusive, and inspiring environment.
+                All programs are facilitated by trained outdoor educators in a safe, inclusive, and inspiring environment.
               </p>
             </div>
 
@@ -218,8 +210,7 @@ export default function YouthPage() {
                 Join Us
               </h2>
               <p className="text-lg text-foreground/80 mb-6">
-                Explore upcoming programs, weekend workshops, and holiday
-                activities. Upcoming events will be posted here.
+                Explore upcoming programs and workshops designed to empower the next generation of sustainability leaders. Events will be posted here.
               </p>
             </div>
           </div>

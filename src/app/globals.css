@@ -5,24 +5,24 @@
 
 @layer base {
   :root {
-    --background: 120 30% 97%;
+    --background: 40 30% 98%; /* Lighter, warmer off-white */
     --foreground: 145 50% 10%;
-    --card: 120 30% 97%;
+    --card: 40 30% 98%;
     --card-foreground: 145 50% 10%;
-    --popover: 0 0% 100%;
+    --popover: 30 50% 99%;
     --popover-foreground: 145 50% 10%;
     --primary: 142 76% 36%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 145 40% 92%;
+    --secondary: 120 25% 94%; /* Light green-gray */
     --secondary-foreground: 145 50% 20%;
-    --muted: 145 30% 90%;
+    --muted: 120 25% 94%;
     --muted-foreground: 145 25% 45%;
     --accent: 130 65% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 145 30% 80%;
-    --input: 145 30% 94%;
+    --border: 120 20% 88%;
+    --input: 120 25% 96%;
     --ring: 142 76% 36%;
     --chart-1: 160 70% 40%;
     --chart-2: 48 96% 53%;
@@ -70,7 +70,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-poppins), sans-serif;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(142 76% 36%)" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-3.87 3.13-7 7-7h1"/><path d="M15.5 8.5c.3-1 .5-2.2.5-3.5A6.5 6.5 0 0 0 9.5 5C6 5 3 8 3 11.5A6.5 6.5 0 0 0 9.5 18c2.5 0 4.5-1.5 5.5-4"/><path d="M12 21c-2-2-2-4-2-6"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(142 76% 36%)" stroke="white" stroke-width="1"><path d="M3 3l7.07 18.97 2.52-10.05L21.97 10.05 3 3z" transform="rotate(-45 12 12)"/></svg>'), auto;
   }
   a, button, [role="button"] {
     cursor: pointer;

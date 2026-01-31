@@ -61,27 +61,27 @@ export default function Home() {
   const faqs = [
     {
       question: "What is Prakruthi Shaale?",
-      answer: "Prakruthi Shaale is an innovative outdoor learning centre dedicated to revolutionising education by connecting minds with the natural world. The centre provides unique outdoor experiences that are designed to inspire creativity, curiosity, and critical thinking skills within a natural environment."
+      answer: "Prakruthi Shaale is an innovative outdoor learning centre dedicated to revolutionising education by connecting minds with the natural world. Our goal is to inspire creativity, curiosity, and critical thinking to foster a generation of leaders committed to the UN Sustainable Development Goals (SDGs)."
     },
     {
       question: "What are the primary mission and vision of the organisation?",
-      answer: 'The organisation operates on a "Think Global, Act Local" approach to achieve Sustainable Development Goals (SDG). Its mission is to make sustainability accessible and actionable for everyone, bridging existing knowledge gaps and mobilising resources to foster collaborative impact. Ultimately, it aims to build a global network of changemakers to ensure a sustainable future.'
+      answer: 'Our vision is to build a global network of changemakers achieving the SDGs through a "Think Global, Act Local" approach. Our mission is to make sustainability accessible and actionable for everyone, bridging knowledge gaps and mobilising resources to drive progress on goals for quality education, climate action, and terrestrial ecosystem preservation.'
     },
     {
       question: "How does outdoor learning benefit participants?",
-      answer: "By connecting individuals with nature, the programs promote holistic development and nurture responsible, compassionate individuals. These immersive educational experiences complement academic learning with hands-on activities, helping to empower future leaders and inspire a lifelong love for nature."
+      answer: "Our programs promote holistic development by connecting individuals with nature, nurturing responsible and compassionate global citizens. These immersive experiences complement academic learning with hands-on activities that empower future leaders and inspire a lifelong commitment to achieving the SDGs."
     },
     {
       question: "What environmental challenges does Prakruthi Shaale address?",
-      answer: "The centre seeks to address urgent environmental threats and the problem of disconnected sustainability efforts. It identifies opportunities to empower community-led innovation and create a collaborative ecosystem that overcomes limited community engagement and inefficient resource allocation."
+      answer: "We address urgent environmental threats and fragmented sustainability efforts by focusing on key SDGs. We empower community-led innovation for sustainable cities (SDG 11), promote climate action (SDG 13), and protect life on land (SDG 15) by creating a collaborative ecosystem for impactful change."
     },
     {
       question: "Who are the key partners and stakeholders?",
-      answer: "Prakruthi Shaale unites various stakeholders, including organisations, youth, and individual changemakers, to foster social innovation. Notably, the centre features a groundbreaking initiative in partnership with the Nobel Laureate Sir CV Raman Trust to empower minds through extraordinary learning experiences."
+      answer: "Prakruthi Shaale unites organisations, youth, and changemakers to foster social innovation aligned with SDG 17 (Partnerships for the Goals). A key partnership with the Nobel Laureate Sir CV Raman Trust helps us empower minds through extraordinary learning experiences."
     },
     {
       question: "How can I get involved or stay updated on activities?",
-      answer: 'Visitors can participate in workshops, community activities, and events such as "Volunteer Day" to help shape a sustainable tomorrow. The organisation actively mobilises volunteers and resources to create a collective impact through both online and offline engagements.'
+      answer: "You can participate in workshops and community events to help achieve the SDGs. We actively mobilise volunteers and resources for collective impact, both online and offline, creating pathways for anyone to contribute to a sustainable tomorrow."
     },
     {
       question: "Where is Prakruthi Shaale located, and how can I contact them?",
@@ -92,18 +92,18 @@ export default function Home() {
   const aboutItems = [
     {
       icon: Target,
-      title: 'Innovative Outdoor Learning Center',
-      description: 'Dedicated to revolutionizing education by providing unique outdoor learning experiences that inspire.',
+      title: 'Education for Sustainable Development',
+      description: 'Our innovative outdoor learning experiences are designed to provide quality education (SDG 4) and inspire climate action (SDG 13).',
     },
     {
       icon: Leaf,
-      title: 'Nature Connection Benefits',
-      description: 'Connects everyone with nature to foster creativity, curiosity, and critical thinking skills in a natural environment.',
+      title: 'Fostering Global Citizenship',
+      description: 'We connect individuals with nature to foster creativity, critical thinking, and a deep-seated responsibility for our planet (SDG 15).',
     },
     {
       icon: Sprout,
       title: 'Promoting Holistic Development',
-      description: 'Focuses on nurturing responsible and compassionate individuals through immersive outdoor educational programs.',
+      description: 'Through immersive programs, we nurture compassionate and responsible leaders equipped to tackle global challenges.',
     },
   ];
 
@@ -131,7 +131,7 @@ export default function Home() {
                   className="inline-block animate-fade-in-up"
                   style={{ color: '#889063', animationDelay: '100ms' }}
                 >
-                  Empowering
+                  Fostering Global Citizens
                 </span>
                 <br />
                 <span
@@ -142,16 +142,13 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg text-white/90 max-w-2xl mx-auto animate-fade-in-up [animation-delay:700ms]">
-                Prakruthi Shaale revolutionizes education by connecting minds with nature through
-                innovative outdoor learning experiences. It fosters creativity,
-                curiosity, and critical thinking, promoting holistic
-                development.
+                 Prakruthi Shaale empowers individuals to become active contributors to the UN Sustainable Development Goals (SDGs). Through innovative outdoor learning, we foster the creativity, critical thinking, and global awareness needed to build a sustainable future.
               </p>
             </div>
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary">
+        <section id="about" ref={aboutRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
           <div className="container mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center px-4">
             <div className={cn('h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg transform transition-all duration-700 ease-out hover:scale-105', aboutInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10')}>
               <Image
@@ -194,15 +191,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="vision" ref={visionRef} className="py-16 md:py-20 bg-gradient-to-b from-secondary to-background">
+        <section id="vision" ref={visionRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
           <div className="container mx-auto text-center px-4">
             <div className={cn('transition-all duration-700 ease-out', visionInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
                 Our Vision &amp; Mission
               </h2>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-12">
-                Connecting changemakers to make sustainability actionable and
-                inclusive.
+                To build a global network of changemakers dedicated to achieving the Sustainable Development Goals through local action.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 text-center">
@@ -217,10 +213,7 @@ export default function Home() {
                   Our Vision
                 </h3>
                 <p className="text-white/90">
-                  Think Global, Act Local approach. Achieving SDG Goals.
-                  Connecting individuals, organizations, and youth. Building a
-                  network of changemakers. Sustainable future through online and
-                  offline engagements.
+                  A global network of changemakers dedicated to achieving the Sustainable Development Goals through a "Think Global, Act Local" approach. We unite individuals, organizations, and youth to foster a sustainable future through collaboration.
                 </p>
               </div>
               <div
@@ -234,9 +227,7 @@ export default function Home() {
                   Our Mission
                 </h3>
                 <p className="text-white/90">
-                  Make sustainability accessible and actionable for all. Bridge
-                  knowledge gaps in sustainability. Mobilize volunteers and
-                  resources effectively. Foster collaborative action for impact.
+                  To make sustainability accessible and actionable. We bridge knowledge gaps and mobilize resources to drive progress on quality education (SDG 4), climate action (SDG 13), and protecting life on land (SDG 15).
                 </p>
               </div>
             </div>
@@ -261,9 +252,7 @@ export default function Home() {
                   The Challenge &amp; The Opportunity
                 </h2>
                 <p className="mt-4 text-lg text-white/90">
-                  Addressing urgent environmental threats by uniting stakeholders
-                  and empowering youth to foster sustainable development and
-                  social innovation.
+                  We turn global challenges into local opportunities by empowering communities to act on climate change, biodiversity loss, and sustainable development.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
@@ -274,10 +263,10 @@ export default function Home() {
                     The Challenge
                   </h3>
                   <ul className="space-y-2 text-white/80 list-disc list-inside text-left">
-                    <li>Limited community engagement</li>
-                    <li>Urgent environmental threats</li>
-                    <li>Disconnected sustainability efforts</li>
-                    <li>Inefficient resource allocation</li>
+                    <li>Apathy towards climate action (SDG 13)</li>
+                    <li>Biodiversity loss and ecosystem degradation (SDG 15)</li>
+                    <li>Fragmented community action (SDG 11)</li>
+                    <li>Gaps in quality environmental education (SDG 4)</li>
                   </ul>
                 </div>
                 <div className={cn('bg-white/10 backdrop-blur-sm p-6 rounded-lg transition-all duration-700 ease-out transform hover:scale-105', challengeInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10')} style={{ transitionDelay: '400ms' }}>
@@ -287,10 +276,10 @@ export default function Home() {
                     The Opportunity
                   </h3>
                   <ul className="space-y-2 text-white/80 list-disc text-left pl-5">
-                    <li>Empower community-led innovation</li>
-                    <li>Create a collaborative ecosystem</li>
-                    <li>Leverage partnerships for impact</li>
-                    <li>Mobilize resources efficiently</li>
+                    <li>Empower community-led climate solutions</li>
+                    <li>Build resilient and sustainable cities (SDG 11)</li>
+                    <li>Foster partnerships for the goals (SDG 17)</li>
+                    <li>Mobilize youth for environmental stewardship</li>
                   </ul>
                 </div>
               </div>
@@ -298,14 +287,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="live" ref={liveRef} className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary">
+        <section id="live" ref={liveRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
           <div className="container mx-auto text-center px-4">
              <div className={cn('transition-all duration-700 ease-out', liveInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
                 Upcoming Events
               </h2>
               <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
-                Stay updated with our latest events, workshops, and community activities. Join us!
+                Join our journey toward a sustainable future. Explore our upcoming events, workshops, and community activities dedicated to advancing the Global Goals.
               </p>
             </div>
             <div className={cn('rounded-lg overflow-hidden shadow-xl transition-all duration-700 ease-out', liveInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')} style={{ transitionDelay: '200ms' }}>
@@ -314,7 +303,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="py-16 md:py-20 bg-gradient-to-b from-secondary to-background">
+        <section id="faq" ref={faqRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
           <div className="container mx-auto px-4">
              <div className={cn('transition-all duration-700 ease-out', faqInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
@@ -345,13 +334,7 @@ export default function Home() {
                 Shape a Sustainable Tomorrow Together
               </h2>
               <p className="text-lg max-w-4xl mx-auto mb-8 text-primary-foreground/90">
-                Discover our groundbreaking initiative uniting Nobel Laureate Sir
-                CV Raman Trust. Join us to empower minds
-                through extraordinary learning experiences, complement academic
-                education with hands-on activities, and inspire a lifelong love
-                for nature. Partner with Prakruthi Shaale to nurture curious,
-                compassionate, and responsible future leaders who will shape a
-                sustainable tomorrow.
+                Join us in forging partnerships for the goals (SDG 17). Our groundbreaking initiative with the Nobel Laureate Sir CV Raman Trust is just one example of how we collaborate to empower minds, complement education with hands-on action, and inspire a lifelong love for nature. Partner with Prakruthi Shaale to nurture the next generation of leaders who will shape a sustainable tomorrow.
               </p>
             </div>
             <div className="mt-12">

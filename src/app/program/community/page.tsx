@@ -54,23 +54,23 @@ export default function CommunityPage() {
     },
     {
       icon: CheckCircle,
-      text: 'Civic responsibility',
+      text: 'A strong sense of civic responsibility',
     },
     {
       icon: Users,
-      text: 'Teamwork and collaboration',
+      text: 'Teamwork and collaborative problem-solving skills',
     },
     {
       icon: Award,
-      text: 'Leadership and initiative',
+      text: 'Leadership and initiative for local action',
     },
     {
       icon: Lightbulb,
-      text: 'Environmental consciousness',
+      text: 'Deepened environmental consciousness',
     },
     {
       icon: HeartHandshake,
-      text: 'A deeper connection to their community',
+      text: 'A tangible connection to community and planet',
     },
   ];
 
@@ -102,10 +102,10 @@ export default function CommunityPage() {
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight animate-fade-in-up">
-              Community Volunteering Program
+              Community Action for the Planet
             </h1>
             <p className="mt-4 text-lg md:text-xl text-white/90 animate-fade-in-up [animation-delay:300ms]">
-              Local Action. Shared Responsibility. Meaningful Impact.
+              Local Action. Shared Responsibility. Global Impact.
             </p>
           </div>
         </div>
@@ -121,49 +121,35 @@ export default function CommunityPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
               <p className="text-lg text-foreground/80 mb-4">
-                Prakruthi Shaale’s Community Volunteering Program is rooted in
-                the belief that sustainable change begins at the community
-                level. Aligned with the UN Sustainable Development Goals (SDGs)
-                and principles of active citizenship, our volunteering
-                initiatives provide individuals and groups with opportunities
-                to contribute meaningfully to society while developing empathy,
-                leadership, and a sense of responsibility.
+                Our Community Action Program empowers individuals to be catalysts for change, directly contributing to UN Sustainable Development Goals like Climate Action (SDG 13), Sustainable Cities (SDG 11), and Life on Land (SDG 15). We believe that meaningful global impact begins with local, collective action.
               </p>
             </div>
 
             <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-                A Place Where Community Comes Together
+                A Hub for Community-Led Change
               </h3>
               <p className="text-foreground/80">
-                Located at the historic residence of Nobel Laureate Sir C. V.
-                Raman, set across 2.28 acres of green space in Malleswaram,
-                Bengaluru, Prakruthi Shaale serves as a hub where citizens,
-                youth, families, institutions, and organizations come together
-                to work on real-world community challenges. The campus offers a
-                safe, accessible, and inspiring environment to learn, serve,
-                and reflect.
+                Located at the historic 2.28-acre residence of Nobel Laureate Sir C. V. Raman, Prakruthi Shaale serves as a hub where citizens, youth, and organizations unite to tackle real-world challenges. It’s an inspiring environment to learn, serve, and drive progress on the SDGs.
               </p>
             </div>
 
             <div className="mb-12">
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-                What the Community Volunteering Program Offers
+                What the Community Action Program Offers
               </h3>
               <p className="text-foreground/80 mb-4">
-                Our volunteering programs are action-oriented and inclusive, designed for participants aged 6 to 24 and beyond, depending on the nature of the activity. Participants engage in:
+                Our action-oriented programs are designed for all ages to engage in:
               </p>
               <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                <li>Community service and civic action</li>
-                <li>
-                  Environmental conservation and sustainability initiatives
-                </li>
-                <li>Awareness building and outreach activities</li>
-                <li>Skill-based volunteering</li>
-                <li>Collaborative problem-solving at the local level</li>
+                <li>Community service projects targeting local SDG priorities</li>
+                <li>Environmental conservation and ecosystem restoration</li>
+                <li>Awareness campaigns on climate action and biodiversity</li>
+                <li>Skill-based volunteering for sustainable solutions</li>
+                <li>Collaborative problem-solving for community resilience</li>
               </ul>
               <p className="text-foreground/80 mt-4">
-                Each volunteering experience is thoughtfully structured to ensure meaningful contribution and personal growth.
+                Each experience is structured to ensure your contribution is both meaningful and educational.
               </p>
             </div>
 
@@ -172,7 +158,7 @@ export default function CommunityPage() {
                 Who Can Participate
               </h3>
               <p className="text-foreground/80 mb-4">
-                The Community Volunteering Program is open to:
+                The Community Action Program is open to everyone:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {whoCanParticipate.map((item, index) => {
@@ -193,7 +179,7 @@ export default function CommunityPage() {
                 })}
               </div>
               <p className="text-foreground/80 mt-4 text-center">
-                Activities are customized based on group size, age, time availability, and community needs.
+                Activities are customized based on group size, age, and community needs to maximize impact.
               </p>
             </div>
 
@@ -205,18 +191,16 @@ export default function CommunityPage() {
                 Understand → Engage → Reflect → Act
               </p>
               <p className="text-foreground/80 mb-2">
-                All volunteering initiatives follow this simple, impactful
-                framework. Participants:
+                All initiatives follow this simple, impactful framework. Participants:
               </p>
               <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                <li>Learn about the issue and its context</li>
-                <li>Engage directly with the community or environment</li>
-                <li>Reflect on their role and impact</li>
-                <li>Take action that contributes to sustainable outcomes</li>
+                <li>Learn about the issue and its connection to the SDGs</li>
+                <li>Engage directly with the community and environment</li>
+                <li>Reflect on their role in creating systemic change</li>
+                <li>Take action that contributes to measurable, sustainable outcomes</li>
               </ul>
               <p className="text-foreground/80 mt-4">
-                This ensures volunteering is purposeful, respectful, and
-                educational.
+                This ensures every action is purposeful, respectful, and educational.
               </p>
             </div>
 
@@ -248,7 +232,7 @@ export default function CommunityPage() {
                 })}
               </div>
                  <p className="text-foreground/80 mt-4">
-                Volunteers also gain a sense of fulfillment by contributing to tangible, local impact.
+                Volunteers also gain a sense of fulfillment by contributing to tangible, local impact on global goals.
               </p>
             </div>
             
@@ -257,7 +241,7 @@ export default function CommunityPage() {
                 Volunteering as a Pathway to Sustainable Change
               </h3>
                <p className="text-lg text-foreground/80">
-               Prakruthi Shaale’s Community Volunteering Program connects people with purpose, creating a culture of participation and shared responsibility. By working at the grassroots level, volunteers become active contributors to building resilient, inclusive, and sustainable communities.
+               Prakruthi Shaale’s Community Action Program connects people with purpose, creating a culture of participation and shared responsibility. By working at the grassroots level, volunteers become active contributors to building resilient, inclusive, and sustainable communities for all.
               </p>
             </div>
 
@@ -267,7 +251,7 @@ export default function CommunityPage() {
                 Upcoming Event
               </h2>
                <p className="text-lg text-foreground/80 mb-6">
-                Join our Volunteer Day on December 21, 2025! Let's make our community stronger together.
+                Join our Volunteer Day on December 21, 2025! Let's work together for our community and our planet.
               </p>
               <Button size="lg" onClick={handleContactScroll}>
                 Register Now
