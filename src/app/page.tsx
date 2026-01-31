@@ -15,6 +15,12 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
 import GoogleCalendar from '@/components/google-calendar';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export default function Home() {
   const challengeImage = PlaceHolderImages.find(
@@ -28,6 +34,38 @@ export default function Home() {
   const { ref: missionRef, inView: missionInView } = useInView({
     threshold: 0.1,
   });
+
+  const faqs = [
+    {
+      question: "What is Prakruthi Shaale?",
+      answer: "Prakruthi Shaale is an innovative outdoor learning centre dedicated to revolutionising education by connecting minds with the natural world. The centre provides unique outdoor experiences that are designed to inspire creativity, curiosity, and critical thinking skills within a natural environment."
+    },
+    {
+      question: "What are the primary mission and vision of the organisation?",
+      answer: 'The organisation operates on a "Think Global, Act Local" approach to achieve Sustainable Development Goals (SDG). Its mission is to make sustainability accessible and actionable for everyone, bridging existing knowledge gaps and mobilising resources to foster collaborative impact. Ultimately, it aims to build a global network of changemakers to ensure a sustainable future.'
+    },
+    {
+      question: "How does outdoor learning benefit participants?",
+      answer: "By connecting individuals with nature, the programs promote holistic development and nurture responsible, compassionate individuals. These immersive educational experiences complement academic learning with hands-on activities, helping to empower future leaders and inspire a lifelong love for nature."
+    },
+    {
+      question: "What environmental challenges does Prakruthi Shaale address?",
+      answer: "The centre seeks to address urgent environmental threats and the problem of disconnected sustainability efforts. It identifies opportunities to empower community-led innovation and create a collaborative ecosystem that overcomes limited community engagement and inefficient resource allocation."
+    },
+    {
+      question: "Who are the key partners and stakeholders?",
+      answer: "Prakruthi Shaale unites various stakeholders, including organisations, youth, and individual changemakers, to foster social innovation. Notably, the centre features a groundbreaking initiative in partnership with the Nobel Laureate Sir CV Raman Trust to empower minds through extraordinary learning experiences."
+    },
+    {
+      question: "How can I get involved or stay updated on activities?",
+      answer: 'Visitors can participate in workshops, community activities, and events such as "Volunteer Day" to help shape a sustainable tomorrow. The organisation actively mobilises volunteers and resources to create a collective impact through both online and offline engagements.'
+    },
+    {
+      question: "Where is Prakruthi Shaale located, and how can I contact them?",
+      answer: "The centre is located at 45, 15th Cross Rd, Maruthi Extension, Malleshwaram, Bengaluru, Karnataka 560003. For enquiries, you can contact them via telephone at +91 9886633810 or email krishnaraj@prakruthishaale.com."
+    }
+  ];
+
 
   return (
     <div className="relative flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
@@ -265,6 +303,28 @@ export default function Home() {
             </p>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <GoogleCalendar />
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#889063' }}>
+              Frequently Asked Questions
+            </h2>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem value={`item-${index}`} key={index}>
+                    <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-foreground/80">
+                      {faq.answer.replace(/ \[\d+\]/g, '')}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>

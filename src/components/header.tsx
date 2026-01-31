@@ -80,6 +80,14 @@ const Header = () => {
           </Button>
         </Link>
         <Button
+          variant="ghost"
+          onClick={() => scrollTo('faq')}
+          className={commonButtonClass}
+          style={commonButtonStyle}
+        >
+          FAQ
+        </Button>
+        <Button
           onClick={() => scrollTo('contact')}
           className={cn(
             'border',
