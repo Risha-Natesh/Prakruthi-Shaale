@@ -70,10 +70,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-poppins), sans-serif;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><path fill="hsl(130 65% 50%)" stroke="hsl(142 76% 36%)" stroke-width="1.5" stroke-linejoin="round" d="M4.6,2.9L4.6,2.9l12,10.4l-5.4,0.5l1,5.5l-2.6,1.4l-1.9-5.1l-4,3.2L4.6,2.9z"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="hsl(130 65% 50%)" stroke="hsl(142 76% 36%)" stroke-width="1.5" d="M4 4 L14 14 L10 15 L12 22 L10 23 L8 16 L3 17 z"/></svg>'), auto;
   }
   a, button, [role="button"] {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="hsl(130 65% 50%)" stroke="hsl(142 76% 36%)" stroke-width="1" d="M13,3.5V17h-2V7.8l-2.4,1.4V5.7L13,3.5 M14.5,1h-5L4,4v8l4,2.3v8.7h2v-9l4-2.3V3.3L14.5,1L14.5,1z"/></svg>'), pointer;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="hsl(130 65% 50%)" stroke="hsl(142 76% 36%)" stroke-width="1.5" stroke-linejoin="round" d="M14.2,21.9 L9,16.7 V7.2 C9,6.5 9.6,6 10.3,6 h0.4 C11.3,6 12,6.7 12,7.5 v6.2 l2.2-0.8 V6.3 c0-0.8 0.7-1.5 1.5-1.5 h0.4 c0.8,0 1.5,0.7 1.5,1.5 v8.1 l2.3-0.8 V8.6 c0-0.8 0.7-1.5 1.5-1.5 h0.4 c0.8,0 1.5,0.7 1.5,1.5 v9 c0,2.1-1.7,3.8-3.8,3.8 h-4 C15.4,22.9 14.7,22.5 14.2,21.9 z"/></svg>'), pointer;
   }
 }
 
