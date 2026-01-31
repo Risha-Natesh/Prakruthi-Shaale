@@ -155,11 +155,11 @@ export default function ProgramPage() {
   return (
     <div className="relative flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
       <Header />
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-16 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
         <section
           id="programs"
           ref={approachRef}
-          className="py-16 md:py-20 relative overflow-hidden text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient"
+          className="py-16 md:py-20 relative overflow-hidden"
         >
           <div className="absolute inset-0 z-0 opacity-50">
             <svg
@@ -253,7 +253,7 @@ export default function ProgramPage() {
           </div>
         </section>
 
-        <section id="initiatives" ref={initiativesRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
+        <section id="initiatives" ref={initiativesRef} className="py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className={cn('text-center mb-12 transition-all duration-700', initiativesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold">Explore Our Initiatives</h2>
