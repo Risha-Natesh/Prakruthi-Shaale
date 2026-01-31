@@ -70,7 +70,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-poppins), sans-serif;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(142 76% 36%)" stroke="white" stroke-width="1"><path d="M3 3l7.07 18.97 2.52-10.05L21.97 10.05 3 3z" transform="rotate(-90 12 12)"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(142 76% 36%)" stroke="white" stroke-width="1"><path d="m12 12 4-8 4 8-6 2-4-2Z" transform="rotate(-45 12 12)"/></svg>'), auto;
   }
   a, button, [role="button"] {
     cursor: pointer;

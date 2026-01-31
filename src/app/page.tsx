@@ -327,7 +327,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-emerald-600 to-accent bg-[length:200%_200%] animate-gradient">
+        <section id="contact" ref={contactRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto text-center px-4">
             <div className={cn('transition-all duration-700 ease-out', contactInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
