@@ -119,7 +119,7 @@ export default function YouthPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 A Place to Explore, Learn, and Belong
               </h2>
               <p className="text-lg text-foreground/80 mb-4">
@@ -138,7 +138,7 @@ export default function YouthPage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
                 Who Can Participate
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -154,7 +154,7 @@ export default function YouthPage() {
                         className="relative p-6 rounded-lg bg-background/80 backdrop-blur-md flex flex-col items-center justify-center h-full"
                       >
                         <Icon className="w-10 h-10 mb-3 text-accent" />
-                        <h4 className="font-bold text-lg text-accent/90">{item.title}</h4>
+                        <h4 className="font-bold text-lg text-primary/90">{item.title}</h4>
                         <p className="text-foreground/80">{item.description}</p>
                       </div>
                     </div>
@@ -163,8 +163,8 @@ export default function YouthPage() {
               </div>
             </div>
 
-            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary/30">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4 text-center">
+            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">
                 What Families Can Expect
               </h3>
               <p className="text-foreground/80 mb-6 text-center">
@@ -185,7 +185,7 @@ export default function YouthPage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
                 Why Parents Choose Prakruthi Shaale
               </h3>
               <div className="grid grid-cols-1 gap-6">
@@ -214,7 +214,7 @@ export default function YouthPage() {
             </div>
 
             <div className="text-center p-6 md:p-8 rounded-lg bg-accent/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Join Us
               </h2>
               <p className="text-lg text-foreground/80 mb-6">

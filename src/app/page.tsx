@@ -110,7 +110,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-16 md:py-20 bg-secondary/30">
+        <section id="about" className="py-16 md:py-20 bg-secondary">
           <div className="container mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center px-4">
             <div className="h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg">
               <Image
@@ -134,8 +134,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3
-                    className="text-xl font-bold transition-transform duration-300 hover:scale-105"
-                    style={{ color: '#889063' }}
+                    className="text-xl font-bold text-primary transition-transform duration-300 hover:scale-105"
                   >
                     Innovative Outdoor Learning Center
                   </h3>
@@ -153,8 +152,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3
-                    className="text-xl font-bold transition-transform duration-300 hover:scale-105"
-                    style={{ color: '#889063' }}
+                    className="text-xl font-bold text-primary transition-transform duration-300 hover:scale-105"
                   >
                     Nature Connection Benefits
                   </h3>
@@ -174,8 +172,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3
-                    className="text-xl font-bold transition-transform duration-300 hover:scale-105"
-                    style={{ color: '#889063' }}
+                    className="text-xl font-bold text-primary transition-transform duration-300 hover:scale-105"
                   >
                     Promoting Holistic Development
                   </h3>
@@ -189,9 +186,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="vision" className="py-16 md:py-20 bg-white">
+        <section id="vision" className="py-16 md:py-20 bg-background">
           <div className="container mx-auto text-center px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#889063' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               Our Vision &amp; Mission
             </h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-12">
@@ -202,12 +199,12 @@ export default function Home() {
               <div
                 ref={visionRef}
                 className={cn(
-                  'p-8 rounded-lg shadow-md opacity-0',
+                  'p-8 rounded-lg shadow-md opacity-0 text-primary-foreground',
+                  'bg-gradient-to-br from-primary to-green-700',
                   visionInView && 'animate-fade-in'
                 )}
-                style={{ backgroundColor: '#697254' }}
               >
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-2xl font-bold mb-4">
                   Our Vision
                 </h3>
                 <p className="text-white/90">
@@ -220,12 +217,12 @@ export default function Home() {
               <div
                 ref={missionRef}
                 className={cn(
-                  'p-8 rounded-lg shadow-md opacity-0',
+                  'p-8 rounded-lg shadow-md opacity-0 text-primary-foreground',
+                   'bg-gradient-to-br from-accent to-emerald-600',
                   missionInView && 'animate-fade-in [animation-delay:300ms]'
                 )}
-                style={{ backgroundColor: '#697254' }}
               >
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-2xl font-bold mb-4">
                   Our Mission
                 </h3>
                 <p className="text-white/90">
@@ -251,7 +248,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60"></div>
           <div className="container mx-auto relative z-10 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold" style={{ color: '#889063' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">
                 The Challenge &amp; The Opportunity
               </h2>
               <p className="mt-4 text-lg text-white/90">
@@ -262,8 +259,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                   <h3
-                    className="font-bold text-xl mb-3"
-                    style={{ color: '#889063' }}
+                    className="font-bold text-xl mb-3 text-emerald-400"
                   >
                     The Challenge
                   </h3>
@@ -276,8 +272,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                   <h3
-                    className="font-bold text-xl mb-3"
-                    style={{ color: '#889063' }}
+                    className="font-bold text-xl mb-3 text-emerald-400"
                   >
                     The Opportunity
                   </h3>
@@ -293,9 +288,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="live" className="py-16 md:py-20 bg-secondary/30">
+        <section id="live" className="py-16 md:py-20 bg-secondary">
           <div className="container mx-auto text-center px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#889063' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               Upcoming Events
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
@@ -307,9 +302,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" className="py-16 md:py-20 bg-white">
+        <section id="faq" className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#889063' }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
               Frequently Asked Questions
             </h2>
             <div className="max-w-3xl mx-auto">
@@ -329,7 +324,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="py-16 md:py-20 bg-[#546A50] text-white">
+        <section id="contact" className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-emerald-600 to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto text-center px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Shape a Sustainable Tomorrow Together
@@ -348,8 +343,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="text-left">
                     <h3
-                      className="text-2xl font-bold mb-6"
-                      style={{ color: '#889063' }}
+                      className="text-2xl font-bold mb-6 text-primary"
                     >
                       Contact Us
                     </h3>

@@ -40,9 +40,9 @@ const Header = () => {
     }
   };
 
-  const navTextColor = 'text-[#03110d]';
+  const navTextColor = 'text-foreground';
   const textShadow = 'drop-shadow(0 1px 2px rgba(255,255,255,0.4))';
-  const navHoverColor = 'hover:bg-black/10';
+  const navHoverColor = 'hover:bg-foreground/10';
 
   const NavLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
     const commonButtonClass = cn(
@@ -91,7 +91,7 @@ const Header = () => {
           onClick={() => scrollTo('contact')}
           className={cn(
             'border',
-            'border-[#03110d]/50 bg-black/5 text-[#03110d] hover:bg-black/10',
+            'border-foreground/50 bg-foreground/5 text-foreground hover:bg-foreground/10',
             isMobile && 'w-full justify-start'
           )}
           style={commonButtonStyle}

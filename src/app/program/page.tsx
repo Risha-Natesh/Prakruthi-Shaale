@@ -96,8 +96,8 @@ export default function ProgramPage() {
       description:
         'Partner with us to create impactful environmental and team-building experiences.',
       href: '/program/corporate',
-      color: 'text-blue-800',
-      bg: 'bg-blue-400',
+      color: 'text-teal-800',
+      bg: 'bg-teal-400',
       image: '/Images/co-op.jpg',
     },
     {
@@ -106,8 +106,8 @@ export default function ProgramPage() {
       description:
         'Join our volunteer efforts to make a tangible difference in our community.',
       href: '/program/community',
-      color: 'text-yellow-800',
-      bg: 'bg-yellow-400',
+      color: 'text-lime-800',
+      bg: 'bg-lime-400',
       image: '/Images/volunteer.jpg',
     },
     {
@@ -116,8 +116,8 @@ export default function ProgramPage() {
       description:
         'Collaborate on for-profit ventures and sustainable business opportunities.',
       href: '/program/partnerships',
-      color: 'text-purple-800',
-      bg: 'bg-purple-400',
+      color: 'text-emerald-800',
+      bg: 'bg-emerald-400',
       image: '/Images/partner.jpg',
     },
   ];
@@ -137,7 +137,7 @@ export default function ProgramPage() {
       <main className="flex-1 pt-16">
         <section
           id="programs"
-          className="py-16 md:py-20 relative overflow-hidden bg-[#E6EAE0]"
+          className="py-16 md:py-20 relative overflow-hidden bg-background"
         >
           <div className="absolute inset-0 z-0">
             <svg
@@ -155,22 +155,22 @@ export default function ProgramPage() {
               <g>
                 <path
                   d="M 300,0 C 200,150 400,200 300,300 C 200,400 400,450 300,600 L 0,600 L 0,0 Z"
-                  fill="#697254"
+                  fill="#15803d"
                   filter="url(#shadow)"
                 />
                  <path
                   d="M 250,0 C 150,150 350,200 250,300 C 150,400 350,450 250,600 L 0,600 L 0,0 Z"
-                  fill="#889063"
+                  fill="#16a34a"
                   filter="url(#shadow)"
                 />
                 <path
                   d="M 200,0 C 100,150 300,200 200,300 C 100,400 300,450 200,600 L 0,600 L 0,0 Z"
-                  fill="#A7AD89"
+                  fill="#22c55e"
                   filter="url(#shadow)"
                 />
                  <path
                   d="M 150,0 C 50,150 250,200 150,300 C 50,400 250,450 150,600 L 0,600 L 0,0 Z"
-                  fill="#E6EAE0"
+                  fill="#dcfce7"
                   filter="url(#shadow)"
                 />
               </g>
@@ -261,7 +261,7 @@ export default function ProgramPage() {
           </div>
         </section>
 
-        <section id="initiatives" className="py-16 md:py-20 bg-secondary/30">
+        <section id="initiatives" className="py-16 md:py-20 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold">Explore Our Initiatives</h2>

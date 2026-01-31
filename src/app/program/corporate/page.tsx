@@ -119,9 +119,9 @@ export default function CorporatePage() {
               </p>
             </div>
 
-            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary/30">
+            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
               <div className="max-w-3xl mx-auto text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                   A Heritage Campus That Inspires Teams
                 </h3>
                 <p className="text-foreground/80 mb-6">
@@ -144,7 +144,7 @@ export default function CorporatePage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
                 Corporate Engagement Models
               </h3>
               <p className="text-foreground/80 mb-6 text-center">
@@ -172,9 +172,9 @@ export default function CorporatePage() {
               </p>
             </div>
 
-            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary/30">
+            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
               <div className="max-w-3xl mx-auto text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                   Our Experiential Approach
                 </h3>
                 <p className="text-lg text-foreground/80 mb-4">
@@ -196,7 +196,7 @@ export default function CorporatePage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
                 Outcomes for Organizations & Teams
               </h3>
               <p className="text-foreground/80 mb-6 text-center">
@@ -216,7 +216,7 @@ export default function CorporatePage() {
             </div>
 
             <div className="mb-12 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Activities as Flexible Add-Ons
               </h3>
               <p className="text-lg text-foreground/80">
@@ -238,8 +238,8 @@ export default function CorporatePage() {
               <CarouselContent>
                 <CarouselItem>
                   <div className="p-1">
-                    <div className="p-6 md:p-8 rounded-lg bg-secondary/30 h-full">
-                      <h3 className="text-2xl font-bold text-accent mb-4 text-center">
+                    <div className="p-6 md:p-8 rounded-lg bg-secondary h-full">
+                      <h3 className="text-2xl font-bold text-primary mb-4 text-center">
                         Who is this for?
                       </h3>
                       <ul className="list-disc list-inside space-y-2 text-foreground/80">
@@ -252,8 +252,8 @@ export default function CorporatePage() {
                 </CarouselItem>
                 <CarouselItem>
                   <div className="p-1">
-                    <div className="p-6 md:p-8 rounded-lg bg-secondary/30 h-full">
-                      <h3 className="text-2xl font-bold text-accent mb-4 text-center">
+                    <div className="p-6 md:p-8 rounded-lg bg-secondary h-full">
+                      <h3 className="text-2xl font-bold text-primary mb-4 text-center">
                         Our Engagement Process
                       </h3>
                       <ul className="list-disc list-inside space-y-2 text-foreground/80">
@@ -270,7 +270,7 @@ export default function CorporatePage() {
             </Carousel>
 
             <div className="text-center mt-16 p-6 md:p-8 rounded-lg bg-accent/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Bring Your Teams Together—With Purpose
               </h2>
               <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">

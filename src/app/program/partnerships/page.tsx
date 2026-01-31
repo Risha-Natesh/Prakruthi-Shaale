@@ -39,7 +39,7 @@ export default function PartnershipsPage() {
 
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent mb-4">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
                 Driving Growth Through Collaboration
               </h2>
               <p className="text-lg text-foreground/80 mb-6">
@@ -56,12 +56,12 @@ export default function PartnershipsPage() {
               </div>
             </div>
             
-            <div className="bg-secondary/30 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold text-purple-700 mb-4">Partnership Focus</h3>
+            <div className="bg-secondary p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold text-primary mb-4">Partnership Focus</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-purple-200/50 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
-                    <TrendingUp className="w-5 h-5 text-purple-700" />
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                    <TrendingUp className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Sustainable Ventures</h4>
@@ -69,8 +69,8 @@ export default function PartnershipsPage() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                   <div className="w-8 h-8 rounded-full bg-purple-200/50 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
-                    <Handshake className="w-5 h-5 text-purple-700" />
+                   <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                    <Handshake className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold">For-Profit Collaborations</h4>
@@ -78,8 +78,8 @@ export default function PartnershipsPage() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                   <div className="w-8 h-8 rounded-full bg-purple-200/50 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
-                    <Target className="w-5 h-5 text-purple-700" />
+                   <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                    <Target className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Impact Investing</h4>
@@ -91,7 +91,7 @@ export default function PartnershipsPage() {
           </div>
 
           <div className="mt-16 text-center p-6 md:p-8 rounded-lg bg-accent/10">
-            <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">Let's Build a Sustainable Future Together</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Let's Build a Sustainable Future Together</h2>
             <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
               If your organization is passionate about driving sustainable change and is looking for a strategic partner to innovate and grow with, we would love to hear from you.
             </p>

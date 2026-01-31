@@ -117,8 +117,8 @@ export default function CommunityPage() {
               </p>
             </div>
 
-            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary/30">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 A Place Where Community Comes Together
               </h3>
               <p className="text-foreground/80">
@@ -133,7 +133,7 @@ export default function CommunityPage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 What the Community Volunteering Program Offers
               </h3>
               <p className="text-foreground/80 mb-4">
@@ -154,7 +154,7 @@ export default function CommunityPage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Who Can Participate
               </h3>
               <p className="text-foreground/80 mb-4">
@@ -182,8 +182,8 @@ export default function CommunityPage() {
               </p>
             </div>
 
-            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary/30">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Our Volunteering Approach
               </h3>
               <p className="text-foreground/80 mb-4 text-center text-xl md:text-2xl font-semibold">
@@ -206,7 +206,7 @@ export default function CommunityPage() {
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Outcomes for Volunteers
               </h3>
               <p className="text-foreground/80 mb-4">
@@ -237,7 +237,7 @@ export default function CommunityPage() {
             </div>
             
             <div className="mb-12">
-                 <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+                 <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Volunteering as a Pathway to Sustainable Change
               </h3>
                <p className="text-lg text-foreground/80">
@@ -247,7 +247,7 @@ export default function CommunityPage() {
 
 
             <div className="text-center p-6 md:p-8 rounded-lg bg-accent/10">
-                 <h2 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+                 <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Upcoming Event
               </h2>
                <p className="text-lg text-foreground/80 mb-6">
