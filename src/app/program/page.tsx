@@ -53,10 +53,10 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
             >
               <Icon className={`w-8 h-8 ${initiative.color}`} />
             </div>
-            <h3 className="text-3xl font-bold text-foreground">
+            <h3 className="text-3xl font-bold text-primary-foreground">
               {initiative.title}
             </h3>
-            <p className="text-foreground/70 text-lg mt-2">
+            <p className="text-primary-foreground/70 text-lg mt-2">
               {initiative.description}
             </p>
             <Link href={initiative.href} passHref>
@@ -159,7 +159,7 @@ export default function ProgramPage() {
         <section
           id="programs"
           ref={approachRef}
-          className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-background via-secondary to-background"
+          className="py-16 md:py-20 relative overflow-hidden text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient"
         >
           <div className="absolute inset-0 z-0 opacity-50">
             <svg
@@ -207,7 +207,7 @@ export default function ProgramPage() {
               )}
             >
               <h2 className="text-3xl md:text-4xl font-bold">Our Approach</h2>
-              <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
+              <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mt-4">
                 Our approach is rooted in experiential education that empowers individuals to understand and act on the Sustainable Development Goals.
               </p>
             </div>
@@ -243,7 +243,7 @@ export default function ProgramPage() {
                     <h3 className="text-xl font-bold mb-2 transition-transform duration-300 hover:scale-105">
                       {item.title}
                     </h3>
-                    <p className="text-foreground/80">
+                    <p className="text-primary-foreground/90">
                       {item.description}
                     </p>
                   </div>
@@ -253,11 +253,11 @@ export default function ProgramPage() {
           </div>
         </section>
 
-        <section id="initiatives" ref={initiativesRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
+        <section id="initiatives" ref={initiativesRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto px-4">
             <div className={cn('text-center mb-12 transition-all duration-700', initiativesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold">Explore Our Initiatives</h2>
-              <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
+              <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mt-4">
                 Discover how you can get involved and contribute to the Global Goals.
               </p>
             </div>

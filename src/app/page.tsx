@@ -128,15 +128,15 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
                 <span
-                  className="inline-block animate-fade-in-up"
-                  style={{ color: '#889063', animationDelay: '100ms' }}
+                  className="inline-block animate-fade-in-up text-primary"
+                  style={{ animationDelay: '100ms' }}
                 >
                   Fostering Global Citizens
                 </span>
                 <br />
                 <span
-                  className="inline-block animate-fade-in-up"
-                  style={{ color: '#889063', animationDelay: '300ms' }}
+                  className="inline-block animate-fade-in-up text-primary"
+                  style={{ animationDelay: '300ms' }}
                 >
                   Through Nature
                 </span>
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" ref={aboutRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
+        <section id="about" ref={aboutRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center px-4">
             <div className={cn('h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg transform transition-all duration-700 ease-out hover:scale-105', aboutInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10')}>
               <Image
@@ -181,7 +181,7 @@ export default function Home() {
                     >
                       {item.title}
                     </h3>
-                    <p className="text-foreground/80 mt-1">
+                    <p className="text-primary-foreground/90 mt-1">
                       {item.description}
                     </p>
                   </div>
@@ -191,13 +191,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="vision" ref={visionRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
+        <section id="vision" ref={visionRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto text-center px-4">
             <div className={cn('transition-all duration-700 ease-out', visionInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
                 Our Vision &amp; Mission
               </h2>
-              <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-12">
+              <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mb-12">
                 To build a global network of changemakers dedicated to achieving the Sustainable Development Goals through local action.
               </p>
             </div>
@@ -287,13 +287,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="live" ref={liveRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
+        <section id="live" ref={liveRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto text-center px-4">
              <div className={cn('transition-all duration-700 ease-out', liveInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
                 Upcoming Events
               </h2>
-              <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
+              <p className="text-lg text-primary-foreground/90 max-w-3xl mx-auto mb-12">
                 Join our journey toward a sustainable future. Explore our upcoming events, workshops, and community activities dedicated to advancing the Global Goals.
               </p>
             </div>
@@ -303,7 +303,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="faq" ref={faqRef} className="py-16 md:py-20 bg-gradient-to-b from-background via-secondary to-background">
+        <section id="faq" ref={faqRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto px-4">
              <div className={cn('transition-all duration-700 ease-out', faqInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
@@ -317,7 +317,7 @@ export default function Home() {
                     <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-foreground/80">
+                    <AccordionContent className="text-primary-foreground/90">
                       {faq.answer.replace(/ \[\d+\]/g, '')}
                     </AccordionContent>
                   </AccordionItem>

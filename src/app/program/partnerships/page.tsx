@@ -12,7 +12,7 @@ export default function PartnershipsPage() {
   };
 
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient text-primary-foreground">
       <Header />
       <main className="pt-20">
         <div className="relative h-64 md:h-80">
@@ -44,11 +44,11 @@ export default function PartnershipsPage() {
               <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
                 Driving Growth Through Collaboration (SDG 17)
               </h2>
-              <p className="text-lg text-foreground/80 mb-6">
+              <p className="text-lg text-primary-foreground/90 mb-6">
                 Our Strategic Partnerships program is designed for businesses, social enterprises, and innovators looking to co-create ventures that are both profitable and purpose-driven. We align with partners who share our vision for a sustainable future and are committed to advancing the UN Sustainable Development Goals.
               </p>
               
-              <div className="space-y-4 text-foreground/80">
+              <div className="space-y-4 text-primary-foreground/90">
                 <p>
                   At Prakruthi Shaale, we believe collaboration is the key to scaling impact. We offer a unique platform for partners to leverage our heritage campus, community network, and educational expertise to build ventures in eco-tourism, sustainable products, corporate wellness, and green technology—all aligned with the SDGs.
                 </p>
@@ -94,7 +94,7 @@ export default function PartnershipsPage() {
 
           <div className="mt-16 text-center p-6 md:p-8 rounded-lg bg-accent/10">
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Let's Build a Sustainable Future Together</h2>
-            <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
+            <p className="text-lg text-primary-foreground/90 mb-6 max-w-3xl mx-auto">
               If your organization is passionate about driving sustainable change and seeks a strategic partner to innovate with, we would love to build the future with you.
             </p>
             <Button size="lg" onClick={handleContactScroll}>

@@ -89,7 +89,7 @@ export default function CommunityPage() {
   };
 
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient text-primary-foreground">
       <Header />
       <main className="pt-20">
         <div className="relative h-64 md:h-80">
@@ -120,7 +120,7 @@ export default function CommunityPage() {
 
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
-              <p className="text-lg text-foreground/80 mb-4">
+              <p className="text-lg text-primary-foreground/90 mb-4">
                 Our Community Action Program empowers individuals to be catalysts for change, directly contributing to UN Sustainable Development Goals like Climate Action (SDG 13), Sustainable Cities (SDG 11), and Life on Land (SDG 15). We believe that meaningful global impact begins with local, collective action.
               </p>
             </div>
@@ -138,17 +138,17 @@ export default function CommunityPage() {
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 What the Community Action Program Offers
               </h3>
-              <p className="text-foreground/80 mb-4">
+              <p className="text-primary-foreground/90 mb-4">
                 Our action-oriented programs are designed for all ages to engage in:
               </p>
-              <ul className="list-disc list-inside space-y-2 text-foreground/80">
+              <ul className="list-disc list-inside space-y-2 text-primary-foreground/90">
                 <li>Community service projects targeting local SDG priorities</li>
                 <li>Environmental conservation and ecosystem restoration</li>
                 <li>Awareness campaigns on climate action and biodiversity</li>
                 <li>Skill-based volunteering for sustainable solutions</li>
                 <li>Collaborative problem-solving for community resilience</li>
               </ul>
-              <p className="text-foreground/80 mt-4">
+              <p className="text-primary-foreground/90 mt-4">
                 Each experience is structured to ensure your contribution is both meaningful and educational.
               </p>
             </div>
@@ -157,7 +157,7 @@ export default function CommunityPage() {
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Who Can Participate
               </h3>
-              <p className="text-foreground/80 mb-4">
+              <p className="text-primary-foreground/90 mb-4">
                 The Community Action Program is open to everyone:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -178,7 +178,7 @@ export default function CommunityPage() {
                   );
                 })}
               </div>
-              <p className="text-foreground/80 mt-4 text-center">
+              <p className="text-primary-foreground/90 mt-4 text-center">
                 Activities are customized based on group size, age, and community needs to maximize impact.
               </p>
             </div>
@@ -208,7 +208,7 @@ export default function CommunityPage() {
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Outcomes for Volunteers
               </h3>
-              <p className="text-foreground/80 mb-4">
+              <p className="text-primary-foreground/90 mb-4">
                 Through participation, volunteers develop:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -231,7 +231,7 @@ export default function CommunityPage() {
                   );
                 })}
               </div>
-                 <p className="text-foreground/80 mt-4">
+                 <p className="text-primary-foreground/90 mt-4">
                 Volunteers also gain a sense of fulfillment by contributing to tangible, local impact on global goals.
               </p>
             </div>
@@ -240,7 +240,7 @@ export default function CommunityPage() {
                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Volunteering as a Pathway to Sustainable Change
               </h3>
-               <p className="text-lg text-foreground/80">
+               <p className="text-lg text-primary-foreground/90">
                Prakruthi Shaale’s Community Action Program connects people with purpose, creating a culture of participation and shared responsibility. By working at the grassroots level, volunteers become active contributors to building resilient, inclusive, and sustainable communities for all.
               </p>
             </div>
@@ -250,7 +250,7 @@ export default function CommunityPage() {
                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Upcoming Event
               </h2>
-               <p className="text-lg text-foreground/80 mb-6">
+               <p className="text-lg text-primary-foreground/90 mb-6">
                 Join our Volunteer Day on December 21, 2025! Let's work together for our community and our planet.
               </p>
               <Button size="lg" onClick={handleContactScroll}>

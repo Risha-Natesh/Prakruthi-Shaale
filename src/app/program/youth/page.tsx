@@ -92,7 +92,7 @@ export default function YouthPage() {
   ];
 
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient text-primary-foreground">
       <Header />
       <main className="pt-20">
         <div className="relative h-64 md:h-80">
@@ -123,10 +123,10 @@ export default function YouthPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 A Place to Explore, Learn, and Lead
               </h2>
-              <p className="text-lg text-foreground/80 mb-4">
+              <p className="text-lg text-primary-foreground/90 mb-4">
                 Our Youth for SDGs Program offers nature-based learning experiences for ages 6-24, designed to empower the next generation of global citizens. We provide the tools, knowledge, and inspiration for young people to act on critical issues like climate change (SDG 13), biodiversity (SDG 15), and quality education (SDG 4).
               </p>
-              <p className="text-lg text-foreground/80">
+              <p className="text-lg text-primary-foreground/90">
                 Prakruthi Shaale is a community where families and youth come together to nurture curiosity, values, and a commitment to a sustainable world.
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function YouthPage() {
                       >
                         <Icon className="w-10 h-10 mb-3 text-accent" />
                         <h4 className="font-bold text-lg text-primary/90">{item.title}</h4>
-                        <p className="text-foreground/80">{item.description}</p>
+                        <p className="text-primary-foreground/90">{item.description}</p>
                       </div>
                     </div>
                   );
@@ -195,7 +195,7 @@ export default function YouthPage() {
                         <h4 className="font-semibold text-lg text-accent/90">
                           {item.title}
                         </h4>
-                        <p className="text-foreground/80">
+                        <p className="text-primary-foreground/90">
                           {item.description}
                         </p>
                       </div>
@@ -209,7 +209,7 @@ export default function YouthPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Join Us
               </h2>
-              <p className="text-lg text-foreground/80 mb-6">
+              <p className="text-lg text-primary-foreground/90 mb-6">
                 Explore upcoming programs and workshops designed to empower the next generation of sustainability leaders. Events will be posted here.
               </p>
             </div>

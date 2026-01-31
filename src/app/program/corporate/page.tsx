@@ -74,7 +74,7 @@ export default function CorporatePage() {
   };
 
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient text-primary-foreground">
       <Header />
       <main className="pt-20">
         <div className="relative h-64 md:h-80">
@@ -105,10 +105,10 @@ export default function CorporatePage() {
 
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center">
-              <p className="text-lg text-foreground/80">
+              <p className="text-lg text-primary-foreground/90">
                 Prakruthi Shaale offers bespoke corporate engagement experiences that align with your ESG priorities, sustainability goals, and commitment to the UN SDGs. Our programs help translate your organization's purpose into tangible, hands-on team experiences.
               </p>
-              <p className="text-lg text-foreground/80 mt-4">
+              <p className="text-lg text-primary-foreground/90 mt-4">
                 We combine leadership development, team building, and environmental action to create memorable offsites that reinforce responsible business values. Engage your team, foster innovation, and make a measurable impact on goals like Responsible Consumption (SDG 12), Decent Work (SDG 8), and Partnerships for the Goals (SDG 17).
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function CorporatePage() {
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
                 Corporate Engagement Models
               </h3>
-              <p className="text-foreground/80 mb-6 text-center">
+              <p className="text-primary-foreground/90 mb-6 text-center">
                 We offer customizable day-out packages designed around your organization's objectives:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -155,7 +155,7 @@ export default function CorporatePage() {
                   </div>
                 ))}
               </div>
-              <p className="text-foreground/80 mt-6 font-semibold text-center">
+              <p className="text-primary-foreground/90 mt-6 font-semibold text-center">
                 Each engagement is co-designed to reflect team size, learning goals, and your commitment to the SDGs.
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function CorporatePage() {
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
                 Outcomes for Organizations & Teams
               </h3>
-              <p className="text-foreground/80 mb-6 text-center">
+              <p className="text-primary-foreground/90 mb-6 text-center">
                 Corporates consistently report:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -206,7 +206,7 @@ export default function CorporatePage() {
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Activities as Flexible Add-Ons
               </h3>
-              <p className="text-lg text-foreground/80">
+              <p className="text-lg text-primary-foreground/90">
                 Prakruthi Shaale offers a range of optional activity modules that organizations may choose as add-ons based on team preferences and objectives. These modules are presented as flexible components, allowing organizations to curate a day that aligns with their culture—without rigid packages.
               </p>
             </div>
@@ -256,7 +256,7 @@ export default function CorporatePage() {
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Bring Your Teams Together—With Purpose
               </h2>
-              <p className="text-lg text-foreground/80 mb-6 max-w-3xl mx-auto">
+              <p className="text-lg text-primary-foreground/90 mb-6 max-w-3xl mx-auto">
                 Discover how Prakruthi Shaale can create meaningful, memorable, and values-driven team experiences that advance your sustainability agenda.
               </p>
               <Button size="lg" onClick={handleContactScroll}>
