@@ -7,41 +7,19 @@ import {
   Target,
   Users,
   Sprout,
-  HeartHandshake,
-  Lightbulb,
-  Globe,
-  LifeBuoy,
   Phone,
   Mail,
   MapPin,
-  ArrowRight,
-  Calendar,
 } from 'lucide-react';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
+import GoogleCalendar from '@/components/google-calendar';
 
 export default function Home() {
   const challengeImage = PlaceHolderImages.find(
     (img) => img.id === 'challenge'
   );
-
-  const events = [
-    {
-      title: 'Volunteer Day',
-      date: 'December 21, 2025',
-      image: 'https://picsum.photos/seed/event1/600/400',
-      aiHint: 'people planting trees',
-      href: '/program/community',
-      colors: {
-        bg: 'bg-green-100/30',
-        glow1: 'bg-green-400/30',
-        glow2: 'bg-lime-400/30',
-        text: 'text-green-800',
-      },
-    },
-  ];
 
   const { ref: visionRef, inView: visionInView } = useInView({
     threshold: 0.1,
@@ -277,38 +255,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="live" className="py-16 md:py-20">
+        <section id="live" className="py-16 md:py-20 bg-secondary/30">
           <div className="container mx-auto text-center px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#889063' }}>
-              What's Live
+              Upcoming Events
             </h2>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
-              Stay updated with our latest events, workshops, and community activities.
+              Stay updated with our latest events, workshops, and community activities. Join us!
             </p>
-            <div className="flex justify-center">
-              {events.map((event, index) => (
-                <div
-                  key={index}
-                  className="group relative rounded-[3rem] overflow-hidden transform transition-all duration-500 hover:-translate-y-2 w-full max-w-sm"
-                >
-                   <div className={cn("absolute inset-0 backdrop-blur-xl transition-all duration-500 shadow-inner", event.colors.bg)}></div>
-                   <div className={cn("absolute -top-10 -right-10 w-32 h-32 rounded-full blur-2xl transition-all duration-500 scale-100", event.colors.glow1)}></div>
-                   <div className={cn("absolute -bottom-10 -left-10 w-32 h-32 rounded-full blur-2xl transition-all duration-700 scale-100", event.colors.glow2)}></div>
-
-                  <div className="relative p-8 text-left z-10 flex flex-col h-full">
-                    <div className={cn("flex items-center gap-2 text-sm mb-4", event.colors.text)}>
-                      <Calendar className="w-4 h-4" />
-                      <span>{event.date}</span>
-                    </div>
-                    <h3 className={cn("text-xl font-bold mb-2 flex-grow", event.colors.text)}>
-                      {event.title}
-                    </h3>
-                    <Link href={event.href} className={cn("font-semibold flex items-center mt-auto", event.colors.text, 'group-hover:underline')}>
-                      Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
+            <div className="rounded-lg overflow-hidden shadow-xl">
+              <GoogleCalendar />
             </div>
           </div>
         </section>
