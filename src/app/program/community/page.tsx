@@ -1,3 +1,4 @@
+
 'use client';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
@@ -18,6 +19,9 @@ import {
   Calendar,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useInView } from 'react-intersection-observer';
+import React from 'react';
+
 
 export default function CommunityPage() {
   const whoCanParticipate = [
@@ -70,6 +74,16 @@ export default function CommunityPage() {
     },
   ];
 
+  const { ref: whoRef, inView: whoInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  const { ref: outcomesRef, inView: outcomesInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
   const handleContactScroll = () => {
     window.location.href = '/#contact';
   };
@@ -87,10 +101,10 @@ export default function CommunityPage() {
             data-ai-hint="volunteers working together"
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight animate-fade-in-up">
               Community Volunteering Program
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-white/90">
+            <p className="mt-4 text-lg md:text-xl text-white/90 animate-fade-in-up [animation-delay:300ms]">
               Local Action. Shared Responsibility. Meaningful Impact.
             </p>
           </div>
@@ -153,7 +167,7 @@ export default function CommunityPage() {
               </p>
             </div>
 
-            <div className="mb-12">
+            <div className="mb-12" ref={whoRef}>
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Who Can Participate
               </h3>
@@ -166,7 +180,8 @@ export default function CommunityPage() {
                   return (
                     <div
                       key={index}
-                      className="relative group rounded-xl overflow-hidden p-0.5"
+                      className={cn('relative group rounded-xl overflow-hidden p-0.5 transition-all duration-700 ease-out transform hover:scale-105', whoInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}
+                      style={{ transitionDelay: `${100 * index}ms` }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-lime-400/30 blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
                       <div className="relative flex flex-col items-center text-center p-4 rounded-lg bg-background/80 backdrop-blur-md h-full justify-center">
@@ -205,7 +220,7 @@ export default function CommunityPage() {
               </p>
             </div>
 
-            <div className="mb-12">
+            <div className="mb-12" ref={outcomesRef}>
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Outcomes for Volunteers
               </h3>
@@ -218,7 +233,8 @@ export default function CommunityPage() {
                   return (
                     <div
                       key={index}
-                      className="relative group rounded-xl overflow-hidden p-0.5"
+                      className={cn('relative group rounded-xl overflow-hidden p-0.5 transition-all duration-700 ease-out transform hover:scale-105', outcomesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}
+                      style={{ transitionDelay: `${100 * index}ms` }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 to-lime-400/30 blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
                       <div className="relative flex items-center gap-3 p-4 rounded-lg bg-background/80 backdrop-blur-md h-full">

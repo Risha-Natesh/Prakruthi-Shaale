@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import Header from '@/components/header';
@@ -27,12 +28,34 @@ export default function Home() {
     (img) => img.id === 'challenge'
   );
 
-  const { ref: visionRef, inView: visionInView } = useInView({
+  const { ref: aboutRef, inView: aboutInView } = useInView({
     threshold: 0.1,
+    triggerOnce: true,
   });
 
-  const { ref: missionRef, inView: missionInView } = useInView({
+  const { ref: visionRef, inView: visionInView } = useInView({
     threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  const { ref: challengeRef, inView: challengeInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  const { ref: liveRef, inView: liveInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  const { ref: faqRef, inView: faqInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+  
+  const { ref: contactRef, inView: contactInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
   });
 
   const faqs = [
@@ -64,6 +87,24 @@ export default function Home() {
       question: "Where is Prakruthi Shaale located, and how can I contact them?",
       answer: "The centre is located at 45, 15th Cross Rd, Maruthi Extension, Malleshwaram, Bengaluru, Karnataka 560003. For enquiries, you can contact them via telephone at +91 9886633810 or email krishnaraj@prakruthishaale.com."
     }
+  ];
+
+  const aboutItems = [
+    {
+      icon: Target,
+      title: 'Innovative Outdoor Learning Center',
+      description: 'Dedicated to revolutionizing education by providing unique outdoor learning experiences that inspire.',
+    },
+    {
+      icon: Leaf,
+      title: 'Nature Connection Benefits',
+      description: 'Connects everyone with nature to foster creativity, curiosity, and critical thinking skills in a natural environment.',
+    },
+    {
+      icon: Sprout,
+      title: 'Promoting Holistic Development',
+      description: 'Focuses on nurturing responsible and compassionate individuals through immersive outdoor educational programs.',
+    },
   ];
 
 
@@ -110,9 +151,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-16 md:py-20 bg-secondary">
+        <section id="about" ref={aboutRef} className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary">
           <div className="container mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center px-4">
-            <div className="h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg">
+            <div className={cn('h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg transform transition-all duration-700 ease-out hover:scale-105', aboutInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10')}>
               <Image
                 src="/Images/aboutus.jpg"
                 alt="About us"
@@ -126,80 +167,48 @@ export default function Home() {
               </h2>
             </div>
             <div className="flex flex-col gap-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Target className="w-6 h-6 text-accent" />
+              {aboutItems.map((item, index) => (
+                <div 
+                  key={item.title} 
+                  className={cn('flex gap-4 transition-all duration-700 ease-out', aboutInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10')}
+                  style={{ transitionDelay: `${200 * (index + 1)}ms` }}
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                      <item.icon className="w-6 h-6 text-accent" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3
+                      className="text-xl font-bold text-primary transition-transform duration-300 hover:scale-105"
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-foreground/80 mt-1">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
-                <div>
-                  <h3
-                    className="text-xl font-bold text-primary transition-transform duration-300 hover:scale-105"
-                  >
-                    Innovative Outdoor Learning Center
-                  </h3>
-                  <p className="text-foreground/80 mt-1">
-                    Dedicated to revolutionizing education by providing unique
-                    outdoor learning experiences that inspire.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Leaf className="w-6 h-6 text-accent" />
-                  </div>
-                </div>
-                <div>
-                  <h3
-                    className="text-xl font-bold text-primary transition-transform duration-300 hover:scale-105"
-                  >
-                    Nature Connection Benefits
-                  </h3>
-                  <p className="text-foreground/80 mt-1">
-                    Connects everyone with nature to foster creativity,
-                    curiosity, and critical thinking skills in a natural
-                    environment.
-                    '
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Sprout className="w-6 h-6 text-accent" />
-                  </div>
-                </div>
-                <div>
-                  <h3
-                    className="text-xl font-bold text-primary transition-transform duration-300 hover:scale-105"
-                  >
-                    Promoting Holistic Development
-                  </h3>
-                  <p className="text-foreground/80 mt-1">
-                    Focuses on nurturing responsible and compassionate
-                    individuals through immersive outdoor educational programs.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <section id="vision" className="py-16 md:py-20 bg-background">
+        <section id="vision" ref={visionRef} className="py-16 md:py-20 bg-gradient-to-b from-secondary to-background">
           <div className="container mx-auto text-center px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-              Our Vision &amp; Mission
-            </h2>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-12">
-              Connecting changemakers to make sustainability actionable and
-              inclusive.
-            </p>
+            <div className={cn('transition-all duration-700 ease-out', visionInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                Our Vision &amp; Mission
+              </h2>
+              <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-12">
+                Connecting changemakers to make sustainability actionable and
+                inclusive.
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 text-center">
               <div
-                ref={visionRef}
                 className={cn(
-                  'p-8 rounded-lg shadow-md opacity-0 text-primary-foreground',
+                  'p-8 rounded-lg shadow-lg opacity-0 text-primary-foreground transition-all duration-700 ease-out transform hover:scale-105 hover:shadow-2xl',
                   'bg-gradient-to-br from-primary to-green-700',
                   visionInView && 'animate-fade-in'
                 )}
@@ -215,11 +224,10 @@ export default function Home() {
                 </p>
               </div>
               <div
-                ref={missionRef}
                 className={cn(
-                  'p-8 rounded-lg shadow-md opacity-0 text-primary-foreground',
+                  'p-8 rounded-lg shadow-lg opacity-0 text-primary-foreground transition-all duration-700 ease-out transform hover:scale-105 hover:shadow-2xl',
                    'bg-gradient-to-br from-accent to-emerald-600',
-                  missionInView && 'animate-fade-in [animation-delay:300ms]'
+                  visionInView && 'animate-fade-in [animation-delay:300ms]'
                 )}
               >
                 <h3 className="text-2xl font-bold mb-4">
@@ -235,7 +243,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="challenge" className="py-16 md:py-20 relative text-white">
+        <section id="challenge" ref={challengeRef} className="py-16 md:py-20 relative text-white">
           {challengeImage && (
             <Image
               src={challengeImage.imageUrl}
@@ -248,16 +256,18 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60"></div>
           <div className="container mx-auto relative z-10 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                The Challenge &amp; The Opportunity
-              </h2>
-              <p className="mt-4 text-lg text-white/90">
-                Addressing urgent environmental threats by uniting stakeholders
-                and empowering youth to foster sustainable development and
-                social innovation.
-              </p>
+              <div className={cn('transition-all duration-700 ease-out', challengeInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">
+                  The Challenge &amp; The Opportunity
+                </h2>
+                <p className="mt-4 text-lg text-white/90">
+                  Addressing urgent environmental threats by uniting stakeholders
+                  and empowering youth to foster sustainable development and
+                  social innovation.
+                </p>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                <div className={cn('bg-white/10 backdrop-blur-sm p-6 rounded-lg transition-all duration-700 ease-out transform hover:scale-105', challengeInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10')} style={{ transitionDelay: '200ms' }}>
                   <h3
                     className="font-bold text-xl mb-3 text-emerald-400"
                   >
@@ -270,7 +280,7 @@ export default function Home() {
                     <li>Inefficient resource allocation</li>
                   </ul>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                <div className={cn('bg-white/10 backdrop-blur-sm p-6 rounded-lg transition-all duration-700 ease-out transform hover:scale-105', challengeInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10')} style={{ transitionDelay: '400ms' }}>
                   <h3
                     className="font-bold text-xl mb-3 text-emerald-400"
                   >
@@ -288,26 +298,30 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="live" className="py-16 md:py-20 bg-secondary">
+        <section id="live" ref={liveRef} className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary">
           <div className="container mx-auto text-center px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-              Upcoming Events
-            </h2>
-            <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
-              Stay updated with our latest events, workshops, and community activities. Join us!
-            </p>
-            <div className="rounded-lg overflow-hidden shadow-xl">
+             <div className={cn('transition-all duration-700 ease-out', liveInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+                Upcoming Events
+              </h2>
+              <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-12">
+                Stay updated with our latest events, workshops, and community activities. Join us!
+              </p>
+            </div>
+            <div className={cn('rounded-lg overflow-hidden shadow-xl transition-all duration-700 ease-out', liveInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')} style={{ transitionDelay: '200ms' }}>
               <GoogleCalendar />
             </div>
           </div>
         </section>
 
-        <section id="faq" className="py-16 md:py-20 bg-background">
+        <section id="faq" ref={faqRef} className="py-16 md:py-20 bg-gradient-to-b from-secondary to-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-              Frequently Asked Questions
-            </h2>
-            <div className="max-w-3xl mx-auto">
+             <div className={cn('transition-all duration-700 ease-out', faqInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            <div className={cn('max-w-3xl mx-auto transition-all duration-700 ease-out', faqInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')} style={{ transitionDelay: '200ms' }}>
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
                   <AccordionItem value={`item-${index}`} key={index}>
@@ -324,22 +338,24 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-emerald-600 to-accent bg-[length:200%_200%] animate-gradient">
+        <section id="contact" ref={contactRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-emerald-600 to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto text-center px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Shape a Sustainable Tomorrow Together
-            </h2>
-            <p className="text-lg max-w-4xl mx-auto mb-8 text-primary-foreground/90">
-              Discover our groundbreaking initiative uniting Nobel Laureate Sir
-              CV Raman Trust. Join us to empower minds
-              through extraordinary learning experiences, complement academic
-              education with hands-on activities, and inspire a lifelong love
-              for nature. Partner with Prakruthi Shaale to nurture curious,
-              compassionate, and responsible future leaders who will shape a
-              sustainable tomorrow.
-            </p>
+            <div className={cn('transition-all duration-700 ease-out', contactInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Shape a Sustainable Tomorrow Together
+              </h2>
+              <p className="text-lg max-w-4xl mx-auto mb-8 text-primary-foreground/90">
+                Discover our groundbreaking initiative uniting Nobel Laureate Sir
+                CV Raman Trust. Join us to empower minds
+                through extraordinary learning experiences, complement academic
+                education with hands-on activities, and inspire a lifelong love
+                for nature. Partner with Prakruthi Shaale to nurture curious,
+                compassionate, and responsible future leaders who will shape a
+                sustainable tomorrow.
+              </p>
+            </div>
             <div className="mt-12">
-              <div className="max-w-4xl mx-auto bg-background/90 text-foreground rounded-lg p-8 shadow-2xl">
+              <div className={cn('max-w-4xl mx-auto bg-background/90 text-foreground rounded-lg p-8 shadow-2xl transition-all duration-700 ease-out', contactInView ? 'opacity-100 scale-100' : 'opacity-0 scale-90')} style={{ transitionDelay: '200ms' }}>
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="text-left">
                     <h3

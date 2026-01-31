@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import Header from '@/components/header';
@@ -38,7 +39,7 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
         ></div>
         <div
           className={cn(
-            'relative z-10 w-full p-8 bubble-shape',
+            'relative z-10 w-full p-8 bubble-shape transform transition-transform duration-500 hover:scale-105',
             initiative.bg,
             'bg-opacity-40'
           )}
@@ -66,7 +67,7 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
           </div>
         </div>
       </div>
-      <div className="h-80 relative rounded-lg overflow-hidden shadow-lg order-1 md:order-2">
+      <div className="h-80 relative rounded-lg overflow-hidden shadow-lg order-1 md:order-2 transform transition-transform duration-500 hover:scale-105">
         <Image
           src={initiative.image}
           alt={initiative.title}
@@ -122,8 +123,28 @@ export default function ProgramPage() {
     },
   ];
 
+  const approachItems = [
+    {
+      title: 'Outdoor Activities & Workshops',
+      description: 'Activities like nature walks, bird watching, and gardening promote environmental awareness.',
+    },
+    {
+      title: 'Experiential Learning Programs',
+      description: 'Hands-on activities enrich curriculum and support academic, emotional, and social growth.',
+    },
+    {
+      title: 'Volunteering, Team-building & Leadership Programs',
+      description: 'Collaborative challenges enhance communication and leadership skills among participants.',
+    }
+  ];
+
   const { ref: approachRef, inView: approachInView } = useInView({
     threshold: 0.2,
+    triggerOnce: true,
+  });
+
+  const { ref: initiativesRef, inView: initiativesInView } = useInView({
+    threshold: 0.1,
     triggerOnce: true,
   });
 
@@ -137,9 +158,10 @@ export default function ProgramPage() {
       <main className="flex-1 pt-16">
         <section
           id="programs"
-          className="py-16 md:py-20 relative overflow-hidden bg-background"
+          ref={approachRef}
+          className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-background to-secondary"
         >
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 opacity-50">
             <svg
               className="absolute left-0 top-0 h-full w-auto"
               xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +201,6 @@ export default function ProgramPage() {
 
           <div className="container mx-auto relative z-10 px-4">
             <div
-              ref={approachRef}
               className={cn(
                 'text-center mb-12 transition-opacity duration-1000',
                 approachInView ? 'opacity-100' : 'opacity-0'
@@ -193,7 +214,7 @@ export default function ProgramPage() {
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               <div
                 className={cn(
-                  'h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg transition-all duration-1000 transform order-1',
+                  'h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg transition-all duration-1000 transform order-1 hover:scale-105',
                   approachInView
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
@@ -208,91 +229,64 @@ export default function ProgramPage() {
                 />
               </div>
               <div className="flex flex-col gap-8 order-2">
-                <div
-                  className={cn(
-                    'transition-all duration-1000 transform',
-                    approachInView
-                      ? 'opacity-100 translate-y-0 delay-200'
-                      : 'opacity-0 translate-y-10'
-                  )}
-                >
-                  <h3 className="text-xl font-bold mb-2 transition-transform duration-300 hover:scale-105">
-                    Outdoor Activities & Workshops
-                  </h3>
-                  <p className="text-foreground/80">
-                    Activities like nature walks, bird watching, and gardening
-                    promote environmental awareness.
-                  </p>
-                </div>
-                <div
-                  className={cn(
-                    'transition-all duration-1000 transform',
-                    approachInView
-                      ? 'opacity-100 translate-y-0 delay-400'
-                      : 'opacity-0 translate-y-10'
-                  )}
-                >
-                  <h3 className="text-xl font-bold mb-2 transition-transform duration-300 hover:scale-105">
-                    Experiential Learning Programs
-                  </h3>
-                  <p className="text-foreground/80">
-                    Hands-on activities enrich curriculum and support academic,
-                    emotional, and social growth.
-                  </p>
-                </div>
-                <div
-                  className={cn(
-                    'transition-all duration-1000 transform',
-                    approachInView
-                      ? 'opacity-100 translate-y-0 delay-600'
-                      : 'opacity-0 translate-y-10'
-                  )}
-                >
-                  <h3 className="text-xl font-bold mb-2 transition-transform duration-300 hover:scale-105">
-                    Volunteering, Team-building & Leadership Programs
-                  </h3>
-                  <p className="text-foreground/80">
-                    Collaborative challenges enhance communication and
-                    leadership skills among participants.
-                  </p>
-                </div>
+                {approachItems.map((item, index) => (
+                  <div
+                    key={item.title}
+                    className={cn(
+                      'transition-all duration-700 transform',
+                      approachInView
+                        ? 'opacity-100 translate-x-0'
+                        : 'opacity-0 translate-x-10'
+                    )}
+                    style={{ transitionDelay: `${200 * (index + 1)}ms` }}
+                  >
+                    <h3 className="text-xl font-bold mb-2 transition-transform duration-300 hover:scale-105">
+                      {item.title}
+                    </h3>
+                    <p className="text-foreground/80">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        <section id="initiatives" className="py-16 md:py-20 bg-secondary">
+        <section id="initiatives" ref={initiativesRef} className="py-16 md:py-20 bg-gradient-to-b from-secondary to-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
+            <div className={cn('text-center mb-12 transition-all duration-700', initiativesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
               <h2 className="text-3xl md:text-4xl font-bold">Explore Our Initiatives</h2>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto mt-4">
                 Discover how you can get involved and make a difference.
               </p>
             </div>
-            <Carousel
-              plugins={[plugin.current]}
-              opts={{
-                align: 'start',
-                loop: true,
-              }}
-              className="w-full"
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
-            >
-              <CarouselContent>
-                {initiatives.map((initiative) => (
-                  <CarouselItem key={initiative.title} className="md:basis-1/1">
-                    <div className="p-4">
-                      <InitiativeSlide initiative={initiative} />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-center gap-4 mt-8">
-                <CarouselPrevious className="relative top-auto left-auto" />
-                <CarouselNext className="relative top-auto right-auto" />
-              </div>
-            </Carousel>
+            <div className={cn('transition-all duration-700', initiativesInView ? 'opacity-100' : 'opacity-0')} style={{transitionDelay: '200ms'}}>
+              <Carousel
+                plugins={[plugin.current]}
+                opts={{
+                  align: 'start',
+                  loop: true,
+                }}
+                className="w-full"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
+              >
+                <CarouselContent>
+                  {initiatives.map((initiative) => (
+                    <CarouselItem key={initiative.title} className="md:basis-1/1">
+                      <div className="p-4">
+                        <InitiativeSlide initiative={initiative} />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <div className="flex justify-center gap-4 mt-8">
+                  <CarouselPrevious className="relative top-auto left-auto" />
+                  <CarouselNext className="relative top-auto right-auto" />
+                </div>
+              </Carousel>
+            </div>
           </div>
         </section>
       </main>
