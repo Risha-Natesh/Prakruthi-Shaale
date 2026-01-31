@@ -234,24 +234,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="challenge" ref={challengeRef} className="py-16 md:py-20 relative text-white">
-          {challengeImage && (
-            <Image
-              src={challengeImage.imageUrl}
-              alt={challengeImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={challengeImage.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-black/60"></div>
+        <section id="challenge" ref={challengeRef} className="py-16 md:py-20 text-primary-foreground bg-gradient-to-br from-primary via-secondary to-accent bg-[length:200%_200%] animate-gradient">
           <div className="container mx-auto relative z-10 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className={cn('transition-all duration-700 ease-out', challengeInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary">
                   The Challenge &amp; The Opportunity
                 </h2>
-                <p className="mt-4 text-lg text-white/90">
+                <p className="mt-4 text-lg text-primary-foreground/90">
                   We turn global challenges into local opportunities by empowering communities to act on climate change, biodiversity loss, and sustainable development.
                 </p>
               </div>
@@ -262,7 +252,7 @@ export default function Home() {
                   >
                     The Challenge
                   </h3>
-                  <ul className="space-y-2 text-white/80 list-disc list-inside text-left">
+                  <ul className="space-y-2 text-primary-foreground/90 list-disc list-inside text-left">
                     <li>Apathy towards climate action (SDG 13)</li>
                     <li>Biodiversity loss and ecosystem degradation (SDG 15)</li>
                     <li>Fragmented community action (SDG 11)</li>
@@ -275,7 +265,7 @@ export default function Home() {
                   >
                     The Opportunity
                   </h3>
-                  <ul className="space-y-2 text-white/80 list-disc text-left pl-5">
+                  <ul className="space-y-2 text-primary-foreground/90 list-disc text-left pl-5">
                     <li>Empower community-led climate solutions</li>
                     <li>Build resilient and sustainable cities (SDG 11)</li>
                     <li>Foster partnerships for the goals (SDG 17)</li>
