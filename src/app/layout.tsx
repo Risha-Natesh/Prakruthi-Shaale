@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: 'Prakruthi Shaale',
   description:
     'Prakruthi Shaale revolutionizes education by connecting students with nature through innovative outdoor learning experiences.',
+  icons: {
+    icon: '/Images/1logo.jpg',
+  },
 };
 
 export default function RootLayout({
