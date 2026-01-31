@@ -5,24 +5,24 @@
 
 @layer base {
   :root {
-    --background: 40 30% 98%; /* Lighter, warmer off-white */
-    --foreground: 145 50% 10%;
-    --card: 40 30% 98%;
-    --card-foreground: 145 50% 10%;
-    --popover: 30 50% 99%;
-    --popover-foreground: 145 50% 10%;
+    --background: 145 30% 8%;
+    --foreground: 120 20% 95%;
+    --card: 145 30% 8%;
+    --card-foreground: 120 20% 95%;
+    --popover: 145 30% 8%;
+    --popover-foreground: 120 20% 95%;
     --primary: 142 76% 36%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 120 25% 94%; /* Light green-gray */
-    --secondary-foreground: 145 50% 20%;
-    --muted: 120 25% 94%;
-    --muted-foreground: 145 25% 45%;
+    --secondary: 145 25% 15%;
+    --secondary-foreground: 120 20% 95%;
+    --muted: 145 25% 15%;
+    --muted-foreground: 145 15% 65%;
     --accent: 130 65% 50%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 120 20% 88%;
-    --input: 120 25% 96%;
+    --border: 145 25% 15%;
+    --input: 145 25% 15%;
     --ring: 142 76% 36%;
     --chart-1: 160 70% 40%;
     --chart-2: 48 96% 53%;
@@ -70,7 +70,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-poppins), sans-serif;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(142 76% 36%)" stroke="white" stroke-width="1"><path d="M3 3l7.07 18.97 2.52-10.05L21.97 10.05 3 3z" transform="rotate(-45 12 12)"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="hsl(142 76% 36%)" stroke="white" stroke-width="1"><path d="M3 3l7.07 18.97 2.52-10.05L21.97 10.05 3 3z" transform="rotate(-90 12 12)"/></svg>'), auto;
   }
   a, button, [role="button"] {
     cursor: pointer;

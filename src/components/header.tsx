@@ -41,7 +41,6 @@ const Header = () => {
   };
 
   const navTextColor = 'text-foreground';
-  const textShadow = 'drop-shadow(0 1px 2px rgba(255,255,255,0.4))';
   const navHoverColor = 'hover:bg-foreground/10';
 
   const NavLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
@@ -50,7 +49,6 @@ const Header = () => {
       navHoverColor,
       isMobile && 'w-full justify-start'
     );
-    const commonButtonStyle = { filter: isScrolled ? 'none' : textShadow };
 
     const links = (
       <>
@@ -58,7 +56,6 @@ const Header = () => {
           variant="ghost"
           onClick={() => scrollTo('home')}
           className={commonButtonClass}
-          style={commonButtonStyle}
         >
           Home
         </Button>
@@ -66,7 +63,6 @@ const Header = () => {
           variant="ghost"
           onClick={() => scrollTo('about')}
           className={commonButtonClass}
-          style={commonButtonStyle}
         >
           About
         </Button>
@@ -74,7 +70,6 @@ const Header = () => {
           <Button
             variant="ghost"
             className={cn(commonButtonClass, 'w-full', isMobile && 'justify-start')}
-            style={commonButtonStyle}
           >
             Programs
           </Button>
@@ -83,7 +78,6 @@ const Header = () => {
           variant="ghost"
           onClick={() => scrollTo('faq')}
           className={commonButtonClass}
-          style={commonButtonStyle}
         >
           FAQ
         </Button>
@@ -94,7 +88,6 @@ const Header = () => {
             'border-foreground/50 bg-foreground/5 text-foreground hover:bg-foreground/10',
             isMobile && 'w-full justify-start'
           )}
-          style={commonButtonStyle}
         >
           Contact
         </Button>
@@ -131,7 +124,6 @@ const Header = () => {
         />
         <span
           className={cn(navTextColor)}
-          style={{ filter: isScrolled ? 'none' : textShadow }}
         >
           PRAKRUTHI <span className="font-light">SHAALE</span>
         </span>
@@ -146,7 +138,6 @@ const Header = () => {
               variant="ghost"
               size="icon"
               className={cn(navTextColor, navHoverColor)}
-              style={{ filter: isScrolled ? 'none' : textShadow }}
             >
               <Menu className="h-6 w-6" />
               <span className="sr-only">Open menu</span>

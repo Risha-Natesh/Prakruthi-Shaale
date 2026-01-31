@@ -123,7 +123,7 @@ export default function Home() {
             <source src="/videos/hero-background.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-black/40 z-0"></div>
+          <div className="absolute inset-0 bg-black/60 z-0"></div>
           <div className="container mx-auto h-full flex flex-col items-center justify-center text-center text-white relative z-10 px-4">
             <div className="flex flex-col gap-6">
               <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
