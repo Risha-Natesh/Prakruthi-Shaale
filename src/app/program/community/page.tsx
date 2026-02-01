@@ -17,6 +17,7 @@ import {
   Award,
   BookOpen,
   Calendar,
+  Recycle,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useInView } from 'react-intersection-observer';
@@ -80,6 +81,11 @@ export default function CommunityPage() {
   });
 
   const { ref: outcomesRef, inView: outcomesInView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  const { ref: greensRef, inView: greensInView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
@@ -245,6 +251,33 @@ export default function CommunityPage() {
               </p>
             </div>
 
+            <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary shadow-lg" ref={greensRef}>
+              <div
+                className={cn('transition-all duration-700 ease-out', greensInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}
+              >
+                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 text-center flex items-center justify-center gap-2">
+                  <Recycle className="w-8 h-8" />
+                  Featured Initiative: Greens & Browns Story
+                </h3>
+                <p className="text-foreground/80 mb-4">
+                  <strong>Greens & Browns Story</strong> is a community-led sustainability initiative by the <strong>Zero Waste Collective Malleswaram</strong> that focuses on reducing landfill waste through decentralized composting. Launched in February 2023, the project has grown into a scalable model now active across multiple temples and community spaces, diverting around <strong>1.10 tons of organic waste per month</strong> from landfills and converting it into useful compost. The initiative has already achieved significant impact, with thousands of days of activity, over five tons of compost harvested, and strong participation from volunteers and partner organizations.
+                </p>
+                <div className="my-6">
+                  <h4 className="text-xl font-bold text-primary mb-2">Core Goals:</h4>
+                  <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                    <li>Create a structured platform for community volunteering.</li>
+                    <li>Ensure organic waste is kept out of landfills through segregation and composting.</li>
+                    <li>Decentralize waste management at the neighborhood level.</li>
+                  </ul>
+                </div>
+                <p className="text-foreground/80 mb-4">
+                  As the initiative expands from temples to parks and other public spaces, it aims to create a <strong>ward-level organic waste management ecosystem</strong> across the Malleswaram constituency. The project aligns with multiple <strong>UN Sustainable Development Goals</strong>, especially responsible consumption, sustainable communities, climate action, and partnerships for the goals (SDG 17). Through collaboration between civic institutions, educational organizations, and citizens, Greens & Browns Story is shaping a replicable, community-driven model that has the potential to scale across cities and even nationwide.
+                </p>
+                <p className="text-foreground/80 font-semibold">
+                  In short, <strong>Greens & Browns Story</strong> shows how local communities can turn everyday waste into a powerful tool for environmental action—blending tradition, participation, and sustainability into a practical and impactful zero-waste movement.
+                </p>
+              </div>
+            </div>
 
             <div className="text-center p-6 md:p-8 rounded-lg bg-accent/10">
                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
