@@ -140,11 +140,16 @@ export default function CorporatePage() {
               <p className="text-primary-foreground/90 mb-6 text-center">
                 We offer customizable day-out packages designed around your organization's objectives:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {engagementModels.map((model, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-4 p-4 rounded-lg bg-accent/10 border border-accent/20"
+                    className={`flex items-center gap-4 p-4 rounded-lg bg-accent/10 border border-accent/20 md:col-span-2 ${
+                      engagementModels.length % 2 !== 0 &&
+                      index === engagementModels.length - 1
+                        ? 'md:col-start-2'
+                        : ''
+                    }`}
                   >
                     <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                       <model.icon className="w-6 h-6 text-accent" />
