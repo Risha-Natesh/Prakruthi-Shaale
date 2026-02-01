@@ -159,7 +159,7 @@ export default function YouthPage() {
 
             <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">
-                What Families Can Expect
+                What to Expect
               </h3>
               <p className="text-foreground/80 mb-6 text-center">
                 At Prakruthi Shaale, learning is an adventure. Our programs are centered on doing, exploring, and experiencing, with a focus on:
@@ -178,7 +178,7 @@ export default function YouthPage() {
 
             <div className="mb-12">
               <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
-                Why Parents Choose Prakruthi Shaale
+                Why Choose Prakruthi Shaale
               </h3>
               <div className="grid grid-cols-1 gap-6">
                 {whyChoose.map((item, index) => {
