@@ -1,5 +1,6 @@
 
 'use client';
+import React from 'react';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -20,6 +21,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { cn } from '@/lib/utils';
 
 export default function CorporatePage() {
   const engagementModels = [
@@ -144,12 +146,12 @@ export default function CorporatePage() {
                 {engagementModels.map((model, index) => (
                   <div
                     key={index}
-                    className={`flex items-center gap-4 p-4 rounded-lg bg-accent/10 border border-accent/20 md:col-span-2 ${
+                    className={cn('flex items-center gap-4 p-4 rounded-lg bg-accent/10 border border-accent/20 md:col-span-2',
                       engagementModels.length % 2 !== 0 &&
                       index === engagementModels.length - 1
                         ? 'md:col-start-2'
                         : ''
-                    }`}
+                    )}
                   >
                     <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                       <model.icon className="w-6 h-6 text-accent" />
@@ -198,7 +200,12 @@ export default function CorporatePage() {
                 {outcomes.map((outcome, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 p-4 rounded-lg bg-accent/10"
+                    className={cn(
+                      'flex items-center gap-3 p-4 rounded-lg bg-accent/10',
+                      outcomes.length % 2 !== 0 &&
+                        index === outcomes.length - 1 &&
+                        'md:col-span-2 md:justify-center'
+                    )}
                   >
                     <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
                     <span>{outcome}</span>
