@@ -82,7 +82,7 @@ export default function YouthPage() {
     {
       icon: School,
       title: 'Spectrum Senior',
-      description: 'For students in 7th to 12th grade',
+      description: 'For students in 8th to 12th grade',
     },
     {
       icon: GraduationCap,
@@ -127,7 +127,7 @@ export default function YouthPage() {
                 Our Youth for SDGs Program offers nature-based learning experiences for ages 6-24, designed to empower the next generation of global citizens. We provide the tools, knowledge, and inspiration for young people to act on critical issues like climate change (SDG 13), biodiversity (SDG 15), and quality education (SDG 4).
               </p>
               <p className="text-lg text-primary-foreground/90">
-                Prakruthi Shaale is a community where families and youth come together to nurture curiosity, values, and a commitment to a sustainable world.
+                Prakruthi Shaale is a community where individuals and youth come together to nurture curiosity, values, and a commitment to a sustainable world.
               </p>
             </div>
 
