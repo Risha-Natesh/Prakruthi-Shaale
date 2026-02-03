@@ -72,15 +72,6 @@ export default function PartnershipsPage() {
                 </li>
                 <li className="flex items-start">
                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
-                    <Handshake className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">For-Profit Collaborations</h4>
-                    <p className="text-sm text-foreground/70">Partnering on projects with shared financial goals and measurable SDG outcomes.</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                   <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mr-4 mt-1">
                     <Target className="w-5 h-5 text-primary" />
                   </div>
                   <div>
