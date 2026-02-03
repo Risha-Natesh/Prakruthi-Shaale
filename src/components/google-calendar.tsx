@@ -14,7 +14,7 @@ const GoogleCalendar = () => {
   // 5. Copy the ENTIRE <iframe ...> code from the top of the customization page.
   // 6. Find the `src="..."` attribute in that code and copy ONLY the URL inside the quotes.
   // 7. Paste that URL into the `calendarEmbedSrc` variable below.
-  const calendarEmbedSrc = "https://calendar.google.com/calendar/embed?src=a6ec66b5efad03cdb300d5d33ce7cd99985176e2fd6a3f2cab9e0b62138afbcd%40group.calendar.google.com&ctz=Asia%2FKolkata"; // <-- PASTE YOUR CALENDAR EMBED URL HERE
+  const calendarEmbedSrc = "https://calendar.google.com/calendar/embed?src=a6ec66b5efad03cdb300d5d33ce7cd99985176e2fd6a3f2cab9e0b62138afbcd%40group.calendar.google.com&ctz=Asia%2FKolkata&bgcolor=%23121c14"; // <-- PASTE YOUR CALENDAR EMBED URL HERE
 
   if (!calendarEmbedSrc) {
     return (
