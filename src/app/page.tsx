@@ -289,7 +289,7 @@ export default function Home() {
                   Join our journey toward a sustainable future. Explore our upcoming events, workshops, and community activities dedicated to advancing the Global Goals.
                 </p>
               </div>
-              <div className={cn('rounded-lg overflow-hidden shadow-xl transition-all duration-700 ease-out invert hue-rotate-180', liveInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')} style={{ transitionDelay: '200ms' }}>
+              <div className={cn('rounded-lg overflow-hidden shadow-xl transition-all duration-700 ease-out invert hue-rotate-90', liveInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')} style={{ transitionDelay: '200ms' }}>
                 <GoogleCalendar />
               </div>
             </div>
