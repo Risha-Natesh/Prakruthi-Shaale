@@ -1,41 +1,42 @@
-
 'use client';
 
 const GoogleCalendar = () => {
-  // IMPORTANT: Replace this src with your public Google Calendar embed URL.
-  // Follow these steps to get your embed URL:
-  // 1. Open Google Calendar on a computer.
-  // 2. In the "Settings and sharing" for the calendar you want to embed, go to "Access permissions" and check "Make available to public".
-  // 3. Go to the "Integrate calendar" section and click "Customize".
-  // 4. In the customization options:
-  //    - UNCHECK "Show title". This removes the calendar name.
-  //    - UNCHECK "Show timezone".
-  //    - Configure other options as you like.
-  // 5. Copy the ENTIRE <iframe ...> code from the top of the customization page.
-  // 6. Find the `src="..."` attribute in that code and copy ONLY the URL inside the quotes.
-  // 7. Paste that URL into the `calendarEmbedSrc` variable below.
-  const calendarEmbedSrc = "https://calendar.google.com/calendar/embed?src=a6ec66b5efad03cdb300d5d33ce7cd99985176e2fd6a3f2cab9e0b62138afbcd%40group.calendar.google.com&ctz=Asia%2FKolkata&bgcolor=%23121c14"; // <-- PASTE YOUR CALENDAR EMBED URL HERE
+  // This component displays the calendar in "Month" view on desktop and "Agenda" view on mobile.
+  const calendarEmbedUrl = "https://calendar.google.com/calendar/embed?src=a6ec66b5efad03cdb300d5d33ce7cd99985176e2fd6a3f2cab9e0b62138afbcd%40group.calendar.google.com&ctz=Asia%2FKolkata&bgcolor=%23121c14";
 
-  if (!calendarEmbedSrc) {
+  if (!calendarEmbedUrl) {
     return (
       <div className="flex flex-col items-center justify-center h-[600px] bg-muted/50 rounded-lg border border-dashed text-center p-8">
         <h3 className="text-xl font-semibold text-foreground/80">Your Calendar Will Appear Here</h3>
         <p className="mt-2 text-foreground/60">
-          Please follow the instructions in the `src/components/google-calendar.tsx` file to embed your Google Calendar.
+          A calendar embed URL is missing in `src/components/google-calendar.tsx`.
         </p>
       </div>
     )
   }
 
+  const desktopSrc = `${calendarEmbedUrl}&mode=MONTH`;
+  const mobileSrc = `${calendarEmbedUrl}&mode=AGENDA`;
+
   return (
-    <div className="w-full">
+    <div className="w-full h-[600px]">
+      {/* Desktop Calendar (Month View) */}
       <iframe
-        src={calendarEmbedSrc}
+        src={desktopSrc}
+        className="hidden md:block w-full h-full"
         style={{ border: 0 }}
-        width="100%"
-        height="600"
         frameBorder="0"
         scrolling="no"
+        title="Google Calendar - Desktop"
+      ></iframe>
+      {/* Mobile Calendar (Agenda View) */}
+      <iframe
+        src={mobileSrc}
+        className="block md:hidden w-full h-full"
+        style={{ border: 0 }}
+        frameBorder="0"
+        scrolling="no"
+        title="Google Calendar - Mobile"
       ></iframe>
     </div>
   );
