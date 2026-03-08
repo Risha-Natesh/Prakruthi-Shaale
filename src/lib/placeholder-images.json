@@ -41,6 +41,30 @@
       "description": "An image for the Eco Connect program.",
       "imageUrl": "/Images/downfly.jpg",
       "imageHint": "nature program"
+    },
+    {
+      "id": "team-krishna",
+      "description": "Portrait of Krishna Raj Suresh",
+      "imageUrl": "https://picsum.photos/seed/krishna/400/400",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "team-roopa",
+      "description": "Portrait of Roopa Abhishek",
+      "imageUrl": "https://picsum.photos/seed/roopa/400/400",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "team-akhila",
+      "description": "Portrait of Akhila Murthy",
+      "imageUrl": "https://picsum.photos/seed/akhila/400/400",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "team-sindhu",
+      "description": "Portrait of Sindhu M V",
+      "imageUrl": "https://picsum.photos/seed/sindhu/400/400",
+      "imageHint": "professional woman"
     }
   ]
 }
