@@ -50,10 +50,12 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }
       <h3 className="text-2xl font-bold mb-2 text-white tracking-tight">
         {member.name}
       </h3>
-      <Badge className="bg-primary/40 text-white border-white/20 px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm hover:bg-primary/50 transition-colors mb-4">
-        {member.role}
-      </Badge>
-      <p className="text-white/80 text-sm leading-relaxed max-w-[320px] min-h-[3rem] line-clamp-2 px-2">
+      <div className="mb-4">
+        <Badge className="bg-primary/40 text-white border-white/20 px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm hover:bg-primary/50 transition-colors">
+          {member.role}
+        </Badge>
+      </div>
+      <p className="text-white/80 text-sm leading-relaxed max-w-[320px] min-h-[5rem] px-2 whitespace-normal">
         {member.description}
       </p>
     </div>
@@ -148,4 +150,3 @@ export default function TeamsPage() {
     </div>
   );
 }
-
