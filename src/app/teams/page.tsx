@@ -53,7 +53,7 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }
       <Badge className="bg-primary/40 text-white border-white/20 px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm hover:bg-primary/50 transition-colors mb-4">
         {member.role}
       </Badge>
-      <p className="text-white/80 text-sm leading-relaxed max-w-[260px] line-clamp-2">
+      <p className="text-white/80 text-sm leading-relaxed max-w-[320px] min-h-[3rem] line-clamp-2 px-2">
         {member.description}
       </p>
     </div>
@@ -68,25 +68,25 @@ export default function TeamsPage() {
       name: 'Krishna Raj Suresh',
       role: 'Founder Trustee',
       imageId: 'team-krishna',
-      description: 'Visionary leader dedicated to nature-based education and fostering global sustainability goals.',
+      description: 'Visionary leader dedicated to advancing nature-based education and community learning initiatives. Guides the organization’s vision, partnerships, and long-term educational impact.',
     },
     {
       name: 'Roopa Abhishek',
       role: 'Education & Program',
       imageId: 'team-roopa',
-      description: 'Expert in designing immersive outdoor curricula that bridge traditional learning with ecological action.',
+      description: 'Designs immersive outdoor learning programs that connect students with nature and sustainability. Leads curriculum development and ensures engaging, meaningful educational experiences.',
     },
     {
       name: 'Akhila Murthy',
       role: 'Education & Program',
       imageId: 'team-akhila',
-      description: 'Passionate educator focused on student engagement and coordinating impactful community outreach.',
+      description: 'Passionate educator focused on fostering curiosity, creativity, and active student participation. Supports interactive learning environments that inspire exploration and growth.',
     },
     {
       name: 'Sindhu M V',
       role: 'Creative & Treasurer',
       imageId: 'team-sindhu',
-      description: 'Blending creative direction with financial oversight to ensure operational excellence and growth.',
+      description: 'Combines creative direction with financial oversight to strengthen organizational sustainability. Manages communication, branding, and budgeting for impactful program delivery.',
     },
   ];
 
@@ -148,3 +148,4 @@ export default function TeamsPage() {
     </div>
   );
 }
+
