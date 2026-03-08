@@ -74,6 +74,22 @@ const Header = () => {
             Programs
           </Button>
         </Link>
+        <Link href="/teams" passHref>
+          <Button
+            variant="ghost"
+            className={cn(commonButtonClass, 'w-full', isMobile && 'justify-start')}
+          >
+            Teams
+          </Button>
+        </Link>
+        <Link href="/summer-camp" passHref>
+          <Button
+            variant="ghost"
+            className={cn(commonButtonClass, 'w-full', isMobile && 'justify-start')}
+          >
+            Summer Camp
+          </Button>
+        </Link>
         <Button
           variant="ghost"
           onClick={() => scrollTo('faq')}
