@@ -24,7 +24,6 @@ import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { SDGIcon } from '@/components/sdg-icon';
 
 const InitiativeSlide = ({ initiative }: { initiative: any }) => {
   const Icon = initiative.icon;
@@ -56,9 +55,9 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
             <h3 className="text-3xl font-bold text-primary-foreground">
               {initiative.title}
             </h3>
-            <div className="text-primary-foreground/70 text-lg mt-2 flex items-center flex-wrap gap-1 justify-center md:justify-start">
+            <p className="text-primary-foreground/70 text-lg mt-2">
               {initiative.description}
-            </div>
+            </p>
             <Link href={initiative.href} passHref>
               <Button className="mt-4">
                 Learn More <ArrowRight className="ml-2" />
@@ -85,7 +84,7 @@ export default function ProgramPage() {
       icon: Leaf,
       title: 'Youth for SDGs Program',
       description:
-        <>Empowering the next generation to lead on the Global Goals through immersive nature and science education (SDG <SDGIcon />, <SDGIcon />, <SDGIcon />).</>,
+        'Empowering the next generation to lead on the Global Goals through immersive nature and science education (SDG 4, 13, 15).',
       href: '/program/youth',
       color: 'text-green-800',
       bg: 'bg-green-400',
@@ -95,7 +94,7 @@ export default function ProgramPage() {
       icon: Building,
       title: 'Partnerships for Purpose',
       description:
-        <>Collaborate on ESG-aligned corporate experiences that drive sustainable innovation and responsible leadership (SDG <SDGIcon />, <SDGIcon />).</>,
+        'Collaborate on ESG-aligned corporate experiences that drive sustainable innovation and responsible leadership (SDG 12, 17).',
       href: '/program/corporate',
       color: 'text-teal-800',
       bg: 'bg-teal-400',
@@ -105,7 +104,7 @@ export default function ProgramPage() {
       icon: HeartHandshake,
       title: 'Community Action for the Planet',
       description:
-        <>Join local volunteer efforts to build sustainable communities and contribute to climate action and biodiversity (SDG <SDGIcon />, <SDGIcon />, <SDGIcon />).</>,
+        'Join local volunteer efforts to build sustainable communities and contribute to climate action and biodiversity (SDG 11, 13, 15).',
       href: '/program/community',
       color: 'text-lime-800',
       bg: 'bg-lime-400',
@@ -115,7 +114,7 @@ export default function ProgramPage() {
       icon: Briefcase,
       title: 'Ventures for a Better World',
       description:
-        <>Co-create profitable and sustainable business ventures aligned with the principles of the SDGs (SDG <SDGIcon />, <SDGIcon />, <SDGIcon />).</>,
+        'Co-create profitable and sustainable business ventures aligned with the principles of the SDGs (SDG 8, 9, 12).',
       href: '/program/partnerships',
       color: 'text-emerald-800',
       bg: 'bg-emerald-400',
@@ -126,15 +125,15 @@ export default function ProgramPage() {
   const approachItems = [
     {
       title: 'Outdoor Activities & Workshops',
-      description: <>Activities like nature walks and gardening connect participants to SDG <SDGIcon /> (Life on Land) and promote environmental awareness.</>,
+      description: 'Activities like nature walks and gardening connect participants to SDG 15 (Life on Land) and promote environmental awareness.',
     },
     {
       title: 'Experiential Learning Programs',
-      description: <>Hands-on activities provide quality education (SDG <SDGIcon />) that supports academic, emotional, and social growth for all ages.</>,
+      description: 'Hands-on activities provide quality education (SDG 4) that supports academic, emotional, and social growth for all ages.',
     },
     {
       title: 'Volunteering & Leadership Programs',
-      description: <>Collaborative challenges enhance communication and leadership skills, fostering partnerships for the goals (SDG <SDGIcon />).</>,
+      description: 'Collaborative challenges enhance communication and leadership skills, fostering partnerships for the goals (SDG 17).',
     }
   ];
 
@@ -243,9 +242,9 @@ export default function ProgramPage() {
                     <h3 className="text-xl font-bold mb-2 transition-transform duration-300 hover:scale-105">
                       {item.title}
                     </h3>
-                    <div className="text-primary-foreground/90">
+                    <p className="text-primary-foreground/90">
                       {item.description}
-                    </div>
+                    </p>
                   </div>
                 ))}
               </div>

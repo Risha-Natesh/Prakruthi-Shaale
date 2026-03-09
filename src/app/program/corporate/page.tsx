@@ -21,7 +21,6 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
-import { SDGIcon } from '@/components/sdg-icon';
 
 export default function CorporatePage() {
   const engagementModels = [
@@ -59,7 +58,7 @@ export default function CorporatePage() {
     'Corporate offsites focused on purpose and impact',
     'Leadership development aligned with SDG principles',
     'ESG and sustainability engagement initiatives',
-    'CSR-linked employee volunteering days (SDG <SDGIcon />, <SDGIcon />, <SDGIcon />)',
+    'CSR-linked employee volunteering days (SDG 4, 13, 15)',
     'Wellness and employee engagement programs',
   ];
 
@@ -111,7 +110,7 @@ export default function CorporatePage() {
                 Prakruthi Shaale offers bespoke corporate engagement experiences that align with your ESG priorities, sustainability goals, and commitment to the UN SDGs. Our programs help translate your organization's purpose into tangible, hands-on team experiences.
               </p>
               <p className="text-lg text-primary-foreground/90 mt-4">
-                We combine leadership development, team building, and environmental action to create memorable offsites that reinforce responsible business values. Engage your team, foster innovation, and make a measurable impact on goals like Responsible Consumption (SDG <SDGIcon />), Decent Work (SDG <SDGIcon />), and Partnerships for the Goals (SDG <SDGIcon />).
+                We combine leadership development, team building, and environmental action to create memorable offsites that reinforce responsible business values. Engage your team, foster innovation, and make a measurable impact on goals like Responsible Consumption (SDG 12), Decent Work (SDG 8), and Partnerships for the Goals (SDG 17).
               </p>
             </div>
 
