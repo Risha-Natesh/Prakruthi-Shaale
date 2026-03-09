@@ -93,12 +93,12 @@ export default function Home() {
     {
       icon: Target,
       title: 'Education for Sustainable Development',
-      description: 'Our innovative outdoor learning experiences are designed to provide quality education (SDG 4) and inspire climate action (SDG 13).',
+      description: 'Our innovative outdoor learning experiences are designed to provide quality education and inspire climate action.',
     },
     {
       icon: Leaf,
       title: 'Fostering Global Citizenship',
-      description: 'We connect individuals with nature to foster creativity, critical thinking, and a deep-seated responsibility for our planet (SDG 15).',
+      description: 'We connect individuals with nature to foster creativity, critical thinking, and a deep-seated responsibility for our planet.',
     },
     {
       icon: Sprout,
@@ -229,7 +229,7 @@ export default function Home() {
                     Our Mission
                   </h3>
                   <p className="text-white/90">
-                    To make sustainability accessible and actionable. We bridge knowledge gaps and mobilize resources to drive progress on quality education (SDG 4), climate action (SDG 13), and protecting life on land (SDG 15).
+                    To make sustainability accessible and actionable. We bridge knowledge gaps and mobilize resources to drive progress on quality education, climate action, and protecting life on land.
                   </p>
                 </div>
               </div>
@@ -255,10 +255,10 @@ export default function Home() {
                       The Challenge
                     </h3>
                     <ul className="space-y-2 text-primary-foreground/90 list-disc list-inside text-left">
-                      <li>Apathy towards climate action (SDG 13)</li>
-                      <li>Biodiversity loss and ecosystem degradation (SDG 15)</li>
-                      <li>Fragmented community action (SDG 11)</li>
-                      <li>Gaps in quality environmental education (SDG 4)</li>
+                      <li>Apathy towards climate action</li>
+                      <li>Biodiversity loss and ecosystem degradation</li>
+                      <li>Fragmented community action</li>
+                      <li>Gaps in quality environmental education</li>
                     </ul>
                   </div>
                   <div className={cn('bg-white/10 backdrop-blur-sm p-6 rounded-lg transition-all duration-700 ease-out transform hover:scale-105', challengeInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10')} style={{ transitionDelay: '400ms' }}>
@@ -269,8 +269,8 @@ export default function Home() {
                     </h3>
                     <ul className="space-y-2 text-primary-foreground/90 list-disc text-left pl-5">
                       <li>Empower community-led climate solutions</li>
-                      <li>Build resilient and sustainable cities (SDG 11)</li>
-                      <li>Foster partnerships for the goals (SDG 17)</li>
+                      <li>Build resilient and sustainable cities</li>
+                      <li>Foster partnerships for the goals</li>
                       <li>Mobilize youth for environmental stewardship</li>
                     </ul>
                   </div>
@@ -326,7 +326,7 @@ export default function Home() {
                   Shape a Sustainable Tomorrow Together
                 </h2>
                 <p className="text-lg max-w-4xl mx-auto mb-8 text-primary-foreground/90">
-                  Join us in forging partnerships for the goals (SDG 17). Our groundbreaking initiative with the Nobel Laureate Sir CV Raman Trust is just one example of how we collaborate to empower minds, complement education with hands-on action, and inspire a lifelong love for nature. Partner with Prakruthi Shaale to nurture the next generation of leaders who will shape a sustainable tomorrow.
+                  Join us in forging partnerships for the goals. Our groundbreaking initiative with the Nobel Laureate Sir CV Raman Trust is just one example of how we collaborate to empower minds, complement education with hands-on action, and inspire a lifelong love for nature. Partner with Prakruthi Shaale to nurture the next generation of leaders who will shape a sustainable tomorrow.
                 </p>
               </div>
               <div className="mt-12">
@@ -382,4 +382,3 @@ export default function Home() {
     </div>
   );
 }
-
