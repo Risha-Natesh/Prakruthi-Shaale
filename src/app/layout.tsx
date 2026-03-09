@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   description:
     'Prakruthi Shaale revolutionizes education by connecting students with nature through innovative outdoor learning experiences.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/Images/1logo.jpg',
   },
 };
 
