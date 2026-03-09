@@ -84,7 +84,7 @@ export default function ProgramPage() {
       icon: Leaf,
       title: 'Youth for SDGs Program',
       description:
-        'Empowering the next generation to lead on the Global Goals through immersive nature and science education (SDG 4, 13, 15).',
+        'Empowering the next generation to lead on the Global Goals through immersive nature and science education.',
       href: '/program/youth',
       color: 'text-green-800',
       bg: 'bg-green-400',
@@ -94,7 +94,7 @@ export default function ProgramPage() {
       icon: Building,
       title: 'Partnerships for Purpose',
       description:
-        'Collaborate on ESG-aligned corporate experiences that drive sustainable innovation and responsible leadership (SDG 12, 17).',
+        'Collaborate on ESG-aligned corporate experiences that drive sustainable innovation and responsible leadership.',
       href: '/program/corporate',
       color: 'text-teal-800',
       bg: 'bg-teal-400',
@@ -104,28 +104,18 @@ export default function ProgramPage() {
       icon: HeartHandshake,
       title: 'Community Action for the Planet',
       description:
-        'Join local volunteer efforts to build sustainable communities and contribute to climate action and biodiversity (SDG 11, 13, 15).',
+        'Join local volunteer efforts to build sustainable communities and contribute to climate action and biodiversity.',
       href: '/program/community',
       color: 'text-lime-800',
       bg: 'bg-lime-400',
       image: '/Images/volunteer.jpg',
-    },
-    {
-      icon: Briefcase,
-      title: 'Ventures for a Better World',
-      description:
-        'Co-create profitable and sustainable business ventures aligned with the principles of the SDGs (SDG 8, 9, 12).',
-      href: '/program/partnerships',
-      color: 'text-emerald-800',
-      bg: 'bg-emerald-400',
-      image: '/Images/partner.jpg',
     },
   ];
 
   const approachItems = [
     {
       title: 'Outdoor Activities & Workshops',
-      description: 'Activities like nature walks and gardening connect participants to SDG 15 (Life on Land) and promote environmental awareness.',
+      description: 'Activities like nature walks and gardening connect participants to Life on Land (SDG 15) and promote environmental awareness.',
     },
     {
       title: 'Experiential Learning Programs',
