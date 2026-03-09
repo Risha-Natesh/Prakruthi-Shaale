@@ -103,7 +103,7 @@ export default function YouthPage() {
             data-ai-hint="kids exploring nature"
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
               Growing Future Leaders for the Global Goals
             </h1>
           </div>
@@ -111,27 +111,27 @@ export default function YouthPage() {
 
         <div className="container mx-auto py-12 md:py-16 px-4">
           <Link href="/program" className="mb-8 inline-block">
-            <Button variant="outline">
-              <ArrowLeft className="mr-2" />
+            <Button variant="outline" size="sm">
+              <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Programs
             </Button>
           </Link>
 
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
                 A Place to Explore, Learn, and Lead
               </h2>
-              <p className="text-lg text-primary-foreground/90 mb-4">
+              <p className="text-sm md:text-base text-primary-foreground/90 mb-4">
                 Our Youth for SDGs Program offers nature-based learning experiences for ages 6-24, designed to empower the next generation of global citizens. We provide the tools, knowledge, and inspiration for young people to act on critical issues like climate change (SDG 13), biodiversity (SDG 15), and quality education (SDG 4).
               </p>
-              <p className="text-lg text-primary-foreground/90">
+              <p className="text-sm md:text-base text-primary-foreground/90">
                 Prakruthi Shaale is a community where individuals and youth come together to nurture curiosity, values, and a commitment to a sustainable world.
               </p>
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-primary mb-6 text-center">
                 Who Can Participate
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -146,9 +146,9 @@ export default function YouthPage() {
                       <div
                         className="relative p-6 rounded-lg bg-background/80 backdrop-blur-md flex flex-col items-center justify-center h-full"
                       >
-                        <Icon className="w-10 h-10 mb-3 text-accent" />
-                        <h4 className="font-bold text-lg text-primary/90">{item.title}</h4>
-                        <p className="text-primary-foreground/90">{item.description}</p>
+                        <Icon className="w-8 h-8 mb-3 text-accent" />
+                        <h4 className="font-bold text-base text-primary/90">{item.title}</h4>
+                        <p className="text-sm text-primary-foreground/90">{item.description}</p>
                       </div>
                     </div>
                   );
@@ -157,26 +157,26 @@ export default function YouthPage() {
             </div>
 
             <div className="mb-12 p-6 md:p-8 rounded-lg bg-secondary">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 text-center">
                 What to Expect
               </h3>
-              <p className="text-foreground/80 mb-6 text-center">
+              <p className="text-sm md:text-base text-foreground/80 mb-6 text-center">
                 At Prakruthi Shaale, learning is an adventure. Our programs are centered on doing, exploring, and experiencing, with a focus on:
               </p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 list-decimal list-inside">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 list-decimal list-inside text-sm md:text-base">
                 <li>Hands-on activities that bring the SDGs to life</li>
                 <li>Exploration to foster a deep connection with nature (SDG 15)</li>
                 <li>Creative problem-solving for real-world sustainability challenges</li>
                 <li>Teamwork and leadership skills for effective collaboration (SDG 17)</li>
                 <li>Building awareness and practices for sustainable living (SDG 12)</li>
               </ul>
-              <p className="text-foreground/80 mt-6 text-center">
+              <p className="text-sm md:text-base text-foreground/80 mt-6 text-center">
                 All programs are facilitated by trained outdoor educators in a safe, inclusive, and inspiring environment.
               </p>
             </div>
 
             <div className="mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-primary mb-6 text-center">
                 Why Choose Prakruthi Shaale
               </h3>
               <div className="grid grid-cols-1 gap-6">
@@ -187,14 +187,14 @@ export default function YouthPage() {
                       key={index}
                       className="flex items-start gap-4 p-4 rounded-lg bg-accent/10 border border-accent/20"
                     >
-                      <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6 text-accent" />
+                      <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-5 h-5 text-accent" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-lg text-accent/90">
+                        <h4 className="font-semibold text-base md:text-lg text-accent/90">
                           {item.title}
                         </h4>
-                        <p className="text-primary-foreground/90">
+                        <p className="text-sm md:text-base text-primary-foreground/90">
                           {item.description}
                         </p>
                       </div>
@@ -205,10 +205,10 @@ export default function YouthPage() {
             </div>
 
             <div className="text-center p-6 md:p-8 rounded-lg bg-accent/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+              <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
                 Join Us
               </h2>
-              <p className="text-lg text-primary-foreground/90 mb-6">
+              <p className="text-sm md:text-base text-primary-foreground/90 mb-6">
                 Explore upcoming programs and workshops designed to empower the next generation of sustainability leaders. Events will be posted here.
               </p>
             </div>

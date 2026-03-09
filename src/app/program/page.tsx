@@ -46,27 +46,27 @@ const InitiativeSlide = ({ initiative }: { initiative: any }) => {
           <div className="flex flex-col items-center md:items-start">
             <div
               className={cn(
-                `w-16 h-16 rounded-full flex items-center justify-center mb-4`,
+                `w-12 h-12 rounded-full flex items-center justify-center mb-4`,
                 initiative.bg
               )}
             >
-              <Icon className={`w-8 h-8 ${initiative.color}`} />
+              <Icon className={`w-6 h-6 ${initiative.color}`} />
             </div>
-            <h3 className="text-3xl font-bold text-primary-foreground">
+            <h3 className="text-2xl font-bold text-primary-foreground">
               {initiative.title}
             </h3>
-            <p className="text-primary-foreground/70 text-lg mt-2">
+            <p className="text-primary-foreground/70 text-base mt-2">
               {initiative.description}
             </p>
             <Link href={initiative.href} passHref>
-              <Button className="mt-4">
+              <Button size="sm" className="mt-4">
                 Learn More <ArrowRight className="ml-2" />
               </Button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="h-80 relative rounded-lg overflow-hidden shadow-lg order-1 md:order-2 transform transition-transform duration-500 hover:scale-105">
+      <div className="h-64 md:h-80 relative rounded-lg overflow-hidden shadow-lg order-1 md:order-2 transform transition-transform duration-500 hover:scale-105">
         <Image
           src={initiative.image}
           alt={initiative.title}
@@ -195,15 +195,15 @@ export default function ProgramPage() {
                 approachInView ? 'opacity-100' : 'opacity-0'
               )}
             >
-              <h2 className="text-3xl md:text-4xl font-bold">Our Approach</h2>
-              <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mt-4">
+              <h2 className="text-2xl md:text-3xl font-bold">Our Approach</h2>
+              <p className="text-base md:text-lg text-primary-foreground/90 max-w-2xl mx-auto mt-4">
                 Our approach is rooted in experiential education that empowers individuals to understand and act on the Sustainable Development Goals.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               <div
                 className={cn(
-                  'h-80 md:h-96 relative rounded-lg overflow-hidden shadow-lg transition-all duration-1000 transform order-1 hover:scale-105',
+                  'h-72 md:h-80 relative rounded-lg overflow-hidden shadow-lg transition-all duration-1000 transform order-1 hover:scale-105',
                   approachInView
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
@@ -229,10 +229,10 @@ export default function ProgramPage() {
                     )}
                     style={{ transitionDelay: `${200 * (index + 1)}ms` }}
                   >
-                    <h3 className="text-xl font-bold mb-2 transition-transform duration-300 hover:scale-105">
+                    <h3 className="text-lg md:text-xl font-bold mb-2 transition-transform duration-300 hover:scale-105">
                       {item.title}
                     </h3>
-                    <p className="text-primary-foreground/90">
+                    <p className="text-sm md:text-base text-primary-foreground/90">
                       {item.description}
                     </p>
                   </div>
@@ -245,8 +245,8 @@ export default function ProgramPage() {
         <section id="initiatives" ref={initiativesRef} className="py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className={cn('text-center mb-12 transition-all duration-700', initiativesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10')}>
-              <h2 className="text-3xl md:text-4xl font-bold">Explore Our Initiatives</h2>
-              <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mt-4">
+              <h2 className="text-2xl md:text-3xl font-bold">Explore Our Initiatives</h2>
+              <p className="text-base md:text-lg text-primary-foreground/90 max-w-2xl mx-auto mt-4">
                 Discover how you can get involved and contribute to the Global Goals.
               </p>
             </div>
