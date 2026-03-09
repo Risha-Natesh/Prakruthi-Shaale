@@ -1,10 +1,10 @@
-
 'use client';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, Handshake, Target } from 'lucide-react';
+import { SDGIcon } from '@/components/sdg-icon';
 
 export default function PartnershipsPage() {
   const handleContactScroll = () => {
@@ -41,8 +41,8 @@ export default function PartnershipsPage() {
 
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
-                Driving Growth Through Collaboration (SDG 17)
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4 flex items-center gap-2">
+                Driving Growth Through Collaboration (SDG <SDGIcon />)
               </h2>
               <p className="text-lg text-primary-foreground/90 mb-6">
                 Our Strategic Partnerships program is designed for businesses, social enterprises, and innovators looking to co-create ventures that are both profitable and purpose-driven. We align with partners who share our vision for a sustainable future and are committed to advancing the UN Sustainable Development Goals.
@@ -66,7 +66,7 @@ export default function PartnershipsPage() {
                     <TrendingUp className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold">Sustainable Ventures (SDG 8 & 9)</h4>
+                    <h4 className="font-semibold flex items-center gap-1">Sustainable Ventures (SDG <SDGIcon /> & <SDGIcon />)</h4>
                     <p className="text-sm text-foreground/70">Co-creating businesses that promote decent work, economic growth, and sustainable innovation.</p>
                   </div>
                 </li>

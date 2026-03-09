@@ -1,4 +1,3 @@
-
 'use client';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
@@ -19,6 +18,7 @@ import {
   PersonStanding,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { SDGIcon } from '@/components/sdg-icon';
 
 export default function YouthPage() {
   const whatToExpect = [
@@ -123,8 +123,8 @@ export default function YouthPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 A Place to Explore, Learn, and Lead
               </h2>
-              <p className="text-lg text-primary-foreground/90 mb-4">
-                Our Youth for SDGs Program offers nature-based learning experiences for ages 6-24, designed to empower the next generation of global citizens. We provide the tools, knowledge, and inspiration for young people to act on critical issues like climate change (SDG 13), biodiversity (SDG 15), and quality education (SDG 4).
+              <p className="text-lg text-primary-foreground/90 mb-4 flex items-center justify-center flex-wrap gap-1">
+                Our Youth for SDGs Program offers nature-based learning experiences for ages 6-24, designed to empower the next generation of global citizens. We provide the tools, knowledge, and inspiration for young people to act on critical issues like climate change (SDG <SDGIcon />), biodiversity (SDG <SDGIcon />), and quality education (SDG <SDGIcon />).
               </p>
               <p className="text-lg text-primary-foreground/90">
                 Prakruthi Shaale is a community where individuals and youth come together to nurture curiosity, values, and a commitment to a sustainable world.
@@ -166,10 +166,10 @@ export default function YouthPage() {
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 list-decimal list-inside">
                 <li>Hands-on activities that bring the SDGs to life</li>
-                <li>Exploration to foster a deep connection with nature (SDG 15)</li>
+                <li>Exploration to foster a deep connection with nature (SDG <SDGIcon />)</li>
                 <li>Creative problem-solving for real-world sustainability challenges</li>
-                <li>Teamwork and leadership skills for effective collaboration (SDG 17)</li>
-                <li>Building awareness and practices for sustainable living (SDG 12)</li>
+                <li>Teamwork and leadership skills for effective collaboration (SDG <SDGIcon />)</li>
+                <li>Building awareness and practices for sustainable living (SDG <SDGIcon />)</li>
               </ul>
               <p className="text-foreground/80 mt-6 text-center">
                 All programs are facilitated by trained outdoor educators in a safe, inclusive, and inspiring environment.

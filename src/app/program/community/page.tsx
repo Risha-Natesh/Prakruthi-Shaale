@@ -1,4 +1,3 @@
-
 'use client';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
@@ -22,6 +21,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useInView } from 'react-intersection-observer';
 import React from 'react';
+import { SDGIcon } from '@/components/sdg-icon';
 
 
 export default function CommunityPage() {
@@ -127,7 +127,7 @@ export default function CommunityPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
               <p className="text-lg text-primary-foreground/90 mb-4">
-                Our Community Action Program empowers individuals to be catalysts for change, directly contributing to UN Sustainable Development Goals like Climate Action (SDG 13), Sustainable Cities (SDG 11), and Life on Land (SDG 15). We believe that meaningful global impact begins with local, collective action.
+                Our Community Action Program empowers individuals to be catalysts for change, directly contributing to UN Sustainable Development Goals like Climate Action (SDG <SDGIcon />), Sustainable Cities (SDG <SDGIcon />), and Life on Land (SDG <SDGIcon />). We believe that meaningful global impact begins with local, collective action.
               </p>
             </div>
 
@@ -266,7 +266,7 @@ export default function CommunityPage() {
                   The project is built around three core goals: creating a structured platform for community volunteering, ensuring organic waste is kept out of landfills through segregation and composting, and decentralizing waste management at the neighborhood level. By composting waste directly at temples and community spaces, the initiative reduces pressure on municipal systems, cuts transportation emissions, and promotes a circular economy where waste is turned into value for the local community.
                 </p>
                 <p className="text-foreground/80 mb-4">
-                  As the initiative expands from temples to parks and other public spaces, it aims to create a <strong>ward-level organic waste management ecosystem</strong> across the Malleswaram constituency. The project aligns with multiple <strong>UN Sustainable Development Goals</strong>, especially responsible consumption, sustainable communities, climate action, and partnerships for the goals (SDG 17). Through collaboration between civic institutions, educational organizations, and citizens, Greens &amp; Browns Story is shaping a replicable, community-driven model that has the potential to scale across cities and even nationwide.
+                  As the initiative expands from temples to parks and other public spaces, it aims to create a <strong>ward-level organic waste management ecosystem</strong> across the Malleswaram constituency. The project aligns with multiple <strong>UN Sustainable Development Goals</strong>, especially responsible consumption, sustainable communities, climate action, and partnerships for the goals (SDG <SDGIcon />). Through collaboration between civic institutions, educational organizations, and citizens, Greens &amp; Browns Story is shaping a replicable, community-driven model that has the potential to scale across cities and even nationwide.
                 </p>
                 <p className="text-foreground/80 font-semibold">
                   In short, <strong>Greens &amp; Browns Story</strong> shows how local communities can turn everyday waste into a powerful tool for environmental action—blending tradition, participation, and sustainability into a practical and impactful zero-waste movement.

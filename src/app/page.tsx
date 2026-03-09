@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import Header from '@/components/header';
@@ -22,6 +21,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { SDGIcon } from '@/components/sdg-icon';
 
 export default function Home() {
   const challengeImage = PlaceHolderImages.find(
@@ -65,7 +65,11 @@ export default function Home() {
     },
     {
       question: "What are the primary mission and vision of the organisation?",
-      answer: 'Our vision is to build a global network of changemakers achieving the SDGs through a "Think Global, Act Local" approach. Our mission is to make sustainability accessible and actionable for everyone, bridging knowledge gaps and mobilising resources to drive progress on goals for quality education, climate action, and terrestrial ecosystem preservation.'
+      answer: (
+        <>
+          Our vision is to build a global network of changemakers achieving the SDGs through a "Think Global, Act Local" approach. Our mission is to make sustainability accessible and actionable for everyone, bridging knowledge gaps and mobilising resources to drive progress on goals for quality education, climate action, and terrestrial ecosystem preservation.
+        </>
+      )
     },
     {
       question: "How does outdoor learning benefit participants?",
@@ -73,11 +77,19 @@ export default function Home() {
     },
     {
       question: "What environmental challenges does Prakruthi Shaale address?",
-      answer: "We address urgent environmental threats and fragmented sustainability efforts by focusing on key SDGs. We empower community-led innovation for sustainable cities (SDG 11), promote climate action (SDG 13), and protect life on land (SDG 15) by creating a collaborative ecosystem for impactful change."
+      answer: (
+        <>
+          We address urgent environmental threats and fragmented sustainability efforts by focusing on key SDGs. We empower community-led innovation for sustainable cities (SDG <SDGIcon />), promote climate action (SDG <SDGIcon />), and protect life on land (SDG <SDGIcon />) by creating a collaborative ecosystem for impactful change.
+        </>
+      )
     },
     {
       question: "Who are the key partners and stakeholders?",
-      answer: "Prakruthi Shaale unites organisations, youth, and changemakers to foster social innovation aligned with SDG 17 (Partnerships for the Goals). A key partnership with the Nobel Laureate Sir CV Raman Trust helps us empower minds through extraordinary learning experiences."
+      answer: (
+        <>
+          Prakruthi Shaale unites organisations, youth, and changemakers to foster social innovation aligned with SDG <SDGIcon /> (Partnerships for the Goals). A key partnership with the Nobel Laureate Sir CV Raman Trust helps us empower minds through extraordinary learning experiences.
+        </>
+      )
     },
     {
       question: "How can I get involved or stay updated on activities?",
@@ -310,7 +322,7 @@ export default function Home() {
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="text-primary-foreground/90">
-                        {faq.answer.replace(/ \[\d+\]/g, '')}
+                        {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
                   ))}
