@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -18,7 +17,7 @@ interface TeamMember {
 
 const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }) => {
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
     triggerOnce: true,
   });
 
@@ -55,7 +54,7 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember, index: number }
           {member.role}
         </Badge>
       </div>
-      <p className="text-white/80 text-sm leading-relaxed max-w-[320px] min-h-[5rem] px-2 whitespace-normal">
+      <p className="text-white/80 text-sm leading-relaxed max-w-[320px] px-2 whitespace-normal overflow-visible h-auto">
         {member.description}
       </p>
     </div>
@@ -70,25 +69,25 @@ export default function TeamsPage() {
       name: 'Krishna Raj Suresh',
       role: 'Founder Trustee',
       imageId: 'team-krishna',
-      description: 'Visionary leader dedicated to advancing nature-based education and community learning initiatives. Guides the organization’s vision, partnerships, and long-term educational impact.',
+      description: 'Visionary leader dedicated to advancing nature-based education and community learning initiatives.\nGuides the organization’s vision, partnerships, and long-term educational impact.',
     },
     {
       name: 'Roopa Abhishek',
       role: 'Education & Program',
       imageId: 'team-roopa',
-      description: 'Designs immersive outdoor learning programs that connect students with nature and sustainability. Leads curriculum development and ensures engaging, meaningful educational experiences.',
+      description: 'Designs immersive outdoor learning programs that connect students with nature and sustainability.\nLeads curriculum development and ensures engaging, meaningful educational experiences.',
     },
     {
       name: 'Akhila Murthy',
       role: 'Education & Program',
       imageId: 'team-akhila',
-      description: 'Passionate educator focused on fostering curiosity, creativity, and active student participation. Supports interactive learning environments that inspire exploration and growth.',
+      description: 'Passionate educator focused on fostering curiosity, creativity, and active student participation.\nSupports interactive learning environments that inspire exploration and growth.',
     },
     {
       name: 'Sindhu M V',
       role: 'Creative & Treasurer',
       imageId: 'team-sindhu',
-      description: 'Combines creative direction with financial oversight to strengthen organizational sustainability. Manages communication, branding, and budgeting for impactful program delivery.',
+      description: 'Combines creative direction with financial oversight to strengthen organizational sustainability.\nManages communication, branding, and budgeting for impactful program delivery.',
     },
   ];
 
