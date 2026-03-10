@@ -289,7 +289,6 @@ export default function SummerCampPage() {
                 </div>
                 <ul className="space-y-3 text-xs md:text-sm opacity-90">
                   <li className="flex gap-2"><ChevronRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" /> Registration is confirmed only after payment</li>
-                  <li className="flex gap-2"><ChevronRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" /> No refund policy</li>
                   <li className="flex gap-2"><ChevronRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" /> No swapping of batches once selected</li>
                   <li className="flex gap-2"><ChevronRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" /> Parents/guardians must inform us about any medical conditions or allergies</li>
                   <li className="flex gap-2"><ChevronRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" /> Children must follow camp rules and guidelines</li>
