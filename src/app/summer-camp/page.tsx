@@ -118,7 +118,7 @@ export default function SummerCampPage() {
           />
           <div className="absolute inset-0 bg-black/40 z-0"></div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 className="text-2xl md:text-4xl font-black mb-4 tracking-tighter drop-shadow-2xl">
+            <h1 className="text-xl md:text-2xl font-black mb-4 tracking-tighter drop-shadow-2xl">
               Panchavati <span className="text-accent">Summer Camp 2026</span>
             </h1>
             <p className="text-lg md:text-xl font-light mb-2 text-white/90">
@@ -142,7 +142,7 @@ export default function SummerCampPage() {
 
         <section className="py-16 container mx-auto px-4">
           <ScrollSection className="max-w-4xl mx-auto text-center">
-            <h2 className="text-xl md:text-2xl font-bold mb-6">About the Camp</h2>
+            <h2 className="text-lg md:text-xl font-bold mb-6">About the Camp</h2>
             <div className="space-y-4 text-sm md:text-base text-primary-foreground/90 leading-relaxed">
               <p>
                 Our summer camp focuses on mindfulness, sustainability, and life skills, designed to help kids grow, learn, and thrive.
@@ -157,14 +157,14 @@ export default function SummerCampPage() {
         <section className="py-16 bg-black/10">
           <div className="container mx-auto px-4">
             <ScrollSection className="text-center mb-10">
-              <h2 className="text-xl md:text-2xl font-bold">Age Groups</h2>
+              <h2 className="text-lg md:text-xl font-bold">Age Groups</h2>
             </ScrollSection>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <ScrollSection className="delay-100">
                 <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:scale-105 transition-transform duration-500">
                   <CardContent className="p-6 text-center">
                     <Users className="w-10 h-10 mx-auto mb-4 text-accent" />
-                    <h3 className="text-lg md:text-xl font-bold mb-2 text-white">Juniors</h3>
+                    <h3 className="text-base font-bold mb-2 text-white">Juniors</h3>
                     <p className="text-base md:text-lg text-accent/90 font-semibold">6 to 10 Years</p>
                   </CardContent>
                 </Card>
@@ -173,7 +173,7 @@ export default function SummerCampPage() {
                 <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:scale-105 transition-transform duration-500">
                   <CardContent className="p-6 text-center">
                     <Users className="w-10 h-10 mx-auto mb-4 text-primary" />
-                    <h3 className="text-lg md:text-xl font-bold mb-2 text-white">Seniors</h3>
+                    <h3 className="text-base font-bold mb-2 text-white">Seniors</h3>
                     <p className="text-base md:text-lg text-primary/90 font-semibold">11 to 15 Years</p>
                   </CardContent>
                 </Card>
@@ -184,7 +184,7 @@ export default function SummerCampPage() {
 
         <section className="py-16 container mx-auto px-4">
           <ScrollSection className="text-center mb-12">
-            <h2 className="text-xl md:text-2xl font-bold">What We'll Explore</h2>
+            <h2 className="text-lg md:text-xl font-bold">What We'll Explore</h2>
           </ScrollSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {explorationItems.map((item, idx) => (
@@ -202,7 +202,7 @@ export default function SummerCampPage() {
         <section className="py-16 bg-accent/10">
           <div className="container mx-auto px-4">
             <ScrollSection className="text-center mb-12">
-              <h2 className="text-xl md:text-2xl font-bold">Special Highlights</h2>
+              <h2 className="text-lg md:text-xl font-bold">Special Highlights</h2>
             </ScrollSection>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {highlights.map((h, idx) => (
@@ -221,7 +221,7 @@ export default function SummerCampPage() {
         <section className="py-16 container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             <ScrollSection>
-              <h2 className="text-xl md:text-2xl font-bold mb-6">Daily Schedule</h2>
+              <h2 className="text-lg md:text-xl font-bold mb-6">Daily Schedule</h2>
               <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center gap-6">
                 <Clock className="w-10 h-10 text-accent flex-shrink-0" />
                 <div>
@@ -231,7 +231,7 @@ export default function SummerCampPage() {
               </div>
             </ScrollSection>
             <ScrollSection>
-              <h2 className="text-xl md:text-2xl font-bold mb-6">Available Batches</h2>
+              <h2 className="text-lg md:text-xl font-bold mb-6">Available Batches</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {batches.map((b, idx) => (
                   <div key={idx} className="p-4 rounded-xl bg-primary/20 border border-white/10 flex items-center gap-3 text-xs">
@@ -250,7 +250,7 @@ export default function SummerCampPage() {
         <section className="py-16 bg-black/20">
           <div className="container mx-auto px-4 max-w-4xl">
             <ScrollSection className="text-center mb-10">
-              <h2 className="text-xl md:text-2xl font-bold">What to Expect</h2>
+              <h2 className="text-lg md:text-xl font-bold">What to Expect</h2>
             </ScrollSection>
             <div className="grid gap-4">
               {[
@@ -272,7 +272,7 @@ export default function SummerCampPage() {
             <ScrollSection className="bg-white/10 p-8 rounded-2xl border border-white/20">
               <div className="flex items-center gap-4 mb-4">
                 <BadgeIndianRupee className="w-6 h-6 text-accent" />
-                <h2 className="text-xl md:text-2xl font-bold">Camp Fee</h2>
+                <h2 className="text-lg md:text-xl font-bold">Camp Fee</h2>
               </div>
               <p className="text-3xl md:text-4xl font-black text-white mb-2">₹5,000</p>
               <p className="text-sm opacity-80">per child per batch. Includes all activities and materials.</p>
@@ -280,7 +280,7 @@ export default function SummerCampPage() {
             <ScrollSection className="bg-accent/20 p-8 rounded-2xl border border-accent/20 flex flex-col justify-center">
               <div className="flex items-center gap-4 mb-4">
                 <QrCode className="w-6 h-6 text-white" />
-                <h2 className="text-xl md:text-2xl font-bold">Payment Details</h2>
+                <h2 className="text-lg md:text-xl font-bold">Payment Details</h2>
               </div>
               <p className="text-sm md:text-base mb-4 leading-relaxed">
                 Payment can be made using the QR Code provided during registration.
@@ -299,7 +299,7 @@ export default function SummerCampPage() {
               <ScrollSection>
                 <div className="flex items-center gap-3 mb-6">
                   <FileText className="w-6 h-6 text-accent" />
-                  <h2 className="text-xl md:text-2xl font-bold">Terms & Conditions</h2>
+                  <h2 className="text-lg md:text-xl font-bold">Terms & Conditions</h2>
                 </div>
                 <ul className="space-y-3 text-xs md:text-sm opacity-90">
                   <li className="flex gap-2"><ChevronRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" /> Registration is confirmed only after payment</li>
@@ -312,15 +312,15 @@ export default function SummerCampPage() {
               <ScrollSection>
                 <div className="flex items-center gap-3 mb-6">
                   <AlertCircle className="w-6 h-6 text-destructive" />
-                  <h2 className="text-xl md:text-2xl font-bold">Cancellation Policy</h2>
+                  <h2 className="text-lg md:text-xl font-bold">Cancellation Policy</h2>
                 </div>
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-white/5 border-l-4 border-accent">
-                    <p className="text-sm font-bold text-white">Cancellations before 7 days</p>
+                    <p className="text-sm font-bold text-white">Cancellations made 10 days before the batch start date</p>
                     <p className="text-xl font-black text-accent">50% Refund</p>
                   </div>
                   <div className="p-4 rounded-xl bg-white/5 border-l-4 border-destructive">
-                    <p className="text-sm font-bold text-white">Cancellations before 4 days</p>
+                    <p className="text-sm font-bold text-white">Cancellations made 7 days or less before the batch start date</p>
                     <p className="text-xl font-black text-destructive">No Refund</p>
                   </div>
                 </div>
@@ -333,12 +333,12 @@ export default function SummerCampPage() {
           <div className="absolute inset-0 z-0 bg-[url('https://picsum.photos/seed/forest-texture/1200/800')] opacity-5 mix-blend-overlay"></div>
           <div className="container mx-auto px-4 relative z-10 text-center">
             <ScrollSection className="max-w-2xl mx-auto">
-              <h2 className="text-2xl md:text-4xl font-black mb-6">Secure Your Spot!</h2>
+              <h2 className="text-lg md:text-xl font-black mb-6">Secure Your Spot!</h2>
               <p className="text-sm md:text-base mb-8 opacity-90 leading-relaxed">
                 Join us for an unforgettable experience at the iconic Panchavati. Limited seats available per batch.
               </p>
               <a 
-                href="https://forms.gle/ke9LkcfeVbY2XkFq6" 
+                href="https://forms.gle/ke9LkecfeVbY2XkFq6" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -355,7 +355,7 @@ export default function SummerCampPage() {
 
         <section className="py-16 container mx-auto px-4">
           <ScrollSection className="text-center mb-12">
-            <h2 className="text-xl md:text-2xl font-bold">Contact Us</h2>
+            <h2 className="text-lg md:text-xl font-bold">Contact Us</h2>
             <p className="mt-2 text-sm opacity-70">Have questions? We're here to help.</p>
           </ScrollSection>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -380,7 +380,7 @@ export default function SummerCampPage() {
         <section className="py-16 bg-white/5">
           <div className="container mx-auto px-4 max-w-3xl">
             <ScrollSection className="text-center mb-10">
-              <h2 className="text-xl md:text-2xl font-bold">Frequently Asked Questions</h2>
+              <h2 className="text-lg md:text-xl font-bold">Frequently Asked Questions</h2>
             </ScrollSection>
             <ScrollSection>
               <Accordion type="single" collapsible className="w-full">
