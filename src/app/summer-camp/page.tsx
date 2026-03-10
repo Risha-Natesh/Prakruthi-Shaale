@@ -17,7 +17,6 @@ import {
   Clock, 
   Calendar, 
   BadgeIndianRupee, 
-  QrCode, 
   FileText, 
   AlertCircle, 
   Phone, 
@@ -268,27 +267,14 @@ export default function SummerCampPage() {
         </section>
 
         <section className="py-16 container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-            <ScrollSection className="bg-white/10 p-8 rounded-2xl border border-white/20">
-              <div className="flex items-center gap-4 mb-4">
+          <div className="max-w-xl mx-auto">
+            <ScrollSection className="bg-white/10 p-8 rounded-2xl border border-white/20 text-center">
+              <div className="flex items-center justify-center gap-4 mb-4">
                 <BadgeIndianRupee className="w-6 h-6 text-accent" />
                 <h2 className="text-base md:text-lg font-bold">Camp Fee</h2>
               </div>
               <p className="text-3xl md:text-4xl font-black text-white mb-2">₹5,000</p>
               <p className="text-sm opacity-80">per child per batch. Includes all activities and materials.</p>
-            </ScrollSection>
-            <ScrollSection className="bg-accent/20 p-8 rounded-2xl border border-accent/20 flex flex-col justify-center">
-              <div className="flex items-center gap-4 mb-4">
-                <QrCode className="w-6 h-6 text-white" />
-                <h2 className="text-base md:text-lg font-bold">Payment Details</h2>
-              </div>
-              <p className="text-sm md:text-base mb-4 leading-relaxed">
-                Payment can be made using the QR Code provided during registration.
-              </p>
-              <div className="p-3 bg-white/10 rounded-lg flex items-start gap-3">
-                <AlertCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                <p className="font-bold text-xs md:text-sm text-white">Registration is confirmed only after payment is completed.</p>
-              </div>
             </ScrollSection>
           </div>
         </section>
